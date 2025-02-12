@@ -1,6 +1,10 @@
 package net.farkas.wildaside;
 
 import com.mojang.logging.LogUtils;
+import net.farkas.wildaside.block.ModBlocks;
+import net.farkas.wildaside.item.ModCreativeModeTabs;
+import net.farkas.wildaside.item.ModItems;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -24,10 +28,14 @@ public class WildAside
     {
         IEventBus modEventBus = context.getModEventBus();
 
+        ModCreativeModeTabs.register(modEventBus);
+
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
-
         modEventBus.addListener(this::addCreative);
 
         //context.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
@@ -40,8 +48,10 @@ public class WildAside
 
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
-//        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
-//            event.accept(EXAMPLE_BLOCK_ITEM);
+        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.VIBRION);
+            event.accept(ModItems.ENTORIUM);
+        }
     }
 
 
