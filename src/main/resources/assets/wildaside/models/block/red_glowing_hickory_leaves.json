@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "wildaside:block/red_glowing_leaves",
+    "particle": "wildaside:block/red_glowing_leaves"
+  }
+}

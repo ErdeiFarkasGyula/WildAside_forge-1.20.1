@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "wildaside:block/quartz_block_bottom",
+    "up": "wildaside:block/bioengineer_workstation_top",
+    "north": "wildaside:block/bioengineer_workstation_side",
+    "east": "wildaside:block/bioengineer_workstation_side",
+    "south": "wildaside:block/bioengineer_workstation_side",
+    "west": "wildaside:block/bioengineer_workstation_side",
+    "particle": "wildaside:block/quartz_block_bottom"
+  },
+  "render_type": "solid"
+}

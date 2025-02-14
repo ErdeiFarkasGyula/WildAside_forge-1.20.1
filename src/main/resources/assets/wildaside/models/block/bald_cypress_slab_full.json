@@ -1,0 +1,9 @@
+{
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "bottom": "wildaside:block/bald_cypress_planks",
+    "top": "wildaside:block/bald_cypress_planks",
+    "side": "wildaside:block/bald_cypress_planks"
+  },
+  "render_type": "cutout"
+}

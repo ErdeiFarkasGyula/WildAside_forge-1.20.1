@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "wildaside:block/substilium_stem_side",
+    "particle": "wildaside:block/substilium_stem_side"
+  },
+  "render_type": "solid"
+}

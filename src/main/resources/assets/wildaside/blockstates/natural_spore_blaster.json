@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "wildaside:block/natural_spore_blaster"
+    },
+    "facing=east": {
+      "model": "wildaside:block/natural_spore_blaster",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "wildaside:block/natural_spore_blaster",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "wildaside:block/natural_spore_blaster",
+      "y": 270
+    },
+    "facing=up": {
+      "model": "wildaside:block/natural_spore_blaster",
+      "x": 270
+    },
+    "facing=down": {
+      "model": "wildaside:block/natural_spore_blaster",
+      "x": 90
+    }
+  }
+}

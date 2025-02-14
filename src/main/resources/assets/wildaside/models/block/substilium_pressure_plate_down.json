@@ -1,0 +1,7 @@
+{
+  "parent": "block/pressure_plate_down",
+  "textures": {
+    "texture": "wildaside:block/substilium_planks"
+  },
+  "render_type": "cutout"
+}

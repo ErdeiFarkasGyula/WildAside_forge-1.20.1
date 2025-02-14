@@ -16,11 +16,17 @@ public class ModCreativeModeTabs {
 
     public static final RegistryObject<CreativeModeTab> WILDASIDE_TAB = CREATIVE_MODE_TABS.register("wildaside_tab",
             () -> CreativeModeTab.builder()
-                    .icon(() -> new ItemStack(ModItems.VIBRION.get()))
+                    .icon(() -> new ItemStack(ModBlocks.VIBRION_BLOCK.get()))
                     .title(Component.translatable("creativetab.wildaside_tab"))
                     .displayItems((pParamateres, pOutput) -> {
                         pOutput.accept(ModItems.VIBRION.get());
                         pOutput.accept(ModBlocks.VIBRION_BLOCK.get());
+                        pOutput.accept(ModBlocks.VIBRION_GEL.get());
+                        pOutput.accept(ModBlocks.LIT_VIBRION_GEL.get());
+                        pOutput.accept(ModBlocks.VIBRION_GLASS.get());
+                        pOutput.accept(ModBlocks.LIT_VIBRION_GLASS.get());
+                        pOutput.accept(ModBlocks.VIBRION_GLASS_PANE.get());
+                        pOutput.accept(ModBlocks.LIT_VIBRION_GLASS_PANE.get());
 
                         pOutput.accept(ModItems.ENTORIUM.get());
                     })

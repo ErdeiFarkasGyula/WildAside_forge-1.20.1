@@ -1,0 +1,7 @@
+{
+  "parent": "wildaside:custom/entorium_gauntlet",
+  "textures": {
+    "1": "wildaside:block/entorium_gauntlet",
+    "particle": "wildaside:item/entorium_gauntlet"
+  }
+}

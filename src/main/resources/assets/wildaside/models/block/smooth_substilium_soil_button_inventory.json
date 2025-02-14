@@ -1,0 +1,7 @@
+{
+  "parent": "block/button_inventory",
+  "textures": {
+    "texture": "wildaside:block/smooth_substilium_soil"
+  },
+  "render_type": "cutout"
+}

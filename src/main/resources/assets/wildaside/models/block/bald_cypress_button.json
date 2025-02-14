@@ -1,0 +1,7 @@
+{
+  "parent": "block/button",
+  "textures": {
+    "texture": "wildaside:block/bald_cypress_planks"
+  },
+  "render_type": "cutout"
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "wildaside:block/chiseled_substilium_soil",
+    "particle": "wildaside:block/chiseled_substilium_soil"
+  },
+  "render_type": "solid"
+}

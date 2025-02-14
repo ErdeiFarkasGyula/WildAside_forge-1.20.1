@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "type=bottom,is_yellow=false": {
+      "model": "wildaside:block/hickory_slab"
+    },
+    "type=top,is_yellow=false": {
+      "model": "wildaside:block/hickory_slab_top"
+    },
+    "type=double,is_yellow=false": {
+      "model": "wildaside:block/hickory_slab_full"
+    },
+    "type=bottom,is_yellow=true": {
+      "model": "wildaside:block/yellow_hickory_slab"
+    },
+    "type=top,is_yellow=true": {
+      "model": "wildaside:block/yellow_hickory_slab_top"
+    },
+    "type=double,is_yellow=true": {
+      "model": "wildaside:block/yellow_hickory_slab_full"
+    }
+  }
+}

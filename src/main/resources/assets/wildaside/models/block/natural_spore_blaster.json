@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "wildaside:block/substilium_soil",
+    "up": "wildaside:block/substilium_soil",
+    "north": "wildaside:block/spore_blaster_base",
+    "east": "wildaside:block/substilium_soil",
+    "south": "wildaside:block/spore_blaster_base",
+    "west": "wildaside:block/substilium_soil",
+    "particle": "wildaside:block/substilium_soil"
+  },
+  "render_type": "solid"
+}

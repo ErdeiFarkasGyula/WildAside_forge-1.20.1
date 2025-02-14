@@ -1,0 +1,15 @@
+{
+  "variants": {
+    "powered=false,is_yellow=false": {
+      "model": "wildaside:block/hickory_pressure_plate"
+    },
+    "powered=true,is_yellow=false": {
+      "model": "wildaside:block/hickory_pressure_plate_down"
+    },
+    "powered=false,is_yellow=true": {
+      "model": "wildaside:block/yellow_hickory_pressure_plate"
+    },
+    "powered=true,is_yellow=true": {
+      "model": "wildaside:block/yellow_hickory_pressure_plate_down"
+    }  }
+}

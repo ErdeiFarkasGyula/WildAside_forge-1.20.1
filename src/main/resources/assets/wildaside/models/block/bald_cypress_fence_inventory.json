@@ -1,0 +1,8 @@
+{
+  "parent": "block/fence_inventory",
+  "textures": {
+    "texture": "wildaside:block/bald_cypress_planks",
+    "particle": "wildaside:block/bald_cypress_planks"
+  },
+  "render_type": "cutout"
+}

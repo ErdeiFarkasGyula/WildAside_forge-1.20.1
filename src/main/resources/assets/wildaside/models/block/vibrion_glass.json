@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "wildaside:block/vibrion_glass"
+  },
+  "render_type": "translucent"
+}

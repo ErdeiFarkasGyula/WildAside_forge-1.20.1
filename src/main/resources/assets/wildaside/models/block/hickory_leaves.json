@@ -1,0 +1,7 @@
+{
+  "parent": "block/leaves",
+  "textures": {
+    "all": "wildaside:block/hickory_leaves",
+    "particle": "wildaside:block/hickory_leaves"
+  }
+}

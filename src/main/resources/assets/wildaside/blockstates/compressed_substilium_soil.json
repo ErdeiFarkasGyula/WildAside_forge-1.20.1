@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "wildaside:block/compressed_substilium_soil"
+    },
+    "facing=east": {
+      "model": "wildaside:block/compressed_substilium_soil",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "wildaside:block/compressed_substilium_soil",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "wildaside:block/compressed_substilium_soil",
+      "y": 270
+    }
+  }
+}

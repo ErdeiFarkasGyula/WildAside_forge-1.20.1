@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "is_yellow=false": {
+      "model": "wildaside:block/hickory_planks"
+    },
+    "is_yellow=true": {
+      "model": "wildaside:block/yellow_hickory_planks"
+    }
+  }
+}

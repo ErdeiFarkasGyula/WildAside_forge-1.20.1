@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "wildaside:block/bald_cypress_log_side",
+    "particle": "wildaside:block/bald_cypress_log_side"
+  },
+  "render_type": "solid"
+}

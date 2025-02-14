@@ -1,0 +1,7 @@
+{
+  "parent": "block/button_inventory",
+  "textures": {
+    "texture": "wildaside:block/yellow_hickory_planks"
+  },
+  "render_type": "cutout"
+}

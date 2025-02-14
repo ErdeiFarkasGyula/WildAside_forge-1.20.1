@@ -1,0 +1,9 @@
+{
+  "parent": "wildaside:custom/fallen_leaves",
+  "textures": {
+    "all": "wildaside:block/hickory_leaves",
+    "particle": "wildaside:block/hickory_leaves",
+    "leaves": "wildaside:block/hickory_leaves"
+  },
+  "render_type": "cutout"
+}

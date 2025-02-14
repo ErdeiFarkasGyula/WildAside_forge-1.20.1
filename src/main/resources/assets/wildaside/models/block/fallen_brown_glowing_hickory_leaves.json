@@ -1,0 +1,9 @@
+{
+  "parent": "wildaside:custom/fallen_leaves",
+  "textures": {
+    "all": "wildaside:block/brown_glowing_leaves",
+    "particle": "wildaside:block/brown_glowing_leaves",
+    "leaves": "wildaside:block/brown_glowing_leaves"
+  },
+  "render_type": "cutout"
+}

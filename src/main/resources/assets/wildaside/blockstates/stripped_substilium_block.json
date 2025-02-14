@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "wildaside:block/stripped_substilium_block",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "wildaside:block/stripped_substilium_block"
+    },
+    "axis=z": {
+      "model": "wildaside:block/stripped_substilium_block",
+      "x": 90
+    }
+  }
+}

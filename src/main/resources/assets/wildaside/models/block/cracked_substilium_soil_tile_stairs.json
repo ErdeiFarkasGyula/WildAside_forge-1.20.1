@@ -1,0 +1,9 @@
+{
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "wildaside:block/cracked_substilium_tiles",
+    "top": "wildaside:block/cracked_substilium_tiles",
+    "side": "wildaside:block/cracked_substilium_tiles"
+  },
+  "render_type": "cutout"
+}
