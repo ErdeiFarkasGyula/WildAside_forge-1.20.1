@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "wildaside:block/vibrion_glass_pane"
+    "layer0": "wildaside:block/vibrion_glass"
   },
   "render_type": "translucent"
 }
