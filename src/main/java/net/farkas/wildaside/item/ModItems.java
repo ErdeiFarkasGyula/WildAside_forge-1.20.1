@@ -12,6 +12,8 @@ public class ModItems {
 
     public static final RegistryObject<Item> VIBRION = ITEMS.register("vibrion",
             () ->  new Item(new Item.Properties()));
+    public static final RegistryObject<Item> VIBRION_2 = ITEMS.register("vibrion_2",
+            () ->  new Item(new Item.Properties()));
     public static final RegistryObject<Item> ENTORIUM = ITEMS.register("entorium",
             () ->  new Item(new Item.Properties()));
 
