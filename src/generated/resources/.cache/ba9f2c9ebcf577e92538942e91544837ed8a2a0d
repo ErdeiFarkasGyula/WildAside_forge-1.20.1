@@ -1,5 +1,6 @@
-// 1.20.1	2025-02-15T14:48:12.3079321	Item Models: wildaside
+// 1.20.1	2025-02-15T21:22:57.6841572	Item Models: wildaside
 7c314b9855fa14cfb6f45f4b35479303da8c369e assets/wildaside/models/item/entorium.json
+28b841c1b7ab30aa3f867a711da8e464c43ecf6b assets/wildaside/models/item/lit_vibrion_glass_pane.json
 ce65bd0963c5205bfc3314bd251ab760f3b49892 assets/wildaside/models/item/substilium_button.json
 2051b81d7e2c282448034be02a5d9a303b83b0d6 assets/wildaside/models/item/substilium_door.json
 5c52e05997d9996e065623dccb26652428bfebd3 assets/wildaside/models/item/substilium_fence.json
@@ -13,3 +14,5 @@ faaf590e6f5db2aac7f2f2a76c371f12f57a0a9c assets/wildaside/models/item/substilium
 66f3426f4cccf32b8c8350f96a108ec7d371c807 assets/wildaside/models/item/substilium_trapdoor.json
 e64cd79400c73a174556db69ac31d1be127aa727 assets/wildaside/models/item/substilium_wood.json
 ba9b6c59e041ca210f319502611fc9d1be5045be assets/wildaside/models/item/vibrion.json
+28b841c1b7ab30aa3f867a711da8e464c43ecf6b assets/wildaside/models/item/vibrion_glass_pane.json
+78d1091c6bfee6f5eb6f3d286f67bc150b54208f assets/wildaside/models/item/vibrion_growth.json

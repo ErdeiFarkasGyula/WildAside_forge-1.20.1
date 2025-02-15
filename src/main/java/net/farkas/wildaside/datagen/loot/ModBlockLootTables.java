@@ -25,6 +25,30 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
+        //VIBRION
+        this.dropSelf(ModBlocks.VIBRION_GEL.get());
+        this.dropSelf(ModBlocks.LIT_VIBRION_GEL.get());
+        this.dropSelf(ModBlocks.VIBRION_GROWTH.get());
+        this.add(ModBlocks.POTTED_VIBRION_GROWTH.get(), createPotFlowerItemTable(ModBlocks.VIBRION_GROWTH.get()));
+
+        this.add(ModBlocks.VIBRION_BLOCK.get(),
+                block -> createSilktouchedFortuneDrops(ModBlocks.VIBRION_BLOCK.get(), ModItems.VIBRION.get(), 1, 3));
+        this.add(ModBlocks.VIBRION_SPOREHOLDER.get(),
+                block -> createSilktouchedFortuneDrops(ModBlocks.VIBRION_SPOREHOLDER.get(), ModItems.VIBRION.get(), 1, 2));
+        this.add(ModBlocks.VIBRION_GLASS.get(),
+                block -> createSilktouchedDrops(ModBlocks.VIBRION_BLOCK.get(), ModItems.VIBRION.get()));
+        this.add(ModBlocks.LIT_VIBRION_GLASS.get(),
+                block -> createSilktouchedDrops(ModBlocks.VIBRION_BLOCK.get(), ModItems.VIBRION.get()));
+        this.add(ModBlocks.VIBRION_GLASS_PANE.get(),
+                block -> createSilktouchedDrops(ModBlocks.VIBRION_BLOCK.get(), ModItems.VIBRION.get()));
+        this.add(ModBlocks.LIT_VIBRION_GLASS_PANE.get(),
+                block -> createSilktouchedDrops(ModBlocks.VIBRION_BLOCK.get(), ModItems.VIBRION.get()));
+
+        //ENTORIUM
+        this.dropSelf(ModBlocks.ENTORIUM_SHROOM.get());
+
+        //SUBSTILIUM
+        this.dropSelf(ModBlocks.SUBSTILIUM_SOIL.get());
         this.dropSelf(ModBlocks.SUBSTILIUM_STEM.get());
         this.dropSelf(ModBlocks.SUBSTILIUM_WOOD.get());
         this.dropSelf(ModBlocks.SUBSTILIUM_PLANKS.get());
@@ -35,21 +59,6 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.SUBSTILIUM_PRESSURE_PLATE.get());
         this.dropSelf(ModBlocks.SUBSTILIUM_TRAPDOOR.get());
 
-        this.dropSelf(ModBlocks.VIBRION_GEL.get());
-        this.dropSelf(ModBlocks.LIT_VIBRION_GEL.get());
-        this.dropSelf(ModBlocks.SUBSTILIUM_SOIL.get());
-
-        this.add(ModBlocks.VIBRION_BLOCK.get(),
-                block -> createSilktouchedExperienceDrops(ModBlocks.VIBRION_BLOCK.get(), ModItems.VIBRION.get(), 1, 3));
-        this.add(ModBlocks.VIBRION_GLASS.get(),
-                block -> createSilktouchedDrops(ModBlocks.VIBRION_BLOCK.get(), ModItems.VIBRION.get()));
-        this.add(ModBlocks.LIT_VIBRION_GLASS.get(),
-                block -> createSilktouchedDrops(ModBlocks.VIBRION_BLOCK.get(), ModItems.VIBRION.get()));
-        this.add(ModBlocks.VIBRION_GLASS_PANE.get(),
-                block -> createSilktouchedDrops(ModBlocks.VIBRION_BLOCK.get(), ModItems.VIBRION.get()));
-        this.add(ModBlocks.LIT_VIBRION_GLASS_PANE.get(),
-                block -> createSilktouchedDrops(ModBlocks.VIBRION_BLOCK.get(), ModItems.VIBRION.get()));
-
         this.add(ModBlocks.SUBSTILIUM_SIGN.get(),
                 block -> createSingleItemTable(ModBlocks.SUBSTILIUM_SIGN.get()));
         this.add(ModBlocks.SUBSTILIUM_WALL_SIGN.get(),
@@ -59,11 +68,12 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.add(ModBlocks.SUBSTILIUM_WALL_HANGING_SIGN.get(),
                 block -> createSingleItemTable(ModBlocks.SUBSTILIUM_HANGING_SIGN.get()));
 
+
         this.add(ModBlocks.SUBSTILIUM_SLAB.get(), block -> createSlabItemTable(ModBlocks.SUBSTILIUM_SLAB.get()));
         this.add(ModBlocks.SUBSTILIUM_DOOR.get(), block -> createSlabItemTable(ModBlocks.SUBSTILIUM_DOOR.get()));
     }
 
-    protected LootTable.Builder createSilktouchedExperienceDrops(Block pBlock, Item item, int min, int max) {
+    protected LootTable.Builder createSilktouchedFortuneDrops(Block pBlock, Item item, int min, int max) {
         return createSilkTouchDispatchTable(pBlock,
                 this.applyExplosionDecay(pBlock,
                         LootItem.lootTableItem(item)
@@ -72,7 +82,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
     }
 
-    protected LootTable.Builder createSilktouchedExperienceDrops(Block pBlock, Item item) {
+    protected LootTable.Builder createSilktouchedFortuneDrops(Block pBlock, Item item) {
         return createSilkTouchDispatchTable(pBlock,
                 this.applyExplosionDecay(pBlock,
                         LootItem.lootTableItem(item)

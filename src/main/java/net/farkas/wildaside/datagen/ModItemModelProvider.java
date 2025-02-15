@@ -20,13 +20,16 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
+        //VIBRION
         simpleItem(ModItems.VIBRION);
+        simpleBlockItemBlockTexture(ModBlocks.VIBRION_GROWTH);
+
+        //ENTORIUM
         simpleItem(ModItems.ENTORIUM);
 
-
+        //SUBSTILIUM
         simpleItem(ModItems.SUBSTILIUM_SIGN);
         simpleItem(ModItems.SUBSTILIUM_HANGING_SIGN);
-
         simpleBlockItem(ModBlocks.SUBSTILIUM_DOOR);
         trapdoorItem(ModBlocks.SUBSTILIUM_TRAPDOOR);
         evenSimplerBlockItem(ModBlocks.SUBSTILIUM_STEM);
@@ -37,8 +40,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         evenSimplerBlockItem(ModBlocks.SUBSTILIUM_PRESSURE_PLATE);
         fenceItem(ModBlocks.SUBSTILIUM_FENCE, ModBlocks.SUBSTILIUM_PLANKS);
         buttonItem(ModBlocks.SUBSTILIUM_BUTTON, ModBlocks.SUBSTILIUM_PLANKS);
-        evenSimplerBlockItem(ModBlocks.VIBRION_GLASS_PANE);
-        evenSimplerBlockItem(ModBlocks.LIT_VIBRION_GLASS_PANE);
+        simpleBlockItem(ModBlocks.VIBRION_GLASS_PANE, ModBlocks.VIBRION_GLASS);
+        simpleBlockItem(ModBlocks.LIT_VIBRION_GLASS_PANE, ModBlocks.VIBRION_GLASS);
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
@@ -76,5 +79,17 @@ public class ModItemModelProvider extends ItemModelProvider {
         return withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",
                 new ResourceLocation(WildAside.MOD_ID,"item/" + item.getId().getPath()));
+    }
+
+    private ItemModelBuilder simpleBlockItem(RegistryObject<Block> item, RegistryObject<Block> item2) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(WildAside.MOD_ID,"block/" + item2.getId().getPath()));
+    }
+
+    private ItemModelBuilder simpleBlockItemBlockTexture(RegistryObject<Block> item) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(WildAside.MOD_ID,"block/" + item.getId().getPath()));
     }
 }

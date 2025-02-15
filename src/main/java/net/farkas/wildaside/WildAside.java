@@ -6,8 +6,12 @@ import net.farkas.wildaside.block.entity.ModBlockEntities;
 import net.farkas.wildaside.item.ModCreativeModeTabs;
 import net.farkas.wildaside.item.ModItems;
 import net.farkas.wildaside.util.ModWoodTypes;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -46,9 +50,10 @@ public class WildAside
         //context.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
-    private void commonSetup(final FMLCommonSetupEvent event)
-    {
-
+    private void commonSetup(final FMLCommonSetupEvent event) {
+        event.enqueueWork(() -> {
+            ((FlowerPotBlock)Blocks.FLOWER_POT).addPlant(ModBlocks.VIBRION_GROWTH.getId(), ModBlocks.POTTED_VIBRION_GROWTH);
+        });
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event)
@@ -72,6 +77,9 @@ public class WildAside
             Sheets.addWoodType(ModWoodTypes.SUBSTILIUM);
             Sheets.addWoodType(ModWoodTypes.HICKORY);
             Sheets.addWoodType(ModWoodTypes.CYPRESS);
+
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.VIBRION_GLASS_PANE.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.LIT_VIBRION_GLASS_PANE.get(), RenderType.translucent());
         }
     }
 }

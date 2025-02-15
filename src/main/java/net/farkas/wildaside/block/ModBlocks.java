@@ -1,33 +1,27 @@
 package net.farkas.wildaside.block;
 
 import net.farkas.wildaside.WildAside;
-import net.farkas.wildaside.block.custom.VibrionBlock;
-import net.farkas.wildaside.block.custom.VibrionGel;
-import net.farkas.wildaside.block.custom.VibrionGlass;
+import net.farkas.wildaside.block.custom.*;
 import net.farkas.wildaside.block.custom.sign.ModHangingSignBlock;
 import net.farkas.wildaside.block.custom.sign.ModStandingSignBlock;
 import net.farkas.wildaside.block.custom.sign.ModWallHangingSignBlock;
 import net.farkas.wildaside.block.custom.sign.ModWallSignBlock;
+import net.farkas.wildaside.block.custom.vibrion.Sporeholder;
+import net.farkas.wildaside.block.custom.vibrion.VibrionGel;
+import net.farkas.wildaside.block.custom.vibrion.VibrionGlass;
 import net.farkas.wildaside.item.ModItems;
 import net.farkas.wildaside.util.ModWoodTypes;
-import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
-import net.minecraft.util.RandomSource;
 import net.minecraft.util.valueproviders.UniformInt;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
-import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraft.world.level.material.MapColor;
-import net.minecraftforge.common.IPlantable;
+import net.minecraft.world.level.material.PushReaction;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -110,11 +104,48 @@ public class ModBlocks {
                     .lightLevel(l -> 7)
                     .instrument(NoteBlockInstrument.HAT)));
 
+    public static final RegistryObject<Block> VIBRION_GROWTH = registerBlock("vibrion_growth",
+            () ->  new FlowerBlock(() -> MobEffects.POISON, 5, BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_YELLOW)
+                    .sound(SoundType.ROOTS)
+                    .lightLevel(l -> 3)
+                    .noCollission()
+                    .noOcclusion()
+                    .replaceable()
+                    .instabreak()
+                    .offsetType(BlockBehaviour.OffsetType.XZ)
+                    .pushReaction(PushReaction.DESTROY)));
 
+    public static final RegistryObject<Block> POTTED_VIBRION_GROWTH = BLOCKS.register("potted_vibrion_growth",
+            () ->  new FlowerPotBlock(() -> (FlowerPotBlock)Blocks.FLOWER_POT, ModBlocks.VIBRION_GROWTH, BlockBehaviour.Properties.copy(Blocks.POTTED_CRIMSON_ROOTS)
+                    .mapColor(MapColor.COLOR_YELLOW)
+                    .lightLevel(l -> 3)
+                    .instabreak()
+                    .pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> VIBRION_SPOREHOLDER = registerBlock("vibrion_sporeholder",
+            () ->  new Sporeholder(() -> MobEffects.POISON, 500, BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_YELLOW)
+                    .sound(SoundType.FUNGUS)
+                    .lightLevel(l -> 5)
+                    .noCollission()
+                    .noOcclusion()
+                    .strength(1.5f,  2f)
+                    .offsetType(BlockBehaviour.OffsetType.XZ)
+                    .pushReaction(PushReaction.DESTROY)));
+
+
+    //ENTORIUM
+    public static final RegistryObject<Block> ENTORIUM_SHROOM = registerBlock("entorium_shroom",
+            () ->  new HugeMushroomBlock(BlockBehaviour.Properties.of()
+                    .ignitedByLava()
+                    .mapColor(MapColor.COLOR_PURPLE)
+                    .sound(SoundType.WART_BLOCK)
+                    .strength(1.2F,  1.5F)));
 
     //SUBSTILIUM
     public static final RegistryObject<Block> SUBSTILIUM_SOIL = registerBlock("substilium_soil",
-            () ->  new Block(BlockBehaviour.Properties.of()
+            () ->  new SubstiliumSoil(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.COLOR_CYAN)
                     .sound(SoundType.ROOTED_DIRT)
                     .strength(2,  5)));

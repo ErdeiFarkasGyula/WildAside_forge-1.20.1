@@ -18,6 +18,21 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
+        //VIBRION
+        blockWithItem(ModBlocks.VIBRION_BLOCK);
+        translucentBlockWithItem(ModBlocks.VIBRION_GEL);
+        simpleBlockWithItem(ModBlocks.LIT_VIBRION_GEL.get(), translucentAll(ModBlocks.VIBRION_GEL.get()));
+        translucentBlockWithItem(ModBlocks.VIBRION_GLASS);
+        simpleBlockWithItem(ModBlocks.LIT_VIBRION_GLASS.get(), translucentAll(ModBlocks.VIBRION_GLASS.get()));
+        paneBlockWithRenderType(((IronBarsBlock)ModBlocks.VIBRION_GLASS_PANE.get()), modLoc("block/vibrion_glass"), modLoc("block/vibrion_glass"), "translucent");
+        paneBlockWithRenderType(((IronBarsBlock)ModBlocks.LIT_VIBRION_GLASS_PANE.get()), modLoc("block/vibrion_glass"), modLoc("block/vibrion_glass"), "translucent");
+        signBlock(((StandingSignBlock) ModBlocks.SUBSTILIUM_SIGN.get()), ((WallSignBlock) ModBlocks.SUBSTILIUM_WALL_SIGN.get()), blockTexture(ModBlocks.SUBSTILIUM_PLANKS.get()));
+        hangingSignBlock((ModBlocks.SUBSTILIUM_HANGING_SIGN.get()), (ModBlocks.SUBSTILIUM_WALL_HANGING_SIGN.get()), blockTexture(ModBlocks.SUBSTILIUM_PLANKS.get()));
+        simpleBlockWithItem(ModBlocks.VIBRION_GROWTH.get(), models().cross(blockTexture(ModBlocks.VIBRION_GROWTH.get()).getPath(), blockTexture(ModBlocks.VIBRION_GROWTH.get())).renderType("cutout"));
+        simpleBlockWithItem(ModBlocks.POTTED_VIBRION_GROWTH.get(), models().singleTexture("potted_vibrion_growth", new ResourceLocation("flower_pot_cross"), "plant", blockTexture(ModBlocks.VIBRION_GROWTH.get())).renderType("cutout"));
+        simpleBlockWithItem(ModBlocks.VIBRION_SPOREHOLDER.get(),  new ModelFile.UncheckedModelFile(modLoc("custom/vibrion_sporeholder")));
+
+        //SUBSTILIUM
         blockWithItem(ModBlocks.SUBSTILIUM_SOIL);
         axisBlock(((RotatedPillarBlock) ModBlocks.SUBSTILIUM_STEM.get()), modLoc("block/substilium_stem_side"), modLoc("block/substilium_stem_top"));
         axisBlock(((RotatedPillarBlock) ModBlocks.SUBSTILIUM_WOOD.get()), modLoc("block/substilium_stem_side"), modLoc("block/substilium_stem_side"));
@@ -31,17 +46,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         doorBlockWithRenderType(((DoorBlock)ModBlocks.SUBSTILIUM_DOOR.get()), modLoc("block/substilium_door_bottom"), modLoc("block/substilium_door_top"), "cutout");
         trapdoorBlockWithRenderType(((TrapDoorBlock)ModBlocks.SUBSTILIUM_TRAPDOOR.get()), modLoc("block/substilium_trapdoor"), true, "cutout");
 
-        blockWithItem(ModBlocks.VIBRION_BLOCK);
-        translucentBlockWithItem(ModBlocks.VIBRION_GEL);
-        simpleBlockWithItem(ModBlocks.LIT_VIBRION_GEL.get(), translucentAll(ModBlocks.VIBRION_GEL.get()));
-        translucentBlockWithItem(ModBlocks.VIBRION_GLASS);
-        simpleBlockWithItem(ModBlocks.LIT_VIBRION_GLASS.get(), translucentAll(ModBlocks.VIBRION_GLASS.get()));
-        paneBlockWithRenderType(((IronBarsBlock)ModBlocks.VIBRION_GLASS_PANE.get()), modLoc("block/vibrion_glass"), modLoc("block/vibrion_glass"), "translucent");
-        paneBlockWithRenderType(((IronBarsBlock)ModBlocks.LIT_VIBRION_GLASS_PANE.get()), modLoc("block/vibrion_glass"), modLoc("block/vibrion_glass"), "translucent");
-
-
-        signBlock(((StandingSignBlock) ModBlocks.SUBSTILIUM_SIGN.get()), ((WallSignBlock) ModBlocks.SUBSTILIUM_WALL_SIGN.get()), blockTexture(ModBlocks.SUBSTILIUM_PLANKS.get()));
-        hangingSignBlock((ModBlocks.SUBSTILIUM_HANGING_SIGN.get()), (ModBlocks.SUBSTILIUM_WALL_HANGING_SIGN.get()), blockTexture(ModBlocks.SUBSTILIUM_PLANKS.get()));
+        //ENTORIUM
+        blockWithItem(ModBlocks.ENTORIUM_SHROOM);
     }
 
     public void hangingSignBlock(Block signBlock, Block wallSignBlock, ResourceLocation texture) {

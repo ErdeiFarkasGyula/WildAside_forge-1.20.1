@@ -1,7 +1,9 @@
-// 1.20.1	2025-02-15T14:26:32.5771903	Loot Tables
+// 1.20.1	2025-02-15T21:41:41.3425385	Loot Tables
+37eecf0ef6a9c8fddba678ee0a32c9d1425a417e data/wildaside/loot_tables/blocks/entorium_shroom.json
 0bef178ae67a6024159dd08a0fe237f7d3618556 data/wildaside/loot_tables/blocks/lit_vibrion_gel.json
 e0ede89ac3ded8493fa0c5b49e68f6518535fec6 data/wildaside/loot_tables/blocks/lit_vibrion_glass.json
 6aeaa252206ddaa0d034954ac7e0a71bd82c6af3 data/wildaside/loot_tables/blocks/lit_vibrion_glass_pane.json
+2cb5b5d8b37cbd4e705a80f1af8d47ce607e2ffa data/wildaside/loot_tables/blocks/potted_vibrion_growth.json
 61ed275c2b690506f72ba42c14966e46955e9579 data/wildaside/loot_tables/blocks/substilium_button.json
 8bd4d700782d827fa6e2c110fe8ae8a02d48eeca data/wildaside/loot_tables/blocks/substilium_door.json
 860c1f531e96f2910c470c39f820020a032ab7f2 data/wildaside/loot_tables/blocks/substilium_fence.json
@@ -22,3 +24,5 @@ e0933eb524f4cf3ae32862eb13a5b200fb5ee071 data/wildaside/loot_tables/blocks/subst
 b57d7a14de2e99f6c31f8a36d3b76c119eb05846 data/wildaside/loot_tables/blocks/vibrion_gel.json
 3020aa2a5f3c91463f515efddcb54f4ff8143b7b data/wildaside/loot_tables/blocks/vibrion_glass.json
 b9a24c9b479991c4f06e335c92525b4f50b1814b data/wildaside/loot_tables/blocks/vibrion_glass_pane.json
+5f9a5037c85ecfa0fcafc9688b908daecbde238c data/wildaside/loot_tables/blocks/vibrion_growth.json
+061657929cdad54f970751fd0c5f9a85aa820f2a data/wildaside/loot_tables/blocks/vibrion_sporeholder.json

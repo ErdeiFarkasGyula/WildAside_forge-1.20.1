@@ -1,4 +1,4 @@
-package net.farkas.wildaside.block.custom;
+package net.farkas.wildaside.block.custom.vibrion;
 
 import net.farkas.wildaside.util.ModTags;
 import net.minecraft.core.Direction;
