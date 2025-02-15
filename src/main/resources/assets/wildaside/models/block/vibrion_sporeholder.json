@@ -1,9 +1,0 @@
-{
-  "parent": "wildaside:custom/vibrion_sporeholder",
-  "textures": {
-    "all": "wildaside:block/vibrion_sporeholder",
-    "particle": "wildaside:block/vibrion_sporeholder",
-    "sporeholder": "wildaside:block/vibrion_sporeholder"
-  },
-  "render_type": "cutout"
-}

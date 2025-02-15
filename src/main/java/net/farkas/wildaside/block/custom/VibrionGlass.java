@@ -1,7 +1,6 @@
 package net.farkas.wildaside.block.custom;
 
-import net.farkas.wildaside.block.ModBlocks;
-import net.farkas.wildaside.tags.ModTags;
+import net.farkas.wildaside.util.ModTags;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.block.GlassBlock;
 import net.minecraft.world.level.block.state.BlockState;

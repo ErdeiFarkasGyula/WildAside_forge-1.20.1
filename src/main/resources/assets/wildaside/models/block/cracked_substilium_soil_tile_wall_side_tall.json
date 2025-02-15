@@ -1,8 +1,0 @@
-{
-  "parent": "block/template_wall_side_tall",
-  "textures": {
-    "wall": "wildaside:block/cracked_substilium_tiles",
-    "particle": "wildaside:block/cracked_substilium_tiles"
-  },
-  "render_type": "cutout"
-}

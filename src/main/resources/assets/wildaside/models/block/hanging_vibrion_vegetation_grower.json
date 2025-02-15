@@ -1,8 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "wildaside:block/hanging_vibrion_vines_plant",
-    "particle": "wildaside:block/hanging_vibrion_vines_plant"
-  },
-  "render_type": "solid"
-}

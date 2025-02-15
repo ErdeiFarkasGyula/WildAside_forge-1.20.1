@@ -1,7 +1,0 @@
-{
-  "parent": "block/template_fence_gate_open",
-  "textures": {
-    "texture": "wildaside:block/substilium_planks"
-  },
-  "render_type": "cutout"
-}

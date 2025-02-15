@@ -4,18 +4,28 @@ import net.farkas.wildaside.WildAside;
 import net.farkas.wildaside.block.custom.VibrionBlock;
 import net.farkas.wildaside.block.custom.VibrionGel;
 import net.farkas.wildaside.block.custom.VibrionGlass;
+import net.farkas.wildaside.block.custom.sign.ModHangingSignBlock;
+import net.farkas.wildaside.block.custom.sign.ModStandingSignBlock;
+import net.farkas.wildaside.block.custom.sign.ModWallHangingSignBlock;
+import net.farkas.wildaside.block.custom.sign.ModWallSignBlock;
 import net.farkas.wildaside.item.ModItems;
+import net.farkas.wildaside.util.ModWoodTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.RandomSource;
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
+import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.common.IPlantable;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -28,13 +38,14 @@ import java.util.function.Supplier;
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, WildAside.MOD_ID);
 
+
+    //VIBRION
     public static final RegistryObject<Block> VIBRION_BLOCK = registerBlock("vibrion_block",
-            () ->  new VibrionBlock(BlockBehaviour.Properties.of()
+            () ->  new DropExperienceBlock(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.COLOR_YELLOW)
                     .sound(SoundType.SHROOMLIGHT)
                     .strength(2F,  1F)
-                    .lightLevel(l -> 7)
-                    .randomTicks()));
+                    .lightLevel(l -> 7),  UniformInt.of(1, 2)));
 
     public static final RegistryObject<Block> VIBRION_GEL = registerBlock("vibrion_gel",
             () ->  new VibrionGel(BlockBehaviour.Properties.of()
@@ -42,6 +53,7 @@ public class ModBlocks {
                     .sound(SoundType.HONEY_BLOCK)
                     .strength(0.1F,  0F)
                     .noCollission()
+                    .noOcclusion()
                     .isRedstoneConductor((bs, br, bp) -> false)
                     .speedFactor(0.2f)
                     .jumpFactor(0.6f)
@@ -54,6 +66,7 @@ public class ModBlocks {
                     .strength(0.1F,  0F)
                     .lightLevel(l -> 7)
                     .noCollission()
+                    .noOcclusion()
                     .isRedstoneConductor((bs, br, bp) -> false)
                     .speedFactor(0.2f)
                     .jumpFactor(0.6f)
@@ -96,6 +109,76 @@ public class ModBlocks {
                     .isRedstoneConductor((bs, br, bp) -> false)
                     .lightLevel(l -> 7)
                     .instrument(NoteBlockInstrument.HAT)));
+
+
+
+    //SUBSTILIUM
+    public static final RegistryObject<Block> SUBSTILIUM_SOIL = registerBlock("substilium_soil",
+            () ->  new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_CYAN)
+                    .sound(SoundType.ROOTED_DIRT)
+                    .strength(2,  5)));
+
+    public static final RegistryObject<Block> SUBSTILIUM_STEM = registerBlock("substilium_stem",
+            () ->  new RotatedPillarBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_CYAN)
+                    .ignitedByLava()
+                    .instrument(NoteBlockInstrument.BASS)
+                    .sound(SoundType.STEM)
+                    .strength(2,  2)));
+
+    public static final RegistryObject<Block> SUBSTILIUM_WOOD = registerBlock("substilium_wood",
+            () ->  new RotatedPillarBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_CYAN)
+                    .ignitedByLava()
+                    .instrument(NoteBlockInstrument.BASS)
+                    .sound(SoundType.STEM)
+                    .strength(2,  2)));
+
+    public static final RegistryObject<Block> SUBSTILIUM_PLANKS = registerBlock("substilium_planks",
+            () ->  new RotatedPillarBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_CYAN)
+                    .ignitedByLava()
+                    .instrument(NoteBlockInstrument.BANJO)
+                    .sound(SoundType.WOOD)
+                    .strength(2,  2)));
+
+    public static final RegistryObject<Block> SUBSTILIUM_STAIRS = registerBlock("substilium_stairs",
+            () ->  new StairBlock(() -> ModBlocks.SUBSTILIUM_PLANKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(SUBSTILIUM_PLANKS.get())));
+
+    public static final RegistryObject<Block> SUBSTILIUM_SLAB = registerBlock("substilium_slab",
+            () ->  new SlabBlock(BlockBehaviour.Properties.copy(SUBSTILIUM_PLANKS.get())));
+
+    public static final RegistryObject<Block> SUBSTILIUM_BUTTON = registerBlock("substilium_button",
+            () ->  new ButtonBlock(BlockBehaviour.Properties.copy(SUBSTILIUM_PLANKS.get()), BlockSetType.OAK, 5, true));
+
+    public static final RegistryObject<Block> SUBSTILIUM_PRESSURE_PLATE = registerBlock("substilium_pressure_plate",
+            () ->  new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING,BlockBehaviour.Properties.copy(SUBSTILIUM_PLANKS.get()),
+                    BlockSetType.OAK));
+
+    public static final RegistryObject<Block> SUBSTILIUM_FENCE = registerBlock("substilium_fence",
+            () ->  new FenceBlock(BlockBehaviour.Properties.copy(SUBSTILIUM_PLANKS.get())));
+
+    public static final RegistryObject<Block> SUBSTILIUM_FENCE_GATE = registerBlock("substilium_fence_gate",
+            () ->  new FenceGateBlock(BlockBehaviour.Properties.copy(SUBSTILIUM_PLANKS.get()),
+                    SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
+
+    public static final RegistryObject<Block> SUBSTILIUM_DOOR = registerBlock("substilium_door",
+            () ->  new DoorBlock(BlockBehaviour.Properties.copy(SUBSTILIUM_PLANKS.get()), BlockSetType.OAK));
+
+    public static final RegistryObject<Block> SUBSTILIUM_TRAPDOOR = registerBlock("substilium_trapdoor",
+            () ->  new TrapDoorBlock(BlockBehaviour.Properties.copy(SUBSTILIUM_PLANKS.get()).noOcclusion(), BlockSetType.OAK));
+
+    public static final RegistryObject<Block> SUBSTILIUM_SIGN = BLOCKS.register("substilium_sign",
+            () ->  new ModStandingSignBlock(BlockBehaviour.Properties.copy(SUBSTILIUM_PLANKS.get()).strength(1).forceSolidOn().noCollission(), ModWoodTypes.SUBSTILIUM));
+    public static final RegistryObject<Block> SUBSTILIUM_WALL_SIGN = BLOCKS.register("substilium_wall_sign",
+            () ->  new ModWallSignBlock(BlockBehaviour.Properties.copy(SUBSTILIUM_PLANKS.get()).strength(1).forceSolidOn().noCollission(), ModWoodTypes.SUBSTILIUM));
+
+    public static final RegistryObject<Block> SUBSTILIUM_HANGING_SIGN = BLOCKS.register("substilium_hanging_sign",
+            () ->  new ModHangingSignBlock(BlockBehaviour.Properties.copy(SUBSTILIUM_PLANKS.get()).strength(1).forceSolidOn().noCollission(), ModWoodTypes.SUBSTILIUM));
+    public static final RegistryObject<Block> SUBSTILIUM_WALL_HANGING_SIGN = BLOCKS.register("substilium_hanging_wall_sign",
+            () ->  new ModWallHangingSignBlock(BlockBehaviour.Properties.copy(SUBSTILIUM_PLANKS.get()).strength(1).forceSolidOn().noCollission(),  ModWoodTypes.SUBSTILIUM));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

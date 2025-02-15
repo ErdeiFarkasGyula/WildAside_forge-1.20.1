@@ -1,8 +1,0 @@
-{
-  "parent": "block/cross",
-  "textures": {
-    "cross": "wildaside:block/pinxter_flower",
-    "particle": "wildaside:block/pinxter_flower"
-  },
-  "render_type": "cutout"
-}

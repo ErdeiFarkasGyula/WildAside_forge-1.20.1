@@ -1,8 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "wildaside:block/stripped_bald_cypress_log_side",
-    "particle": "wildaside:block/stripped_bald_cypress_log_side"
-  },
-  "render_type": "solid"
-}

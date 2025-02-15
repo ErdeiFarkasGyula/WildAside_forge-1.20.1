@@ -1,7 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "wildaside:item/substilium_door"
-  },
-  "render_type": "translucent"
-}

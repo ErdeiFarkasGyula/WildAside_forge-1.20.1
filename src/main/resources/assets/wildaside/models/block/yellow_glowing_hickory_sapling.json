@@ -1,8 +1,0 @@
-{
-  "parent": "block/cross",
-  "textures": {
-    "cross": "wildaside:block/yellow_glowing_hickory_sapling",
-    "particle": "wildaside:block/yellow_glowing_hickory_sapling"
-  },
-  "render_type": "cutout"
-}

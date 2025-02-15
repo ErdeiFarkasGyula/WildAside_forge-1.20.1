@@ -1,8 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "wildaside:block/blank",
-    "particle": "wildaside:block/blank"
-  },
-  "render_type": "cutout"
-}

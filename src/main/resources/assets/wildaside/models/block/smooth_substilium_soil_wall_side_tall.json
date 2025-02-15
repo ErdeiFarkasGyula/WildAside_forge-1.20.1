@@ -1,8 +1,0 @@
-{
-  "parent": "block/template_wall_side_tall",
-  "textures": {
-    "wall": "wildaside:block/smooth_substilium_soil",
-    "particle": "wildaside:block/smooth_substilium_soil"
-  },
-  "render_type": "cutout"
-}

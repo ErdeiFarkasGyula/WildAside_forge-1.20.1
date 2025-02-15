@@ -1,8 +1,0 @@
-{
-  "parent": "block/cross",
-  "textures": {
-    "cross": "wildaside:block/substilium_sprouts",
-    "particle": "wildaside:block/substilium_sprouts"
-  },
-  "render_type": "cutout"
-}

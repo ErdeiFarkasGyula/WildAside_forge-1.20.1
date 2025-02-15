@@ -1,8 +1,0 @@
-{
-  "parent": "block/cross",
-  "textures": {
-    "cross": "wildaside:block/hanging_vibrion_vines_plant",
-    "particle": "wildaside:block/hanging_vibrion_vines_plant"
-  },
-  "render_type": "cutout"
-}

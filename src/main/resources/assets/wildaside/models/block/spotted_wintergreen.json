@@ -1,8 +1,0 @@
-{
-  "parent": "block/cross",
-  "textures": {
-    "cross": "wildaside:block/spotted_wintergreen",
-    "particle": "wildaside:block/spotted_wintergreen"
-  },
-  "render_type": "cutout"
-}

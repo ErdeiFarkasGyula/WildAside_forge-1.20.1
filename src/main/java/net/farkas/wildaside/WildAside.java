@@ -2,8 +2,11 @@ package net.farkas.wildaside;
 
 import com.mojang.logging.LogUtils;
 import net.farkas.wildaside.block.ModBlocks;
+import net.farkas.wildaside.block.entity.ModBlockEntities;
 import net.farkas.wildaside.item.ModCreativeModeTabs;
 import net.farkas.wildaside.item.ModItems;
+import net.farkas.wildaside.util.ModWoodTypes;
+import net.minecraft.client.renderer.Sheets;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -33,6 +36,8 @@ public class WildAside
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
+        ModBlockEntities.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -48,10 +53,7 @@ public class WildAside
 
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
-        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.VIBRION);
-            event.accept(ModItems.ENTORIUM);
-        }
+
     }
 
 
@@ -67,7 +69,9 @@ public class WildAside
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
-
+            Sheets.addWoodType(ModWoodTypes.SUBSTILIUM);
+            Sheets.addWoodType(ModWoodTypes.HICKORY);
+            Sheets.addWoodType(ModWoodTypes.CYPRESS);
         }
     }
 }

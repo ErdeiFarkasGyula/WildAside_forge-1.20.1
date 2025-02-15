@@ -1,7 +1,6 @@
 package net.farkas.wildaside.block.custom;
 
-import net.farkas.wildaside.block.ModBlocks;
-import net.farkas.wildaside.tags.ModTags;
+import net.farkas.wildaside.util.ModTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.entity.LivingEntity;

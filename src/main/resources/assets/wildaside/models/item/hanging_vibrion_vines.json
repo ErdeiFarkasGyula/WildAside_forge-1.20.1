@@ -1,7 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "wildaside:item/hanging_vibrion_vines_plant"
-  },
-  "render_type": "translucent"
-}
