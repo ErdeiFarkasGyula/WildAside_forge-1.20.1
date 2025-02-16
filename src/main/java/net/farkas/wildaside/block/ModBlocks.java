@@ -11,6 +11,7 @@ import net.farkas.wildaside.block.custom.vibrion.VibrionGel;
 import net.farkas.wildaside.block.custom.vibrion.VibrionGlass;
 import net.farkas.wildaside.item.ModItems;
 import net.farkas.wildaside.util.ModWoodTypes;
+import net.farkas.wildaside.worldgen.trees.SubstiliumMushroomGrower;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvents;
@@ -128,7 +129,7 @@ public class ModBlocks {
                     .pushReaction(PushReaction.DESTROY)));
 
     public static final RegistryObject<Block> VIBRION_SPOREHOLDER = registerBlock("vibrion_sporeholder",
-            () ->  new Sporeholder(() -> MobEffects.POISON, 500, BlockBehaviour.Properties.of()
+            () ->  new Sporeholder(new SubstiliumMushroomGrower(), BlockBehaviour.Properties.of()
                     .mapColor(MapColor.COLOR_YELLOW)
                     .sound(SoundType.FUNGUS)
                     .lightLevel(l -> 5)
