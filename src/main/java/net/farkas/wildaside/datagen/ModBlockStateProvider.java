@@ -35,7 +35,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         //SUBSTILIUM
         blockWithItem(ModBlocks.SUBSTILIUM_SOIL);
         axisBlock(((RotatedPillarBlock) ModBlocks.SUBSTILIUM_STEM.get()), modLoc("block/substilium_stem_side"), modLoc("block/substilium_stem_top"));
+        axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_SUBSTILIUM_STEM.get()), modLoc("block/stripped_substilium_stem_side"), modLoc("block/stripped_substilium_stem_top"));
         axisBlock(((RotatedPillarBlock) ModBlocks.SUBSTILIUM_WOOD.get()), modLoc("block/substilium_stem_side"), modLoc("block/substilium_stem_side"));
+        axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_SUBSTILIUM_WOOD.get()), modLoc("block/stripped_substilium_stem_side"), modLoc("block/stripped_substilium_stem_side"));
         blockWithItem(ModBlocks.SUBSTILIUM_PLANKS);
         stairsBlock(((StairBlock)ModBlocks.SUBSTILIUM_STAIRS.get()), blockTexture(ModBlocks.SUBSTILIUM_PLANKS.get()));
         slabBlock(((SlabBlock)ModBlocks.SUBSTILIUM_SLAB.get()), blockTexture(ModBlocks.SUBSTILIUM_PLANKS.get()), blockTexture(ModBlocks.SUBSTILIUM_PLANKS.get()));
@@ -48,6 +50,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         //ENTORIUM
         blockWithItem(ModBlocks.ENTORIUM_SHROOM);
+
+        //HICKORY
+        //leavesBlock(ModBlocks);
     }
 
     public void hangingSignBlock(Block signBlock, Block wallSignBlock, ResourceLocation texture) {
@@ -78,5 +83,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     public ModelFile translucentAll(Block block) {
         return this.models().cubeAll(this.name(block), this.blockTexture(block)).renderType("translucent");
+    }
+
+    private void leavesBlock(RegistryObject<Block> blockRegistryObject) {
+        simpleBlockWithItem(blockRegistryObject.get(),
+                models().singleTexture(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), new ResourceLocation("minecraft:block/leaves"),
+                        "all", blockTexture(blockRegistryObject.get())).renderType("cutout"));
     }
 }

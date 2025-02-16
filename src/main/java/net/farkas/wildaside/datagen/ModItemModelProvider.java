@@ -34,6 +34,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         trapdoorItem(ModBlocks.SUBSTILIUM_TRAPDOOR);
         evenSimplerBlockItem(ModBlocks.SUBSTILIUM_STEM);
         evenSimplerBlockItem(ModBlocks.SUBSTILIUM_WOOD);
+        evenSimplerBlockItem(ModBlocks.STRIPPED_SUBSTILIUM_STEM);
+        evenSimplerBlockItem(ModBlocks.STRIPPED_SUBSTILIUM_WOOD);
         evenSimplerBlockItem(ModBlocks.SUBSTILIUM_STAIRS);
         evenSimplerBlockItem(ModBlocks.SUBSTILIUM_SLAB);
         evenSimplerBlockItem(ModBlocks.SUBSTILIUM_FENCE_GATE);

@@ -11,13 +11,17 @@ import net.farkas.wildaside.block.custom.vibrion.VibrionGel;
 import net.farkas.wildaside.block.custom.vibrion.VibrionGlass;
 import net.farkas.wildaside.item.ModItems;
 import net.farkas.wildaside.util.ModWoodTypes;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
@@ -138,7 +142,6 @@ public class ModBlocks {
     //ENTORIUM
     public static final RegistryObject<Block> ENTORIUM_SHROOM = registerBlock("entorium_shroom",
             () ->  new HugeMushroomBlock(BlockBehaviour.Properties.of()
-                    .ignitedByLava()
                     .mapColor(MapColor.COLOR_PURPLE)
                     .sound(SoundType.WART_BLOCK)
                     .strength(1.2F,  1.5F)));
@@ -151,28 +154,33 @@ public class ModBlocks {
                     .strength(2,  5)));
 
     public static final RegistryObject<Block> SUBSTILIUM_STEM = registerBlock("substilium_stem",
-            () ->  new RotatedPillarBlock(BlockBehaviour.Properties.of()
+            () ->  new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.COLOR_CYAN)
                     .ignitedByLava()
                     .instrument(NoteBlockInstrument.BASS)
                     .sound(SoundType.STEM)
                     .strength(2,  2)));
+
+    public static final RegistryObject<Block> STRIPPED_SUBSTILIUM_STEM = registerBlock("stripped_substilium_stem",
+            () ->  new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(ModBlocks.SUBSTILIUM_STEM.get())));
 
     public static final RegistryObject<Block> SUBSTILIUM_WOOD = registerBlock("substilium_wood",
-            () ->  new RotatedPillarBlock(BlockBehaviour.Properties.of()
+            () ->  new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.COLOR_CYAN)
                     .ignitedByLava()
                     .instrument(NoteBlockInstrument.BASS)
                     .sound(SoundType.STEM)
                     .strength(2,  2)));
 
+    public static final RegistryObject<Block> STRIPPED_SUBSTILIUM_WOOD = registerBlock("stripped_substilium_wood",
+            () ->  new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(ModBlocks.SUBSTILIUM_WOOD.get())));
+
     public static final RegistryObject<Block> SUBSTILIUM_PLANKS = registerBlock("substilium_planks",
-            () ->  new RotatedPillarBlock(BlockBehaviour.Properties.of()
+            () ->  new ModFlammableBlock(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.COLOR_CYAN)
-                    .ignitedByLava()
                     .instrument(NoteBlockInstrument.BANJO)
                     .sound(SoundType.WOOD)
-                    .strength(2,  2)));
+                    .strength(2,  2), 10, 5));
 
     public static final RegistryObject<Block> SUBSTILIUM_STAIRS = registerBlock("substilium_stairs",
             () ->  new StairBlock(() -> ModBlocks.SUBSTILIUM_PLANKS.get().defaultBlockState(),
@@ -210,6 +218,11 @@ public class ModBlocks {
             () ->  new ModHangingSignBlock(BlockBehaviour.Properties.copy(SUBSTILIUM_PLANKS.get()).strength(1).forceSolidOn().noCollission(), ModWoodTypes.SUBSTILIUM));
     public static final RegistryObject<Block> SUBSTILIUM_WALL_HANGING_SIGN = BLOCKS.register("substilium_hanging_wall_sign",
             () ->  new ModWallHangingSignBlock(BlockBehaviour.Properties.copy(SUBSTILIUM_PLANKS.get()).strength(1).forceSolidOn().noCollission(),  ModWoodTypes.SUBSTILIUM));
+
+    //HICKORY
+//    public static final RegistryObject<Block> HICKORY_LEAVES = registerBlock("hickory_leaves",
+//            () ->  new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

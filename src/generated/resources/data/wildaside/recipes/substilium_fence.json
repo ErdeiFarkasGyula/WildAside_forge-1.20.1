@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "S": {
+      "item": "wildaside:substilium_planks"
+    },
+    "X": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "SXS",
+    "SXS"
+  ],
+  "result": {
+    "count": 3,
+    "item": "wildaside:substilium_fence"
+  },
+  "show_notification": true
+}

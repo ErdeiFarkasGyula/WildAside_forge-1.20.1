@@ -50,7 +50,9 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         //SUBSTILIUM
         this.dropSelf(ModBlocks.SUBSTILIUM_SOIL.get());
         this.dropSelf(ModBlocks.SUBSTILIUM_STEM.get());
+        this.dropSelf(ModBlocks.STRIPPED_SUBSTILIUM_STEM.get());
         this.dropSelf(ModBlocks.SUBSTILIUM_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_SUBSTILIUM_WOOD.get());
         this.dropSelf(ModBlocks.SUBSTILIUM_PLANKS.get());
         this.dropSelf(ModBlocks.SUBSTILIUM_STAIRS.get());
         this.dropSelf(ModBlocks.SUBSTILIUM_FENCE.get());
@@ -71,6 +73,9 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         this.add(ModBlocks.SUBSTILIUM_SLAB.get(), block -> createSlabItemTable(ModBlocks.SUBSTILIUM_SLAB.get()));
         this.add(ModBlocks.SUBSTILIUM_DOOR.get(), block -> createSlabItemTable(ModBlocks.SUBSTILIUM_DOOR.get()));
+
+//        this.add(ModBlocks.PINE_LEAVES.get(), block ->
+//                createLeavesDrops(block, ModBlocks.SAPPHIRE_BLOCK.get(), NORMAL_LEAVES_SAPLING_CHANCES));
     }
 
     protected LootTable.Builder createSilktouchedFortuneDrops(Block pBlock, Item item, int min, int max) {
@@ -99,4 +104,5 @@ public class ModBlockLootTables extends BlockLootSubProvider {
     protected Iterable<Block> getKnownBlocks() {
         return ModBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get)::iterator;
     }
+
 }

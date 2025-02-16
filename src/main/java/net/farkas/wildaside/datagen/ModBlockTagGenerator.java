@@ -60,5 +60,14 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.SUBSTILIUM_FENCE.get());
         this.tag(BlockTags.FENCE_GATES)
                 .add(ModBlocks.SUBSTILIUM_FENCE_GATE.get());
+
+        this.tag(BlockTags.LOGS_THAT_BURN)
+                .add(ModBlocks.SUBSTILIUM_STEM.get())
+                .add(ModBlocks.STRIPPED_SUBSTILIUM_STEM.get())
+                .add(ModBlocks.SUBSTILIUM_WOOD.get())
+                .add(ModBlocks.STRIPPED_SUBSTILIUM_WOOD.get());
+
+        this.tag(BlockTags.PLANKS)
+                .add(ModBlocks.SUBSTILIUM_PLANKS.get());
     }
 }
