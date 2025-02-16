@@ -144,7 +144,20 @@ public class ModBlocks {
             () ->  new HugeMushroomBlock(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.COLOR_PURPLE)
                     .sound(SoundType.WART_BLOCK)
-                    .strength(1.2F,  1.5F)));
+                    .strength(1.2F,  1.5F)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> OVERGROWN_ENTORIUM_ORE = registerBlock("overgrown_entorium_ore",
+            () ->  new OvergrownEntoriumOre(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_CYAN)
+                    .sound(SoundType.NETHER_ORE)
+                    .strength(3.5f,  5f)));
+
+    public static final RegistryObject<Block> ENTORIUM_ORE = registerBlock("entorium_ore",
+            () ->  new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_PURPLE)
+                    .sound(SoundType.NETHER_ORE)
+                    .strength(3.5f,  5f)));
 
     //SUBSTILIUM
     public static final RegistryObject<Block> SUBSTILIUM_SOIL = registerBlock("substilium_soil",

@@ -31,9 +31,10 @@ public class ModCreativeModeTabs {
 
                         pOutput.accept(ModItems.ENTORIUM.get());
                         pOutput.accept(ModBlocks.ENTORIUM_SHROOM.get());
+                        pOutput.accept(ModBlocks.ENTORIUM_ORE.get());
+                        pOutput.accept(ModBlocks.OVERGROWN_ENTORIUM_ORE.get());
 
                         pOutput.accept(ModBlocks.SUBSTILIUM_SOIL.get());
-
                         pOutput.accept(ModBlocks.SUBSTILIUM_STEM.get());
                         pOutput.accept(ModBlocks.SUBSTILIUM_WOOD.get());
                         pOutput.accept(ModBlocks.STRIPPED_SUBSTILIUM_STEM.get());

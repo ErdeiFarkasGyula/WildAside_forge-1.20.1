@@ -48,8 +48,13 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.SUBSTILIUM_HANGING_SIGN.get());
         //
 
+//        this.tag(BlockTags.MINEABLE_WITH_PICKAXE);
+
+
         this.tag(BlockTags.MINEABLE_WITH_SHOVEL)
-                .add(ModBlocks.SUBSTILIUM_SOIL.get());
+                .add(ModBlocks.SUBSTILIUM_SOIL.get())
+                .add(ModBlocks.OVERGROWN_ENTORIUM_ORE.get())
+                .add(ModBlocks.ENTORIUM_ORE.get());
 
         this.tag(BlockTags.MINEABLE_WITH_HOE)
                 .add(ModBlocks.VIBRION_GEL.get())
@@ -75,6 +80,11 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.SUBSTILIUM_SIGN.get())
                 .add(ModBlocks.SUBSTILIUM_HANGING_SIGN.get());
 
+        this.tag(BlockTags.NEEDS_IRON_TOOL)
+                .add(ModBlocks.ENTORIUM_ORE.get())
+                .add(ModBlocks.OVERGROWN_ENTORIUM_ORE.get());
+
+        //
 
         this.tag(BlockTags.FENCES)
                 .add(ModBlocks.SUBSTILIUM_FENCE.get());

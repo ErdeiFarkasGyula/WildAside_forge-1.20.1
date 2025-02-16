@@ -1,8 +1,10 @@
-// 1.20.1	2025-02-16T15:25:06.9368273	Loot Tables
+// 1.20.1	2025-02-16T17:28:32.2246281	Loot Tables
+4b4746696f765b6494b1c9325bf4ebf2609dbb6b data/wildaside/loot_tables/blocks/entorium_ore.json
 37eecf0ef6a9c8fddba678ee0a32c9d1425a417e data/wildaside/loot_tables/blocks/entorium_shroom.json
 0bef178ae67a6024159dd08a0fe237f7d3618556 data/wildaside/loot_tables/blocks/lit_vibrion_gel.json
 e0ede89ac3ded8493fa0c5b49e68f6518535fec6 data/wildaside/loot_tables/blocks/lit_vibrion_glass.json
 6aeaa252206ddaa0d034954ac7e0a71bd82c6af3 data/wildaside/loot_tables/blocks/lit_vibrion_glass_pane.json
+e226fc4b5e9efd3ffcf7ce37883dfd1c3d197ab3 data/wildaside/loot_tables/blocks/overgrown_entorium_ore.json
 2cb5b5d8b37cbd4e705a80f1af8d47ce607e2ffa data/wildaside/loot_tables/blocks/potted_vibrion_growth.json
 131c7f67aab332df58ff966dff70a5215c597a21 data/wildaside/loot_tables/blocks/stripped_substilium_stem.json
 4d5b9ac1fbb2b06b0fe042757ea5a26739d766bc data/wildaside/loot_tables/blocks/stripped_substilium_wood.json

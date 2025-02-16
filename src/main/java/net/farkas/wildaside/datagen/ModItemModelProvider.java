@@ -28,6 +28,8 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         //ENTORIUM
         simpleItem(ModItems.ENTORIUM);
+        evenSimplerBlockItem(ModBlocks.ENTORIUM_ORE);
+        evenSimplerBlockItem(ModBlocks.OVERGROWN_ENTORIUM_ORE);
 
         //SUBSTILIUM
         simpleItem(ModItems.SUBSTILIUM_SIGN);

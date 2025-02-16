@@ -46,6 +46,9 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         //ENTORIUM
         this.dropSelf(ModBlocks.ENTORIUM_SHROOM.get());
+        this.add(ModBlocks.ENTORIUM_ORE.get(),
+                block -> createSilktouchedFortuneDrops(ModBlocks.ENTORIUM_ORE.get(), ModItems.ENTORIUM.get(), 1, 2));
+        this.dropSelf(ModBlocks.OVERGROWN_ENTORIUM_ORE.get());
 
         //SUBSTILIUM
         this.dropSelf(ModBlocks.SUBSTILIUM_SOIL.get());

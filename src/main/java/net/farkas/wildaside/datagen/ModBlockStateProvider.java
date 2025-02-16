@@ -50,6 +50,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         //ENTORIUM
         blockWithItem(ModBlocks.ENTORIUM_SHROOM);
+        blockWithItem(ModBlocks.ENTORIUM_ORE);
+        blockWithItem(ModBlocks.OVERGROWN_ENTORIUM_ORE);
 
         //HICKORY
         //leavesBlock(ModBlocks);
