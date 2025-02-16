@@ -2,6 +2,8 @@ package net.farkas.wildaside.item;
 
 import net.farkas.wildaside.WildAside;
 import net.farkas.wildaside.block.ModBlocks;
+import net.farkas.wildaside.entity.custom.ModBoatEntity;
+import net.farkas.wildaside.item.custom.ModBoatItem;
 import net.minecraft.world.item.HangingSignItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.SignItem;
@@ -23,6 +25,10 @@ public class ModItems {
             () ->  new SignItem(new Item.Properties().stacksTo(16), ModBlocks.SUBSTILIUM_SIGN.get(), ModBlocks.SUBSTILIUM_WALL_SIGN.get()));
     public static final RegistryObject<Item> SUBSTILIUM_HANGING_SIGN = ITEMS.register("substilium_hanging_sign",
             () ->  new HangingSignItem(ModBlocks.SUBSTILIUM_HANGING_SIGN.get(), ModBlocks.SUBSTILIUM_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
+    public static final RegistryObject<Item> SUBSTILIUM_BOAT = ITEMS.register("substilium_boat",
+            () ->  new ModBoatItem(false, ModBoatEntity.Type.SUBSTILIUM, new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> SUBSTILIUM_CHEST_BOAT = ITEMS.register("substilium_chest_boat",
+            () ->  new ModBoatItem(true, ModBoatEntity.Type.SUBSTILIUM, new Item.Properties().stacksTo(1)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

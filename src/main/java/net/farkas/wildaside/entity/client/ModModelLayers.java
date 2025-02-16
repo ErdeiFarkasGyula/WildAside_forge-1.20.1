@@ -1,0 +1,12 @@
+package net.farkas.wildaside.entity.client;
+
+import net.farkas.wildaside.WildAside;
+import net.minecraft.client.model.geom.ModelLayerLocation;
+import net.minecraft.resources.ResourceLocation;
+
+public class ModModelLayers {
+    public static final ModelLayerLocation SUBSTILIUM_BOAT_LAYER = new ModelLayerLocation(
+            new ResourceLocation(WildAside.MOD_ID, "boat/substilium"), "main");
+    public static final ModelLayerLocation SUBSTILIUM_CHEST_BOAT_LAYER = new ModelLayerLocation(
+            new ResourceLocation(WildAside.MOD_ID, "chest_boat/substilium"), "main");
+}

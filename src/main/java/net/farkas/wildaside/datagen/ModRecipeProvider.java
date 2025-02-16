@@ -51,11 +51,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         //ENTORIUM
 
         //SUBSTILIUM
-        List<Block> SUBSTILIUM_WOODSET = List.of(ModBlocks.SUBSTILIUM_STEM.get(), ModBlocks.STRIPPED_SUBSTILIUM_STEM.get(),
+        List<ItemLike> SUBSTILIUM_WOODSET = List.of(ModBlocks.SUBSTILIUM_STEM.get().asItem(), ModBlocks.STRIPPED_SUBSTILIUM_STEM.get(),
                 ModBlocks.SUBSTILIUM_WOOD.get(), ModBlocks.STRIPPED_SUBSTILIUM_WOOD.get(), ModBlocks.SUBSTILIUM_PLANKS.get(),
                 ModBlocks.SUBSTILIUM_STAIRS.get(), ModBlocks.SUBSTILIUM_SLAB.get(), ModBlocks.SUBSTILIUM_FENCE.get(),
                 ModBlocks.SUBSTILIUM_FENCE_GATE.get(),  ModBlocks.SUBSTILIUM_PRESSURE_PLATE.get(), ModBlocks.SUBSTILIUM_BUTTON.get(),
-                ModBlocks.SUBSTILIUM_DOOR.get(), ModBlocks.SUBSTILIUM_TRAPDOOR.get(), ModBlocks.SUBSTILIUM_SIGN.get(), ModBlocks.SUBSTILIUM_HANGING_SIGN.get());
+                ModBlocks.SUBSTILIUM_DOOR.get(), ModBlocks.SUBSTILIUM_TRAPDOOR.get(), ModBlocks.SUBSTILIUM_SIGN.get(), ModBlocks.SUBSTILIUM_HANGING_SIGN.get(),
+                ModItems.SUBSTILIUM_BOAT.get(), ModItems.SUBSTILIUM_CHEST_BOAT.get());
 
         defaultWoodSet(pWriter, SUBSTILIUM_WOODSET);
     }
@@ -69,7 +70,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     }
 
     protected static void oreCooking(Consumer<FinishedRecipe> pFinishedRecipeConsumer, RecipeSerializer<? extends AbstractCookingRecipe> pCookingSerializer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTime, String pGroup, String pRecipeName) {
-        for(ItemLike itemlike : pIngredients) {
+        for (ItemLike itemlike : pIngredients) {
             SimpleCookingRecipeBuilder.generic(Ingredient.of(itemlike), pCategory, pResult,
                             pExperience, pCookingTime, pCookingSerializer)
                     .group(pGroup).unlockedBy(getHasName(itemlike), has(itemlike))
@@ -77,7 +78,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         }
     }
 
-    protected static void stairsRecipe(Consumer<FinishedRecipe> pWriter, Block stairsBlock, Block originBlock) {
+    protected static void stairsRecipe(Consumer<FinishedRecipe> pWriter, ItemLike stairsBlock, ItemLike originBlock) {
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, stairsBlock, 6)
                 .pattern("S  ")
                 .pattern("SS ")
@@ -96,22 +97,24 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     }
 
-    protected static void defaultWoodSet(Consumer<FinishedRecipe> pWriter, List<Block> blocks) {
-        Block log = blocks.get(0);
-        Block str_log = blocks.get(1);
-        Block wood = blocks.get(2);
-        Block str_wood = blocks.get(3);
-        Block planks = blocks.get(4);
-        Block stairs = blocks.get(5);
-        Block slab = blocks.get(6);
-        Block fence = blocks.get(7);
-        Block gate = blocks.get(8);
-        Block press = blocks.get(9);
-        Block button = blocks.get(10);
-        Block door = blocks.get(11);
-        Block trapdoor = blocks.get(12);
-        Block sign = blocks.get(13);
-        Block hang_sign = blocks.get(14);
+    protected static void defaultWoodSet(Consumer<FinishedRecipe> pWriter, List<ItemLike> blocks) {
+        ItemLike log = blocks.get(0);
+        ItemLike str_log = blocks.get(1);
+        ItemLike wood = blocks.get(2);
+        ItemLike str_wood = blocks.get(3);
+        ItemLike planks = blocks.get(4);
+        ItemLike stairs = blocks.get(5);
+        ItemLike slab = blocks.get(6);
+        ItemLike fence = blocks.get(7);
+        ItemLike gate = blocks.get(8);
+        ItemLike press = blocks.get(9);
+        ItemLike button = blocks.get(10);
+        ItemLike door = blocks.get(11);
+        ItemLike trapdoor = blocks.get(12);
+        ItemLike sign = blocks.get(13);
+        ItemLike hang_sign = blocks.get(14);
+        ItemLike boat = blocks.get(15);
+        ItemLike chest_boat = blocks.get(16);
 
         List<ItemLike> PLANKS_ORIGIN = List.of(log, str_log, wood, str_wood);
 
@@ -201,6 +204,21 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("SSS")
                 .define('S', planks.asItem())
                 .define('X', Blocks.CHAIN)
+                .unlockedBy(getHasName(planks), has(planks))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TRANSPORTATION, boat)
+                .pattern("S S")
+                .pattern("SSS")
+                .define('S', planks.asItem())
+                .unlockedBy(getHasName(planks), has(planks))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TRANSPORTATION, chest_boat)
+                .pattern("SXS")
+                .pattern("SSS")
+                .define('S', planks.asItem())
+                .define('X', Items.CHEST)
                 .unlockedBy(getHasName(planks), has(planks))
                 .save(pWriter);
     }

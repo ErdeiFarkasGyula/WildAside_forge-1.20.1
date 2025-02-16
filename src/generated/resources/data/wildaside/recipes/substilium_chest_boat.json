@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "item": "wildaside:substilium_planks"
+    },
+    "X": {
+      "item": "minecraft:chest"
+    }
+  },
+  "pattern": [
+    "SXS",
+    "SSS"
+  ],
+  "result": {
+    "item": "wildaside:substilium_chest_boat"
+  },
+  "show_notification": true
+}

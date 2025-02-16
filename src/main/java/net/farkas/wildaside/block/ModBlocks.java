@@ -236,6 +236,17 @@ public class ModBlocks {
 
     }
 
+    private static <T extends Block> RegistryObject<T> registerBlockWithStackLimit(String name, Supplier<T> block, int stackLimit) {
+        RegistryObject<T> blockObj = BLOCKS.register(name, block);
+        registerBlockItemWithStackLimit(name, blockObj, stackLimit);
+        return blockObj;
+    }
+
+    private static <T extends Block> RegistryObject<Item> registerBlockItemWithStackLimit(String name, RegistryObject<T> block, int stackLimit) {
+        return ModItems.ITEMS.register(name, ()  -> new BlockItem(block.get(), new Item.Properties().stacksTo(stackLimit)));
+
+    }
+
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
     }

@@ -49,6 +49,8 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.SUBSTILIUM_BUTTON.get());
                         pOutput.accept(ModBlocks.SUBSTILIUM_SIGN.get());
                         pOutput.accept(ModBlocks.SUBSTILIUM_HANGING_SIGN.get());
+                        pOutput.accept(ModItems.SUBSTILIUM_BOAT.get());
+                        pOutput.accept(ModItems.SUBSTILIUM_CHEST_BOAT.get());
 
                     })
                     .build());

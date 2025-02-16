@@ -23,6 +23,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         //VIBRION
         simpleItem(ModItems.VIBRION);
         simpleBlockItemBlockTexture(ModBlocks.VIBRION_GROWTH);
+        simpleBlockItem(ModBlocks.VIBRION_GLASS_PANE, ModBlocks.VIBRION_GLASS);
+        simpleBlockItem(ModBlocks.LIT_VIBRION_GLASS_PANE, ModBlocks.VIBRION_GLASS);
 
         //ENTORIUM
         simpleItem(ModItems.ENTORIUM);
@@ -42,8 +44,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         evenSimplerBlockItem(ModBlocks.SUBSTILIUM_PRESSURE_PLATE);
         fenceItem(ModBlocks.SUBSTILIUM_FENCE, ModBlocks.SUBSTILIUM_PLANKS);
         buttonItem(ModBlocks.SUBSTILIUM_BUTTON, ModBlocks.SUBSTILIUM_PLANKS);
-        simpleBlockItem(ModBlocks.VIBRION_GLASS_PANE, ModBlocks.VIBRION_GLASS);
-        simpleBlockItem(ModBlocks.LIT_VIBRION_GLASS_PANE, ModBlocks.VIBRION_GLASS);
+        simpleItem(ModItems.SUBSTILIUM_BOAT);
+        simpleItem(ModItems.SUBSTILIUM_CHEST_BOAT);
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {

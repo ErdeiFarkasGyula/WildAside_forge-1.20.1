@@ -1,7 +1,11 @@
-// 1.20.1	2025-02-15T21:22:57.6841572	Item Models: wildaside
+// 1.20.1	2025-02-16T16:35:08.5042008	Item Models: wildaside
 7c314b9855fa14cfb6f45f4b35479303da8c369e assets/wildaside/models/item/entorium.json
 28b841c1b7ab30aa3f867a711da8e464c43ecf6b assets/wildaside/models/item/lit_vibrion_glass_pane.json
+2773129b6cb8e880b64baee053fa813761be623d assets/wildaside/models/item/stripped_substilium_stem.json
+b35150cf2a26239ecace834e819cac61b297357f assets/wildaside/models/item/stripped_substilium_wood.json
+15669c597ab76c4706365de838ea0c7231068047 assets/wildaside/models/item/substilium_boat.json
 ce65bd0963c5205bfc3314bd251ab760f3b49892 assets/wildaside/models/item/substilium_button.json
+628141b0d4cb28c7f2fb0782d9f7235fe9e2d546 assets/wildaside/models/item/substilium_chest_boat.json
 2051b81d7e2c282448034be02a5d9a303b83b0d6 assets/wildaside/models/item/substilium_door.json
 5c52e05997d9996e065623dccb26652428bfebd3 assets/wildaside/models/item/substilium_fence.json
 b8b89cdce58262cc28528b2a9e5360014a82ec8d assets/wildaside/models/item/substilium_fence_gate.json
