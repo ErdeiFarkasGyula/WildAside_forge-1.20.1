@@ -9,20 +9,18 @@ import net.farkas.wildaside.block.custom.sign.ModWallSignBlock;
 import net.farkas.wildaside.block.custom.vibrion.Sporeholder;
 import net.farkas.wildaside.block.custom.vibrion.VibrionGel;
 import net.farkas.wildaside.block.custom.vibrion.VibrionGlass;
+import net.farkas.wildaside.block.custom.vibrion.hanging_vines.HangingVibrionVines;
+import net.farkas.wildaside.block.custom.vibrion.hanging_vines.HangingVibrionVinesPlant;
 import net.farkas.wildaside.item.ModItems;
 import net.farkas.wildaside.util.ModWoodTypes;
-import net.farkas.wildaside.worldgen.trees.SubstiliumMushroomGrower;
-import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
+import net.farkas.wildaside.worldgen.mushroom.SubstiliumMushroomGrower;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
@@ -139,6 +137,20 @@ public class ModBlocks {
                     .offsetType(BlockBehaviour.OffsetType.XZ)
                     .pushReaction(PushReaction.DESTROY)));
 
+    public static final RegistryObject<Block> HANGING_VIBRION_VINES = registerBlock("hanging_vibrion_vines",
+            () ->  new HangingVibrionVines(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_YELLOW)
+                    .sound(SoundType.SHROOMLIGHT)
+                    .lightLevel(l -> 3)
+                    .noCollission()
+                    .noOcclusion()
+                    .replaceable()
+                    .isRedstoneConductor((bs, br, bp) -> false)
+                    .strength(0.3f, 0.5f)
+                    .pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> HANGING_VIBRION_VINES_PLANT = registerBlock("hanging_vibrion_vines_plant",
+            () ->  new HangingVibrionVinesPlant(BlockBehaviour.Properties.copy(ModBlocks.HANGING_VIBRION_VINES.get())));
 
     //ENTORIUM
     public static final RegistryObject<Block> ENTORIUM_SHROOM = registerBlock("entorium_shroom",

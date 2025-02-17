@@ -1,6 +1,8 @@
-// 1.20.1	2025-02-16T17:28:32.2221106	Item Models: wildaside
+// 1.20.1	2025-02-17T19:36:21.9810591	Item Models: wildaside
 7c314b9855fa14cfb6f45f4b35479303da8c369e assets/wildaside/models/item/entorium.json
 72ebbdfaa5d8b7399ab25ba412fa3bfdc404a9a3 assets/wildaside/models/item/entorium_ore.json
+8736fb3e4b7f17bd9161702e5696a8b936b15d90 assets/wildaside/models/item/hanging_vibrion_vines.json
+8736fb3e4b7f17bd9161702e5696a8b936b15d90 assets/wildaside/models/item/hanging_vibrion_vines_plant.json
 28b841c1b7ab30aa3f867a711da8e464c43ecf6b assets/wildaside/models/item/lit_vibrion_glass_pane.json
 06017fbe89a63026f0f3e0163d65cf1fa156d723 assets/wildaside/models/item/overgrown_entorium_ore.json
 2773129b6cb8e880b64baee053fa813761be623d assets/wildaside/models/item/stripped_substilium_stem.json

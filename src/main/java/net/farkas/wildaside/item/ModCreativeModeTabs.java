@@ -24,6 +24,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.LIT_VIBRION_GEL.get());
                         pOutput.accept(ModBlocks.VIBRION_GROWTH.get());
                         pOutput.accept(ModBlocks.VIBRION_SPOREHOLDER.get());
+                        pOutput.accept(ModBlocks.HANGING_VIBRION_VINES.get());
                         pOutput.accept(ModBlocks.VIBRION_GLASS.get());
                         pOutput.accept(ModBlocks.LIT_VIBRION_GLASS.get());
                         pOutput.accept(ModBlocks.VIBRION_GLASS_PANE.get());

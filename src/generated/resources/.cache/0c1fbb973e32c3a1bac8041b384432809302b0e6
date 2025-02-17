@@ -1,4 +1,4 @@
-// 1.20.1	2025-02-16T22:11:18.8759056	Tags for minecraft:block mod id wildaside
+// 1.20.1	2025-02-17T18:41:34.0736097	Tags for minecraft:block mod id wildaside
 86e4e8f43fc454dd5ba18216855ccb036baad4f7 data/minecraft/tags/blocks/fences.json
 add694ee77698a9a575d245879ac1ba5f0471a84 data/minecraft/tags/blocks/fence_gates.json
 ea340da74b46f2bb5e7827b552526487608577ce data/minecraft/tags/blocks/logs_that_burn.json
@@ -7,6 +7,7 @@ ea340da74b46f2bb5e7827b552526487608577ce data/minecraft/tags/blocks/logs_that_bu
 f6a14b42f5a62ac856bdbbfbeac0a874ae1c2d24 data/minecraft/tags/blocks/mineable/shovel.json
 9b16a9cb86ee45825b4a238098eac40cb696a4f2 data/minecraft/tags/blocks/needs_iron_tool.json
 799f591a3cf4c2d47f05d6d2891891e068572607 data/minecraft/tags/blocks/planks.json
+16fdd73e0d3bd598a057fcb1bf3db7acc6bd049e data/wildaside/tags/blocks/huge_mushroom_grow_block.json
 c80c0997cc1ded4279d5c1f06cf5261e99a42d10 data/wildaside/tags/blocks/substilium_woodset.json
 90860656b872f340e1f6298b9f0a10b63c956387 data/wildaside/tags/blocks/vibrion_full_glasses.json
 11bf3fcfd93bfa959ca08451d04147319f01bbae data/wildaside/tags/blocks/vibrion_gels.json

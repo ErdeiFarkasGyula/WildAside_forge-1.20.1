@@ -25,6 +25,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleBlockItemBlockTexture(ModBlocks.VIBRION_GROWTH);
         simpleBlockItem(ModBlocks.VIBRION_GLASS_PANE, ModBlocks.VIBRION_GLASS);
         simpleBlockItem(ModBlocks.LIT_VIBRION_GLASS_PANE, ModBlocks.VIBRION_GLASS);
+        simpleBlockItem(ModBlocks.HANGING_VIBRION_VINES, ModBlocks.HANGING_VIBRION_VINES_PLANT);
+        simpleBlockItem(ModBlocks.HANGING_VIBRION_VINES_PLANT, ModBlocks.HANGING_VIBRION_VINES_PLANT);
 
         //ENTORIUM
         simpleItem(ModItems.ENTORIUM);

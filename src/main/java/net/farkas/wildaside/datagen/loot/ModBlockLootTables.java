@@ -29,8 +29,12 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.VIBRION_GEL.get());
         this.dropSelf(ModBlocks.LIT_VIBRION_GEL.get());
         this.dropSelf(ModBlocks.VIBRION_GROWTH.get());
-        this.add(ModBlocks.POTTED_VIBRION_GROWTH.get(), createPotFlowerItemTable(ModBlocks.VIBRION_GROWTH.get()));
+        this.dropSelf(ModBlocks.HANGING_VIBRION_VINES.get());
 
+        this.add(ModBlocks.HANGING_VIBRION_VINES_PLANT.get(),
+                block -> createSingleItemTable(ModBlocks.HANGING_VIBRION_VINES.get()));
+        this.add(ModBlocks.POTTED_VIBRION_GROWTH.get(),
+                createPotFlowerItemTable(ModBlocks.VIBRION_GROWTH.get()));
         this.add(ModBlocks.VIBRION_BLOCK.get(),
                 block -> createSilktouchedFortuneDrops(ModBlocks.VIBRION_BLOCK.get(), ModItems.VIBRION.get(), 1, 3));
         this.add(ModBlocks.VIBRION_SPOREHOLDER.get(),
@@ -74,8 +78,10 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 block -> createSingleItemTable(ModBlocks.SUBSTILIUM_HANGING_SIGN.get()));
 
 
-        this.add(ModBlocks.SUBSTILIUM_SLAB.get(), block -> createSlabItemTable(ModBlocks.SUBSTILIUM_SLAB.get()));
-        this.add(ModBlocks.SUBSTILIUM_DOOR.get(), block -> createSlabItemTable(ModBlocks.SUBSTILIUM_DOOR.get()));
+        this.add(ModBlocks.SUBSTILIUM_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.SUBSTILIUM_SLAB.get()));
+        this.add(ModBlocks.SUBSTILIUM_DOOR.get(),
+                block -> createSlabItemTable(ModBlocks.SUBSTILIUM_DOOR.get()));
 
 //        this.add(ModBlocks.PINE_LEAVES.get(), block ->
 //                createLeavesDrops(block, ModBlocks.SAPPHIRE_BLOCK.get(), NORMAL_LEAVES_SAPLING_CHANCES));
