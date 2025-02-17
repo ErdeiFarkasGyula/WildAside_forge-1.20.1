@@ -1,0 +1,63 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SubstiliumMushroomCapGenerator {
+    internal class Program {
+        static void Main(string[] args) {
+            int r = int.Parse(Console.ReadLine());
+            double m_cap = double.Parse(Console.ReadLine());
+            //int m_trunk = int.Parse(Console.ReadLine());
+
+            Random rand = new Random();
+
+            double modifier = rand.NextDouble();
+            Console.WriteLine(modifier);
+
+            for (int x = 0; x < 2 * r - 1; x ++) {
+                Console.WriteLine();
+                for (int i = Convert.ToInt16(m_cap) - 1; i >= 0; i--) {
+                    //Console.WriteLine($"i: {i}");
+                    Console.WriteLine();
+                    for (int j = 1; j < r * 2; j++) {
+                        //Console.WriteLine($"j: {j}");
+                        if (j == r && x == r - 1) {
+                            Console.Write("T");
+                        } else {
+                            double general = rand.NextDouble();
+                            if (general < i / (m_cap + modifier)) {
+                                double block = rand.NextDouble();
+                                if (block < 0.5) {
+                                    Console.Write("B");
+                                    if (block < 0.2) {
+                                        //HANGING VINES GEN
+                                        double max_vine_length = m_cap * 2;
+                                        int vine_length = Convert.ToInt16(rand.NextDouble() * max_vine_length);
+                                    }
+                                }
+                                else 
+                                if (block < 0.8) {
+                                    Console.Write("G");
+                                }
+                                else {
+                                    Console.Write("L");
+                                }
+
+
+                            }
+                            else {
+                                Console.Write("X");
+
+                            }
+
+
+                        }
+                    }
+                }
+            }
+                Console.ReadKey();
+        }
+    }
+}
