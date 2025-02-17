@@ -1,12 +1,14 @@
-// 1.20.1	2025-02-17T18:41:34.0736097	Tags for minecraft:block mod id wildaside
+// 1.20.1	2025-02-17T21:58:25.5555099	Tags for minecraft:block mod id wildaside
 86e4e8f43fc454dd5ba18216855ccb036baad4f7 data/minecraft/tags/blocks/fences.json
 add694ee77698a9a575d245879ac1ba5f0471a84 data/minecraft/tags/blocks/fence_gates.json
 ea340da74b46f2bb5e7827b552526487608577ce data/minecraft/tags/blocks/logs_that_burn.json
 952f1043c8ecfffb1e682729e400b0c2c8550531 data/minecraft/tags/blocks/mineable/axe.json
 6f7e60eb213042f490c5c09a0997bdc37c78da26 data/minecraft/tags/blocks/mineable/hoe.json
+a1b096513265f7f3677c9238f79a3566f0c6955f data/minecraft/tags/blocks/mineable/pickaxe.json
 f6a14b42f5a62ac856bdbbfbeac0a874ae1c2d24 data/minecraft/tags/blocks/mineable/shovel.json
 9b16a9cb86ee45825b4a238098eac40cb696a4f2 data/minecraft/tags/blocks/needs_iron_tool.json
 799f591a3cf4c2d47f05d6d2891891e068572607 data/minecraft/tags/blocks/planks.json
+547fae9aa3760825065e09d29c048a1b7e5d6d68 data/minecraft/tags/blocks/walls.json
 16fdd73e0d3bd598a057fcb1bf3db7acc6bd049e data/wildaside/tags/blocks/huge_mushroom_grow_block.json
 c80c0997cc1ded4279d5c1f06cf5261e99a42d10 data/wildaside/tags/blocks/substilium_woodset.json
 90860656b872f340e1f6298b9f0a10b63c956387 data/wildaside/tags/blocks/vibrion_full_glasses.json

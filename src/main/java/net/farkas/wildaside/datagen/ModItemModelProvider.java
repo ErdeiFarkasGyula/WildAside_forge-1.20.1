@@ -34,8 +34,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         evenSimplerBlockItem(ModBlocks.OVERGROWN_ENTORIUM_ORE);
 
         //SUBSTILIUM
-        simpleItem(ModItems.SUBSTILIUM_SIGN);
-        simpleItem(ModItems.SUBSTILIUM_HANGING_SIGN);
         simpleBlockItem(ModBlocks.SUBSTILIUM_DOOR);
         trapdoorItem(ModBlocks.SUBSTILIUM_TRAPDOOR);
         evenSimplerBlockItem(ModBlocks.SUBSTILIUM_STEM);
@@ -43,13 +41,21 @@ public class ModItemModelProvider extends ItemModelProvider {
         evenSimplerBlockItem(ModBlocks.STRIPPED_SUBSTILIUM_STEM);
         evenSimplerBlockItem(ModBlocks.STRIPPED_SUBSTILIUM_WOOD);
         evenSimplerBlockItem(ModBlocks.SUBSTILIUM_STAIRS);
+        evenSimplerBlockItem(ModBlocks.SUBSTILIUM_TILE_STAIRS);
         evenSimplerBlockItem(ModBlocks.SUBSTILIUM_SLAB);
+        evenSimplerBlockItem(ModBlocks.SUBSTILIUM_TILE_SLAB);
         evenSimplerBlockItem(ModBlocks.SUBSTILIUM_FENCE_GATE);
         evenSimplerBlockItem(ModBlocks.SUBSTILIUM_PRESSURE_PLATE);
+        evenSimplerBlockItem(ModBlocks.SUBSTILIUM_TILE_PRESSURE_PLATE);
+        wallItem(ModBlocks.SUBSTILIUM_TILE_WALLS, ModBlocks.SUBSTILIUM_TILES);
         fenceItem(ModBlocks.SUBSTILIUM_FENCE, ModBlocks.SUBSTILIUM_PLANKS);
         buttonItem(ModBlocks.SUBSTILIUM_BUTTON, ModBlocks.SUBSTILIUM_PLANKS);
+        buttonItem(ModBlocks.SUBSTILIUM_TILE_BUTTON, ModBlocks.SUBSTILIUM_TILES);
+        simpleItem(ModItems.SUBSTILIUM_SIGN);
+        simpleItem(ModItems.SUBSTILIUM_HANGING_SIGN);
         simpleItem(ModItems.SUBSTILIUM_BOAT);
         simpleItem(ModItems.SUBSTILIUM_CHEST_BOAT);
+        simpleBlockItemBlockTexture(ModBlocks.SUBSTILIUM_SPROUTS);
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {

@@ -36,6 +36,17 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.OVERGROWN_ENTORIUM_ORE.get());
 
                         pOutput.accept(ModBlocks.SUBSTILIUM_SOIL.get());
+                        pOutput.accept(ModBlocks.COMPRESSED_SUBSTILIUM_SOIL.get());
+                        pOutput.accept(ModBlocks.SMOOTH_SUBSTILIUM_SOIL.get());
+                        pOutput.accept(ModBlocks.CHISELLED_SUBSTILIUM_SOIL.get());
+                        pOutput.accept(ModBlocks.SUBSTILIUM_TILES.get());
+                        pOutput.accept(ModBlocks.CRACKED_SUBSTILIUM_TILES.get());
+                        pOutput.accept(ModBlocks.SUBSTILIUM_TILE_STAIRS.get());
+                        pOutput.accept(ModBlocks.SUBSTILIUM_TILE_SLAB.get());
+                        pOutput.accept(ModBlocks.SUBSTILIUM_TILE_WALLS.get());
+                        pOutput.accept(ModBlocks.SUBSTILIUM_TILE_PRESSURE_PLATE.get());
+                        pOutput.accept(ModBlocks.SUBSTILIUM_TILE_BUTTON.get());
+
                         pOutput.accept(ModBlocks.SUBSTILIUM_STEM.get());
                         pOutput.accept(ModBlocks.SUBSTILIUM_WOOD.get());
                         pOutput.accept(ModBlocks.STRIPPED_SUBSTILIUM_STEM.get());
@@ -53,6 +64,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.SUBSTILIUM_HANGING_SIGN.get());
                         pOutput.accept(ModItems.SUBSTILIUM_BOAT.get());
                         pOutput.accept(ModItems.SUBSTILIUM_CHEST_BOAT.get());
+                        pOutput.accept(ModBlocks.SUBSTILIUM_SPROUTS.get());
 
                     })
                     .build());

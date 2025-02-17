@@ -1,4 +1,4 @@
-// 1.20.1	2025-02-17T19:36:21.9810591	Item Models: wildaside
+// 1.20.1	2025-02-17T21:35:01.3171145	Item Models: wildaside
 7c314b9855fa14cfb6f45f4b35479303da8c369e assets/wildaside/models/item/entorium.json
 72ebbdfaa5d8b7399ab25ba412fa3bfdc404a9a3 assets/wildaside/models/item/entorium_ore.json
 8736fb3e4b7f17bd9161702e5696a8b936b15d90 assets/wildaside/models/item/hanging_vibrion_vines.json
@@ -17,8 +17,14 @@ b8b89cdce58262cc28528b2a9e5360014a82ec8d assets/wildaside/models/item/substilium
 00f9f1dd33ab5ac125a14eacd01ec3d134b11ba7 assets/wildaside/models/item/substilium_pressure_plate.json
 ec8a0ba5213a44d570cda916d27b439c177c5ded assets/wildaside/models/item/substilium_sign.json
 2a1447c97ae7362cdc216315aa02b647268c4342 assets/wildaside/models/item/substilium_slab.json
+5803bf64a073d756fcdc0ea6712760d1b78f01cd assets/wildaside/models/item/substilium_sprouts.json
 ca1cccbc1e64dbc972c17cedd1fc84128dc31ae5 assets/wildaside/models/item/substilium_stairs.json
 faaf590e6f5db2aac7f2f2a76c371f12f57a0a9c assets/wildaside/models/item/substilium_stem.json
+0606d4465103d8b899dfd6acb8a576458baccc02 assets/wildaside/models/item/substilium_tile_button.json
+11410f206e5326ebceab8eabd2dfd48021704229 assets/wildaside/models/item/substilium_tile_pressure_plate.json
+11bf9cb09d2cb6c17aa52799db1365ff96fdc325 assets/wildaside/models/item/substilium_tile_slab.json
+a9f83d4c6be050d3985ce9c5465a7ed36831d562 assets/wildaside/models/item/substilium_tile_stairs.json
+0a37d0e2842db5e595c0c902579d6cc94742bf0b assets/wildaside/models/item/substilium_tile_walls.json
 66f3426f4cccf32b8c8350f96a108ec7d371c807 assets/wildaside/models/item/substilium_trapdoor.json
 e64cd79400c73a174556db69ac31d1be127aa727 assets/wildaside/models/item/substilium_wood.json
 ba9b6c59e041ca210f319502611fc9d1be5045be assets/wildaside/models/item/vibrion.json

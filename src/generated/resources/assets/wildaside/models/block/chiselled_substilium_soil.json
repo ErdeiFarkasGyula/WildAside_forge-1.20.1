@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "wildaside:block/chiselled_substilium_soil"
+  }
+}

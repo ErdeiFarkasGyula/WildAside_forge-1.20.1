@@ -56,6 +56,16 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         //SUBSTILIUM
         this.dropSelf(ModBlocks.SUBSTILIUM_SOIL.get());
+        this.dropSelf(ModBlocks.COMPRESSED_SUBSTILIUM_SOIL.get());
+        this.dropSelf(ModBlocks.SMOOTH_SUBSTILIUM_SOIL.get());
+        this.dropSelf(ModBlocks.CHISELLED_SUBSTILIUM_SOIL.get());
+        this.dropSelf(ModBlocks.SUBSTILIUM_TILES.get());
+        this.dropSelf(ModBlocks.CRACKED_SUBSTILIUM_TILES.get());
+        this.dropSelf(ModBlocks.SUBSTILIUM_TILE_STAIRS.get());
+        this.dropSelf(ModBlocks.SUBSTILIUM_TILE_WALLS.get());
+        this.dropSelf(ModBlocks.SUBSTILIUM_TILE_BUTTON.get());
+        this.dropSelf(ModBlocks.SUBSTILIUM_TILE_PRESSURE_PLATE.get());
+
         this.dropSelf(ModBlocks.SUBSTILIUM_STEM.get());
         this.dropSelf(ModBlocks.STRIPPED_SUBSTILIUM_STEM.get());
         this.dropSelf(ModBlocks.SUBSTILIUM_WOOD.get());
@@ -67,6 +77,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.SUBSTILIUM_BUTTON.get());
         this.dropSelf(ModBlocks.SUBSTILIUM_PRESSURE_PLATE.get());
         this.dropSelf(ModBlocks.SUBSTILIUM_TRAPDOOR.get());
+        this.dropSelf(ModBlocks.SUBSTILIUM_SPROUTS.get());
 
         this.add(ModBlocks.SUBSTILIUM_SIGN.get(),
                 block -> createSingleItemTable(ModBlocks.SUBSTILIUM_SIGN.get()));
@@ -78,6 +89,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 block -> createSingleItemTable(ModBlocks.SUBSTILIUM_HANGING_SIGN.get()));
 
 
+        this.add(ModBlocks.SUBSTILIUM_TILE_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.SUBSTILIUM_TILE_SLAB.get()));
         this.add(ModBlocks.SUBSTILIUM_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.SUBSTILIUM_SLAB.get()));
         this.add(ModBlocks.SUBSTILIUM_DOOR.get(),

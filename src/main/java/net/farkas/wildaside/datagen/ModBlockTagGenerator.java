@@ -53,8 +53,17 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
         //
 
-//        this.tag(BlockTags.MINEABLE_WITH_PICKAXE);
-
+        this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .add(ModBlocks.COMPRESSED_SUBSTILIUM_SOIL.get())
+                .add(ModBlocks.SMOOTH_SUBSTILIUM_SOIL.get())
+                .add(ModBlocks.CHISELLED_SUBSTILIUM_SOIL.get())
+                .add(ModBlocks.SUBSTILIUM_TILES.get())
+                .add(ModBlocks.CRACKED_SUBSTILIUM_TILES.get())
+                .add(ModBlocks.SUBSTILIUM_TILE_STAIRS.get())
+                .add(ModBlocks.SUBSTILIUM_TILE_SLAB.get())
+                .add(ModBlocks.SUBSTILIUM_TILE_BUTTON.get())
+                .add(ModBlocks.SUBSTILIUM_TILE_PRESSURE_PLATE.get())
+                .add(ModBlocks.SUBSTILIUM_TILE_WALLS.get());
 
         this.tag(BlockTags.MINEABLE_WITH_SHOVEL)
                 .add(ModBlocks.SUBSTILIUM_SOIL.get())
@@ -95,6 +104,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.SUBSTILIUM_FENCE.get());
         this.tag(BlockTags.FENCE_GATES)
                 .add(ModBlocks.SUBSTILIUM_FENCE_GATE.get());
+        this.tag(BlockTags.WALLS)
+                .add(ModBlocks.SUBSTILIUM_TILE_WALLS.get());
 
         this.tag(BlockTags.LOGS_THAT_BURN)
                 .add(ModBlocks.SUBSTILIUM_STEM.get())

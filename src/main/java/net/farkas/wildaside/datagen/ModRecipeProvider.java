@@ -31,11 +31,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> pWriter) {
-        oreSmelting(pWriter, List.of(ModItems.VIBRION.get()), RecipeCategory.MISC, Items.YELLOW_DYE, 0.25f, 200, "yellow dye");
-//        oreBlasting(pWriter, SAPPHIRE_SMELTABLES, RecipeCategory.MISC, ModItems.SAPPHIRE.get(), 0.25f, 100, "sapphire");
+//      oreBlasting(pWriter, SAPPHIRE_SMELTABLES, RecipeCategory.MISC, ModItems.SAPPHIRE.get(), 0.25f, 100, "sapphire");
 
 
         //VIBRION
+        oreSmelting(pWriter, List.of(ModItems.VIBRION.get()), RecipeCategory.MISC, Items.YELLOW_DYE, 0.25f, 200, "yellow dye");
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.VIBRION_BLOCK.get())
                 .pattern("SS")
                 .pattern("SS")
@@ -58,6 +59,50 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 ModBlocks.SUBSTILIUM_DOOR.get(), ModBlocks.SUBSTILIUM_TRAPDOOR.get(), ModBlocks.SUBSTILIUM_SIGN.get(), ModBlocks.SUBSTILIUM_HANGING_SIGN.get(),
                 ModItems.SUBSTILIUM_BOAT.get(), ModItems.SUBSTILIUM_CHEST_BOAT.get());
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.COMPRESSED_SUBSTILIUM_SOIL.get(), 2)
+                .pattern("SS")
+                .pattern("SS")
+                .define('S', ModBlocks.SUBSTILIUM_SOIL.get())
+                .unlockedBy(getHasName(ModBlocks.SUBSTILIUM_SOIL.get()), has(ModBlocks.SUBSTILIUM_SOIL.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMOOTH_SUBSTILIUM_SOIL.get(), 4)
+                .pattern("SS")
+                .pattern("SS")
+                .define('S', ModBlocks.COMPRESSED_SUBSTILIUM_SOIL.get())
+                .unlockedBy(getHasName(ModBlocks.COMPRESSED_SUBSTILIUM_SOIL.get()), has(ModBlocks.COMPRESSED_SUBSTILIUM_SOIL.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SUBSTILIUM_TILES.get(), 4)
+                .pattern("SS")
+                .pattern("SS")
+                .define('S', ModBlocks.SMOOTH_SUBSTILIUM_SOIL.get())
+                .unlockedBy(getHasName(ModBlocks.SMOOTH_SUBSTILIUM_SOIL.get()), has(ModBlocks.SMOOTH_SUBSTILIUM_SOIL.get()))
+                .save(pWriter);
+
+        Block tiles = ModBlocks.SUBSTILIUM_TILES.get();
+
+        stoneCutting(pWriter, ModBlocks.COMPRESSED_SUBSTILIUM_SOIL.get(), ModBlocks.CHISELLED_SUBSTILIUM_SOIL.get());
+        stoneCutting(pWriter, ModBlocks.COMPRESSED_SUBSTILIUM_SOIL.get(), ModBlocks.SMOOTH_SUBSTILIUM_SOIL.get());
+        stoneCutting(pWriter, ModBlocks.COMPRESSED_SUBSTILIUM_SOIL.get(), tiles);
+        stoneCutting(pWriter, ModBlocks.COMPRESSED_SUBSTILIUM_SOIL.get(), ModBlocks.CRACKED_SUBSTILIUM_TILES.get());
+        stoneCutting(pWriter, ModBlocks.SMOOTH_SUBSTILIUM_SOIL.get(), tiles);
+        stoneCutting(pWriter, ModBlocks.SMOOTH_SUBSTILIUM_SOIL.get(), ModBlocks.CRACKED_SUBSTILIUM_TILES.get());
+        stoneCutting(pWriter, tiles, ModBlocks.CRACKED_SUBSTILIUM_TILES.get());
+        stoneCutting(pWriter, tiles, ModBlocks.SUBSTILIUM_TILE_STAIRS.get());
+        stoneCutting(pWriter, tiles, ModBlocks.SUBSTILIUM_TILE_SLAB.get());
+        stoneCutting(pWriter, tiles, ModBlocks.SUBSTILIUM_TILE_BUTTON.get());
+        stoneCutting(pWriter, tiles, ModBlocks.SUBSTILIUM_TILE_PRESSURE_PLATE.get());
+        stoneCutting(pWriter, tiles, ModBlocks.SUBSTILIUM_TILE_WALLS.get());
+
+        stairsRecipe(pWriter, ModBlocks.SUBSTILIUM_TILE_STAIRS.get(), tiles);
+        slab(pWriter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SUBSTILIUM_TILE_SLAB.get(), tiles);
+        buttonBuilder(ModBlocks.SUBSTILIUM_TILE_BUTTON.get(), Ingredient.of(tiles)).save(pWriter);
+        pressurePlate(pWriter, ModBlocks.SUBSTILIUM_TILE_PRESSURE_PLATE.get(), tiles);
+        wall(pWriter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SUBSTILIUM_TILE_WALLS.get(), tiles);
+
+        oreSmelting(pWriter, List.of(tiles), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_SUBSTILIUM_TILES.get(), 0.20f, 200, "cracked_substilium_tiles");
+
         defaultWoodSet(pWriter, SUBSTILIUM_WOODSET);
     }
 
@@ -78,22 +123,27 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         }
     }
 
-    protected static void stairsRecipe(Consumer<FinishedRecipe> pWriter, ItemLike stairsBlock, ItemLike originBlock) {
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, stairsBlock, 6)
+    protected static void stoneCutting(Consumer<FinishedRecipe> pWriter, ItemLike inputItem, ItemLike outputItem) {
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(inputItem), RecipeCategory.BUILDING_BLOCKS, outputItem).unlockedBy(getHasName(inputItem), has(inputItem))
+                .save(pWriter, WildAside.MOD_ID + ":" + getItemName(outputItem) + "cut_from_" + getItemName(inputItem));
+    }
+
+    protected static void stairsRecipe(Consumer<FinishedRecipe> pWriter, ItemLike outputBlock, ItemLike inputBlock) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, outputBlock, 6)
                 .pattern("S  ")
                 .pattern("SS ")
                 .pattern("SSS")
-                .define('S', originBlock)
-                .unlockedBy(getHasName(originBlock), has(originBlock))
-                .save(pWriter, WildAside.MOD_ID + ":" + getItemName(stairsBlock) + "_1");
+                .define('S', inputBlock)
+                .unlockedBy(getHasName(inputBlock), has(inputBlock))
+                .save(pWriter, WildAside.MOD_ID + ":" + getItemName(outputBlock) + "_1");
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, stairsBlock, 6)
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, outputBlock, 6)
                 .pattern("  S")
                 .pattern(" SS")
                 .pattern("SSS")
-                .define('S', originBlock)
-                .unlockedBy(getHasName(originBlock), has(originBlock))
-                .save(pWriter, WildAside.MOD_ID + ":" + getItemName(stairsBlock) + "_2");
+                .define('S', inputBlock)
+                .unlockedBy(getHasName(inputBlock), has(inputBlock))
+                .save(pWriter, WildAside.MOD_ID + ":" + getItemName(outputBlock) + "_2");
 
     }
 
@@ -102,7 +152,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ItemLike str_log = blocks.get(1);
         ItemLike wood = blocks.get(2);
         ItemLike str_wood = blocks.get(3);
-        ItemLike planks = blocks.get(4);
+        Ingredient planks = Ingredient.of(blocks.get(4));
         ItemLike stairs = blocks.get(5);
         ItemLike slab = blocks.get(6);
         ItemLike fence = blocks.get(7);
@@ -133,93 +183,25 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(pWriter);
 
         for (ItemLike itemLike : PLANKS_ORIGIN) {
-            ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, planks, 4)
+            ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, blocks.get(4), 4)
                     .requires(itemLike)
                     .unlockedBy(getHasName(itemLike), has(itemLike))
-                    .save(pWriter, WildAside.MOD_ID + ":" + getItemName(planks) + "_" + getItemName(itemLike));
+                    .group(getItemName(blocks.get(4)))
+                    .save(pWriter, WildAside.MOD_ID + ":" + getItemName(blocks.get(4)) + "_" + getItemName(itemLike));
         }
 
-        stairsRecipe(pWriter, stairs, planks);
+        stairsRecipe(pWriter, stairs, blocks.get(4));
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, slab, planks).save(pWriter);
+        fenceBuilder(fence, planks).save(pWriter);
+        fenceGateBuilder(gate, planks).save(pWriter);
+        pressurePlateBuilder(RecipeCategory.REDSTONE, press, planks).save(pWriter);
+        buttonBuilder(button, planks).save(pWriter);
+        doorBuilder(door,  planks).save(pWriter);
+        trapdoorBuilder(trapdoor, planks).save(pWriter);
+        signBuilder(sign, planks).save(pWriter);
+        hangingSign(pWriter, hang_sign, blocks.get(4));
+        woodenBoat(pWriter, boat, blocks.get(4));
+        chestBoat(pWriter, chest_boat, blocks.get(4));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, slab, 4)
-                .pattern("SSS")
-                .define('S', planks.asItem())
-                .unlockedBy(getHasName(planks), has(planks))
-                .save(pWriter);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, fence, 3)
-                .pattern("SXS")
-                .pattern("SXS")
-                .define('S', planks.asItem())
-                .define('X', Items.STICK)
-                .unlockedBy(getHasName(planks), has(planks))
-                .save(pWriter);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, gate)
-                .pattern("XSX")
-                .pattern("XSX")
-                .define('S', planks.asItem())
-                .define('X', Items.STICK)
-                .unlockedBy(getHasName(planks), has(planks))
-                .save(pWriter);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, press)
-                .pattern("SS")
-                .define('S', planks.asItem())
-                .unlockedBy(getHasName(planks), has(planks))
-                .save(pWriter);
-
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.REDSTONE, button)
-                .requires(planks)
-                .unlockedBy(getHasName(planks), has(planks))
-                .save(pWriter);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, door, 3)
-                .pattern("SS")
-                .pattern("SS")
-                .pattern("SS")
-                .define('S', planks.asItem())
-                .unlockedBy(getHasName(planks), has(planks))
-                .save(pWriter);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, trapdoor, 2)
-                .pattern("SSS")
-                .pattern("SSS")
-                .define('S', planks.asItem())
-                .unlockedBy(getHasName(planks), has(planks))
-                .save(pWriter);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, sign, 3)
-                .pattern("SSS")
-                .pattern("SSS")
-                .pattern(" X ")
-                .define('S', planks.asItem())
-                .define('X', Items.STICK)
-                .unlockedBy(getHasName(planks), has(planks))
-                .save(pWriter);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, hang_sign, 6)
-                .pattern("X X")
-                .pattern("SSS")
-                .pattern("SSS")
-                .define('S', planks.asItem())
-                .define('X', Blocks.CHAIN)
-                .unlockedBy(getHasName(planks), has(planks))
-                .save(pWriter);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.TRANSPORTATION, boat)
-                .pattern("S S")
-                .pattern("SSS")
-                .define('S', planks.asItem())
-                .unlockedBy(getHasName(planks), has(planks))
-                .save(pWriter);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.TRANSPORTATION, chest_boat)
-                .pattern("SXS")
-                .pattern("SSS")
-                .define('S', planks.asItem())
-                .define('X', Items.CHEST)
-                .unlockedBy(getHasName(planks), has(planks))
-                .save(pWriter);
     }
 }
