@@ -2,16 +2,16 @@
   "type": "minecraft:crafting_shaped",
   "category": "redstone",
   "key": {
-    "S": {
-      "item": "wildaside:substilium_planks"
-    },
-    "X": {
+    "#": {
       "item": "minecraft:stick"
+    },
+    "W": {
+      "item": "wildaside:substilium_planks"
     }
   },
   "pattern": [
-    "XSX",
-    "XSX"
+    "#W#",
+    "#W#"
   ],
   "result": {
     "item": "wildaside:substilium_fence_gate"

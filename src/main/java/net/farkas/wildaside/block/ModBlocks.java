@@ -14,17 +14,22 @@ import net.farkas.wildaside.block.custom.vibrion.hanging_vines.HangingVibrionVin
 import net.farkas.wildaside.item.ModItems;
 import net.farkas.wildaside.util.ModWoodTypes;
 import net.farkas.wildaside.worldgen.mushroom.SubstiliumMushroomGrower;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
+import net.minecraftforge.common.IPlantable;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -164,10 +169,10 @@ public class ModBlocks {
             () ->  new OvergrownEntoriumOre(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.COLOR_CYAN)
                     .sound(SoundType.NETHER_ORE)
-                    .strength(3.5f,  5)));
+                    .strength(3.5f,  12)));
 
     public static final RegistryObject<Block> ENTORIUM_ORE = registerBlock("entorium_ore",
-            () ->  new Block(BlockBehaviour.Properties.of()
+            () ->  new EntoriumOre(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.COLOR_PURPLE)
                     .sound(SoundType.NETHER_ORE)
                     .strength(3,  12)));
@@ -180,11 +185,16 @@ public class ModBlocks {
                     .strength(1,  2)));
 
     public static final RegistryObject<Block> COMPRESSED_SUBSTILIUM_SOIL = registerBlock("compressed_substilium_soil",
-            () ->  new RotatedPillarBlock(BlockBehaviour.Properties.of()
+            () ->  new Block(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.COLOR_CYAN)
                     .sound(SoundType.DEEPSLATE)
                     .requiresCorrectToolForDrops()
-                    .strength(2,  12)));
+                    .strength(2,  12)) {
+                @Override
+                public boolean canSustainPlant(BlockState state, BlockGetter world, BlockPos pos, Direction facing, IPlantable plantable) {
+                    return true;
+                }
+            });
 
     public static final RegistryObject<Block> SMOOTH_SUBSTILIUM_SOIL = registerBlock("smooth_substilium_soil",
             () ->  new Block(BlockBehaviour.Properties.copy(COMPRESSED_SUBSTILIUM_SOIL.get())));

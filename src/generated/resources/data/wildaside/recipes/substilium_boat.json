@@ -1,14 +1,15 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "misc",
+  "group": "boat",
   "key": {
-    "S": {
+    "#": {
       "item": "wildaside:substilium_planks"
     }
   },
   "pattern": [
-    "S S",
-    "SSS"
+    "# #",
+    "###"
   ],
   "result": {
     "item": "wildaside:substilium_boat"

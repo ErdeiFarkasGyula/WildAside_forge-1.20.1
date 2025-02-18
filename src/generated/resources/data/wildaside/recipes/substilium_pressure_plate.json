@@ -2,12 +2,12 @@
   "type": "minecraft:crafting_shaped",
   "category": "redstone",
   "key": {
-    "S": {
+    "#": {
       "item": "wildaside:substilium_planks"
     }
   },
   "pattern": [
-    "SS"
+    "##"
   ],
   "result": {
     "item": "wildaside:substilium_pressure_plate"

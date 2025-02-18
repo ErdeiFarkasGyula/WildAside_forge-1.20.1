@@ -1,8 +1,9 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "misc",
+  "group": "sign",
   "key": {
-    "S": {
+    "#": {
       "item": "wildaside:substilium_planks"
     },
     "X": {
@@ -10,8 +11,8 @@
     }
   },
   "pattern": [
-    "SSS",
-    "SSS",
+    "###",
+    "###",
     " X "
   ],
   "result": {

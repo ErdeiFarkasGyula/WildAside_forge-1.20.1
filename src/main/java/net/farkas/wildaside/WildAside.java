@@ -3,10 +3,12 @@ package net.farkas.wildaside;
 import com.mojang.logging.LogUtils;
 import net.farkas.wildaside.block.ModBlocks;
 import net.farkas.wildaside.block.entity.ModBlockEntities;
+import net.farkas.wildaside.effect.ModMobEffects;
 import net.farkas.wildaside.entity.ModEntities;
 import net.farkas.wildaside.entity.client.ModBoatRenderer;
 import net.farkas.wildaside.item.ModCreativeModeTabs;
 import net.farkas.wildaside.item.ModItems;
+import net.farkas.wildaside.particle.ModParticles;
 import net.farkas.wildaside.util.ModWoodTypes;
 import net.farkas.wildaside.worldgen.mushroom.ModStemPlacerTypes;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
@@ -46,6 +48,10 @@ public class WildAside
         ModBlockEntities.register(modEventBus);
 
         ModStemPlacerTypes.register(modEventBus);
+
+        ModMobEffects.register(modEventBus);
+
+        ModParticles.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 

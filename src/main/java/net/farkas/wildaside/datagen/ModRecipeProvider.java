@@ -96,10 +96,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         stoneCutting(pWriter, tiles, ModBlocks.SUBSTILIUM_TILE_WALLS.get());
 
         stairsRecipe(pWriter, ModBlocks.SUBSTILIUM_TILE_STAIRS.get(), tiles);
-        slab(pWriter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SUBSTILIUM_TILE_SLAB.get(), tiles);
-        buttonBuilder(ModBlocks.SUBSTILIUM_TILE_BUTTON.get(), Ingredient.of(tiles)).save(pWriter);
-        pressurePlate(pWriter, ModBlocks.SUBSTILIUM_TILE_PRESSURE_PLATE.get(), tiles);
-        wall(pWriter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SUBSTILIUM_TILE_WALLS.get(), tiles);
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SUBSTILIUM_TILE_SLAB.get(), Ingredient.of(tiles)).unlockedBy(getHasName(tiles), has(tiles)).save(pWriter);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.REDSTONE, ModBlocks.SUBSTILIUM_TILE_BUTTON.get())
+                .requires(tiles)
+                .unlockedBy(getHasName(tiles), has(tiles))
+                .save(pWriter);
+        pressurePlateBuilder(RecipeCategory.REDSTONE, ModBlocks.SUBSTILIUM_TILE_PRESSURE_PLATE.get(), Ingredient.of(tiles)).unlockedBy(getHasName(tiles), has(tiles)).save(pWriter);
+        wallBuilder(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SUBSTILIUM_TILE_WALLS.get(), Ingredient.of(tiles)).unlockedBy(getHasName(tiles), has(tiles)).save(pWriter);
 
         oreSmelting(pWriter, List.of(tiles), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_SUBSTILIUM_TILES.get(), 0.20f, 200, "cracked_substilium_tiles");
 
@@ -191,14 +194,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         }
 
         stairsRecipe(pWriter, stairs, blocks.get(4));
-        slabBuilder(RecipeCategory.BUILDING_BLOCKS, slab, planks).save(pWriter);
-        fenceBuilder(fence, planks).save(pWriter);
-        fenceGateBuilder(gate, planks).save(pWriter);
-        pressurePlateBuilder(RecipeCategory.REDSTONE, press, planks).save(pWriter);
-        buttonBuilder(button, planks).save(pWriter);
-        doorBuilder(door,  planks).save(pWriter);
-        trapdoorBuilder(trapdoor, planks).save(pWriter);
-        signBuilder(sign, planks).save(pWriter);
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, slab, planks).unlockedBy(getHasName(blocks.get(4)), has(blocks.get(4))).save(pWriter);
+        fenceBuilder(fence, planks).unlockedBy(getHasName(blocks.get(4)), has(blocks.get(4))).save(pWriter);
+        fenceGateBuilder(gate, planks).unlockedBy(getHasName(blocks.get(4)), has(blocks.get(4))).save(pWriter);
+        pressurePlateBuilder(RecipeCategory.REDSTONE, press, planks).unlockedBy(getHasName(blocks.get(4)), has(blocks.get(4))).save(pWriter);
+        buttonBuilder(button, planks).unlockedBy(getHasName(blocks.get(4)), has(blocks.get(4))).save(pWriter);
+        doorBuilder(door,  planks).unlockedBy(getHasName(blocks.get(4)), has(blocks.get(4))).save(pWriter);
+        trapdoorBuilder(trapdoor, planks).unlockedBy(getHasName(blocks.get(4)), has(blocks.get(4))).save(pWriter);
+        signBuilder(sign, planks).unlockedBy(getHasName(blocks.get(4)), has(blocks.get(4))).save(pWriter);
         hangingSign(pWriter, hang_sign, blocks.get(4));
         woodenBoat(pWriter, boat, blocks.get(4));
         chestBoat(pWriter, chest_boat, blocks.get(4));

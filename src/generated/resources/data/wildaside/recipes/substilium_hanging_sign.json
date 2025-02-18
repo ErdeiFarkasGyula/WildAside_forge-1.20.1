@@ -1,8 +1,9 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "misc",
+  "group": "hanging_sign",
   "key": {
-    "S": {
+    "#": {
       "item": "wildaside:substilium_planks"
     },
     "X": {
@@ -11,8 +12,8 @@
   },
   "pattern": [
     "X X",
-    "SSS",
-    "SSS"
+    "###",
+    "###"
   ],
   "result": {
     "count": 6,

@@ -1,13 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_substilium_planks": {
+    "has_boat": {
       "conditions": {
         "items": [
           {
-            "items": [
-              "wildaside:substilium_planks"
-            ]
+            "tag": "minecraft:boats"
           }
         ]
       },
@@ -22,7 +20,7 @@
   },
   "requirements": [
     [
-      "has_substilium_planks",
+      "has_boat",
       "has_the_recipe"
     ]
   ],

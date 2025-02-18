@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_substilium_planks": {
+    "has_stripped_logs": {
       "conditions": {
         "items": [
           {
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_substilium_planks",
+      "has_stripped_logs",
       "has_the_recipe"
     ]
   ],
