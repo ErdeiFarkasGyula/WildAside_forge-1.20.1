@@ -14,6 +14,8 @@ public class ModParticles {
 
     public static final RegistryObject<SimpleParticleType> ENTORIUM_PARTICLES =
             PARTICLE_TYPES.register("entorium_particles", () -> new SimpleParticleType(true));
+    public static final RegistryObject<SimpleParticleType> SUBSTILIUM_PARTICLES =
+            PARTICLE_TYPES.register("substilium_particles", () -> new SimpleParticleType(true));
 
 
     public static void register(IEventBus eventBus) {

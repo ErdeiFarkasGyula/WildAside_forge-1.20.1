@@ -5,6 +5,7 @@ import net.farkas.wildaside.block.entity.ModBlockEntities;
 import net.farkas.wildaside.entity.client.ModModelLayers;
 import net.farkas.wildaside.particle.EntoriumParticles;
 import net.farkas.wildaside.particle.ModParticles;
+import net.farkas.wildaside.particle.SubstiliumParticle;
 import net.minecraft.client.model.BoatModel;
 import net.minecraft.client.model.ChestBoatModel;
 import net.minecraft.client.renderer.blockentity.HangingSignRenderer;
@@ -34,6 +35,7 @@ public class ModEventBusClientEvents {
     @SubscribeEvent
     public static void registerParticleFactories(RegisterParticleProvidersEvent event) {
         event.registerSpriteSet(ModParticles.ENTORIUM_PARTICLES.get(), EntoriumParticles.Provider::new);
+        event.registerSpriteSet(ModParticles.SUBSTILIUM_PARTICLES.get(), SubstiliumParticle.Provider::new);
     }
 
 

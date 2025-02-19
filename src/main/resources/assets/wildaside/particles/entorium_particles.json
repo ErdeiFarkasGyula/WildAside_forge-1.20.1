@@ -1,20 +1,20 @@
 {
   "textures": [
-    "wildaside:entorium_particle_1",
-    "wildaside:entorium_particle_2",
-    "wildaside:entorium_particle_3",
-    "wildaside:entorium_particle_4",
-    "wildaside:entorium_particle_5",
-    "wildaside:entorium_particle_6",
-    "wildaside:entorium_particle_7",
-    "wildaside:entorium_particle_8",
-    "wildaside:entorium_particle_9",
-    "wildaside:entorium_particle_10",
-    "wildaside:entorium_particle_11",
-    "wildaside:entorium_particle_12",
-    "wildaside:entorium_particle_13",
-    "wildaside:entorium_particle_14",
-    "wildaside:entorium_particle_15",
-    "wildaside:entorium_particle_16"
+    "wildaside:entorium/entorium_particle_1",
+    "wildaside:entorium/entorium_particle_2",
+    "wildaside:entorium/entorium_particle_3",
+    "wildaside:entorium/entorium_particle_4",
+    "wildaside:entorium/entorium_particle_5",
+    "wildaside:entorium/entorium_particle_6",
+    "wildaside:entorium/entorium_particle_7",
+    "wildaside:entorium/entorium_particle_8",
+    "wildaside:entorium/entorium_particle_9",
+    "wildaside:entorium/entorium_particle_10",
+    "wildaside:entorium/entorium_particle_11",
+    "wildaside:entorium/entorium_particle_12",
+    "wildaside:entorium/entorium_particle_13",
+    "wildaside:entorium/entorium_particle_14",
+    "wildaside:entorium/entorium_particle_15",
+    "wildaside:entorium/entorium_particle_16"
   ]
 }
