@@ -47,6 +47,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.SUBSTILIUM_SIGN.get())
                 .add(ModBlocks.SUBSTILIUM_HANGING_SIGN.get());
 
+
+
         this.tag(ModTags.Blocks.HUGE_MUSHROOM_GROW_BLOCK)
                 .add(ModBlocks.SUBSTILIUM_SOIL.get())
                 .add(ModBlocks.OVERGROWN_ENTORIUM_ORE.get());
@@ -81,7 +83,6 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.SUBSTILIUM_WOOD.get())
                 .add(ModBlocks.STRIPPED_SUBSTILIUM_STEM.get())
                 .add(ModBlocks.STRIPPED_SUBSTILIUM_WOOD.get())
-                .add(ModBlocks.SUBSTILIUM_WOOD.get())
                 .add(ModBlocks.SUBSTILIUM_PLANKS.get())
                 .add(ModBlocks.SUBSTILIUM_STAIRS.get())
                 .add(ModBlocks.SUBSTILIUM_SLAB.get())
@@ -92,7 +93,22 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.SUBSTILIUM_FENCE.get())
                 .add(ModBlocks.SUBSTILIUM_FENCE_GATE.get())
                 .add(ModBlocks.SUBSTILIUM_SIGN.get())
-                .add(ModBlocks.SUBSTILIUM_HANGING_SIGN.get());
+                .add(ModBlocks.SUBSTILIUM_HANGING_SIGN.get())
+                .add(ModBlocks.HICKORY_LOG.get())
+                .add(ModBlocks.HICKORY_WOOD.get())
+                .add(ModBlocks.STRIPPED_HICKORY_LOG.get())
+                .add(ModBlocks.STRIPPED_HICKORY_WOOD.get())
+                .add(ModBlocks.HICKORY_PLANKS.get())
+                .add(ModBlocks.HICKORY_STAIRS.get())
+                .add(ModBlocks.HICKORY_SLAB.get())
+                .add(ModBlocks.HICKORY_PRESSURE_PLATE.get())
+                .add(ModBlocks.HICKORY_BUTTON.get())
+                .add(ModBlocks.HICKORY_DOOR.get())
+                .add(ModBlocks.HICKORY_TRAPDOOR.get())
+                .add(ModBlocks.HICKORY_FENCE.get())
+                .add(ModBlocks.HICKORY_FENCE_GATE.get())
+                .add(ModBlocks.HICKORY_SIGN.get())
+                .add(ModBlocks.HICKORY_HANGING_SIGN.get());
 
         this.tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.ENTORIUM_ORE.get())
@@ -101,9 +117,11 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         //
 
         this.tag(BlockTags.FENCES)
-                .add(ModBlocks.SUBSTILIUM_FENCE.get());
+                .add(ModBlocks.SUBSTILIUM_FENCE.get())
+                .add(ModBlocks.HICKORY_FENCE.get());
         this.tag(BlockTags.FENCE_GATES)
-                .add(ModBlocks.SUBSTILIUM_FENCE_GATE.get());
+                .add(ModBlocks.SUBSTILIUM_FENCE_GATE.get())
+                .add(ModBlocks.HICKORY_FENCE_GATE.get());
         this.tag(BlockTags.WALLS)
                 .add(ModBlocks.SUBSTILIUM_TILE_WALLS.get());
 
@@ -111,9 +129,14 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.SUBSTILIUM_STEM.get())
                 .add(ModBlocks.STRIPPED_SUBSTILIUM_STEM.get())
                 .add(ModBlocks.SUBSTILIUM_WOOD.get())
-                .add(ModBlocks.STRIPPED_SUBSTILIUM_WOOD.get());
+                .add(ModBlocks.STRIPPED_SUBSTILIUM_WOOD.get())
+                .add(ModBlocks.HICKORY_LOG.get())
+                .add(ModBlocks.STRIPPED_HICKORY_LOG.get())
+                .add(ModBlocks.HICKORY_WOOD.get())
+                .add(ModBlocks.STRIPPED_HICKORY_WOOD.get());
 
         this.tag(BlockTags.PLANKS)
-                .add(ModBlocks.SUBSTILIUM_PLANKS.get());
+                .add(ModBlocks.SUBSTILIUM_PLANKS.get())
+                .add(ModBlocks.HICKORY_PLANKS.get());
     }
 }

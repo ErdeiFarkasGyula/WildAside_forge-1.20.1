@@ -98,6 +98,32 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
 //        this.add(ModBlocks.PINE_LEAVES.get(), block ->
 //                createLeavesDrops(block, ModBlocks.SAPPHIRE_BLOCK.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+
+        this.dropSelf(ModBlocks.HICKORY_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_HICKORY_LOG.get());
+        this.dropSelf(ModBlocks.HICKORY_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_HICKORY_WOOD.get());
+        this.dropSelf(ModBlocks.HICKORY_PLANKS.get());
+        this.dropSelf(ModBlocks.HICKORY_STAIRS.get());
+        this.dropSelf(ModBlocks.HICKORY_FENCE.get());
+        this.dropSelf(ModBlocks.HICKORY_FENCE_GATE.get());
+        this.dropSelf(ModBlocks.HICKORY_BUTTON.get());
+        this.dropSelf(ModBlocks.HICKORY_PRESSURE_PLATE.get());
+        this.dropSelf(ModBlocks.HICKORY_TRAPDOOR.get());
+
+        this.add(ModBlocks.HICKORY_SIGN.get(),
+                block -> createSingleItemTable(ModBlocks.HICKORY_SIGN.get()));
+        this.add(ModBlocks.HICKORY_WALL_SIGN.get(),
+                block -> createSingleItemTable(ModBlocks.HICKORY_SIGN.get()));
+        this.add(ModBlocks.HICKORY_HANGING_SIGN.get(),
+                block -> createSingleItemTable(ModBlocks.HICKORY_HANGING_SIGN.get()));
+        this.add(ModBlocks.HICKORY_WALL_HANGING_SIGN.get(),
+                block -> createSingleItemTable(ModBlocks.HICKORY_HANGING_SIGN.get()));
+
+        this.add(ModBlocks.HICKORY_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.HICKORY_SLAB.get()));
+        this.add(ModBlocks.HICKORY_DOOR.get(),
+                block -> createSlabItemTable(ModBlocks.HICKORY_DOOR.get()));
     }
 
     protected LootTable.Builder createSilktouchedFortuneDrops(Block pBlock, Item item, int min, int max) {

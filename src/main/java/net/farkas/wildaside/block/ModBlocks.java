@@ -49,6 +49,13 @@ public class ModBlocks {
                     .strength(2F,  1F)
                     .lightLevel(l -> 7),  UniformInt.of(1, 2)));
 
+//    public static final RegistryObject<Block> COMPRESSED_VIBRION_BLOCK = registerBlock("vibrion_block",
+//            () ->  new DropExperienceBlock(BlockBehaviour.Properties.of()
+//                    .mapColor(MapColor.COLOR_YELLOW)
+//                    .sound(SoundType.SHROOMLIGHT)
+//                    .strength(2F,  1F)
+//                    .lightLevel(l -> 7),  UniformInt.of(1, 2)));
+
     public static final RegistryObject<Block> VIBRION_GEL = registerBlock("vibrion_gel",
             () ->  new VibrionGel(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.COLOR_YELLOW)
@@ -289,7 +296,67 @@ public class ModBlocks {
             () ->  new FlowerBlock(() -> MobEffects.CONFUSION, 5, BlockBehaviour.Properties.copy(VIBRION_GROWTH.get())
                     .mapColor(MapColor.COLOR_CYAN)
                     .lightLevel(l -> 0)));
+
+
     //HICKORY
+    public static final RegistryObject<Block> HICKORY_LOG = registerBlock("hickory_log",
+            () ->  new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)
+                    .mapColor(MapColor.TERRACOTTA_ORANGE)
+                    .strength(2.5f, 4)));
+
+    public static final RegistryObject<Block> HICKORY_WOOD = registerBlock("hickory_wood",
+            () ->  new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(HICKORY_LOG.get())));
+
+    public static final RegistryObject<Block> STRIPPED_HICKORY_LOG = registerBlock("stripped_hickory_log",
+            () ->  new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(ModBlocks.HICKORY_LOG.get())));
+
+    public static final RegistryObject<Block> STRIPPED_HICKORY_WOOD = registerBlock("stripped_hickory_wood",
+            () ->  new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(ModBlocks.HICKORY_LOG.get())));
+
+    public static final RegistryObject<Block> HICKORY_PLANKS = registerBlock("hickory_planks",
+            () ->  new ModFlammableBlock(BlockBehaviour.Properties.copy(HICKORY_LOG.get()), 10, 5));
+
+    public static final RegistryObject<Block> HICKORY_STAIRS = registerBlock("hickory_stairs",
+            () ->  new StairBlock(() -> ModBlocks.HICKORY_PLANKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(HICKORY_PLANKS.get())));
+
+    public static final RegistryObject<Block> HICKORY_SLAB = registerBlock("hickory_slab",
+            () ->  new SlabBlock(BlockBehaviour.Properties.copy(HICKORY_PLANKS.get())));
+
+    public static final RegistryObject<Block> HICKORY_BUTTON = registerBlock("hickory_button",
+            () ->  new ButtonBlock(BlockBehaviour.Properties.copy(HICKORY_PLANKS.get()).strength(1, 1), BlockSetType.OAK, 5, true));
+
+    public static final RegistryObject<Block> HICKORY_PRESSURE_PLATE = registerBlock("hickory_pressure_plate",
+            () ->  new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING,BlockBehaviour.Properties.copy(HICKORY_BUTTON.get()),
+                    BlockSetType.OAK));
+
+    public static final RegistryObject<Block> HICKORY_FENCE = registerBlock("hickory_fence",
+            () ->  new FenceBlock(BlockBehaviour.Properties.copy(HICKORY_PLANKS.get())));
+
+    public static final RegistryObject<Block> HICKORY_FENCE_GATE = registerBlock("hickory_fence_gate",
+            () ->  new FenceGateBlock(BlockBehaviour.Properties.copy(HICKORY_PLANKS.get()),
+                    SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
+
+    public static final RegistryObject<Block> HICKORY_DOOR = registerBlock("hickory_door",
+            () ->  new DoorBlock(BlockBehaviour.Properties.copy(HICKORY_PLANKS.get()), BlockSetType.OAK));
+
+    public static final RegistryObject<Block> HICKORY_TRAPDOOR = registerBlock("hickory_trapdoor",
+            () ->  new TrapDoorBlock(BlockBehaviour.Properties.copy(HICKORY_PLANKS.get()).noOcclusion(), BlockSetType.OAK));
+
+    public static final RegistryObject<Block> HICKORY_SIGN = BLOCKS.register("hickory_sign",
+            () ->  new ModStandingSignBlock(BlockBehaviour.Properties.copy(HICKORY_PLANKS.get()).strength(1).forceSolidOn().noCollission(), ModWoodTypes.HICKORY));
+    public static final RegistryObject<Block> HICKORY_WALL_SIGN = BLOCKS.register("hickory_wall_sign",
+            () ->  new ModWallSignBlock(BlockBehaviour.Properties.copy(HICKORY_PLANKS.get()).strength(1).forceSolidOn().noCollission(), ModWoodTypes.HICKORY));
+
+    public static final RegistryObject<Block> HICKORY_HANGING_SIGN = BLOCKS.register("hickory_hanging_sign",
+            () ->  new ModHangingSignBlock(BlockBehaviour.Properties.copy(HICKORY_PLANKS.get()).strength(1).forceSolidOn().noCollission(), ModWoodTypes.HICKORY));
+    public static final RegistryObject<Block> HICKORY_WALL_HANGING_SIGN = BLOCKS.register("hickory_hanging_wall_sign",
+            () ->  new ModWallHangingSignBlock(BlockBehaviour.Properties.copy(HICKORY_PLANKS.get()).strength(1).forceSolidOn().noCollission(),  ModWoodTypes.HICKORY));
+
+//    public static final RegistryObject<Block> SUBSTILIUM_SPROUTS = registerBlock("substilium_sprouts",
+//            () ->  new FlowerBlock(() -> MobEffects.CONFUSION, 5, BlockBehaviour.Properties.copy(VIBRION_GROWTH.get())
+//                    .mapColor(MapColor.COLOR_CYAN)
+//                    .lightLevel(l -> 0)));
 //    public static final RegistryObject<Block> HICKORY_LEAVES = registerBlock("hickory_leaves",
 //            () ->  new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
 

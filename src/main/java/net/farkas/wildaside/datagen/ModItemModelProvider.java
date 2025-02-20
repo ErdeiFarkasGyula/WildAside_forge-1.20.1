@@ -56,6 +56,24 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.SUBSTILIUM_BOAT);
         simpleItem(ModItems.SUBSTILIUM_CHEST_BOAT);
         simpleBlockItemBlockTexture(ModBlocks.SUBSTILIUM_SPROUTS);
+
+        //HICKORY
+        simpleBlockItem(ModBlocks.HICKORY_DOOR);
+        trapdoorItem(ModBlocks.HICKORY_TRAPDOOR);
+        evenSimplerBlockItem(ModBlocks.HICKORY_LOG);
+        evenSimplerBlockItem(ModBlocks.HICKORY_WOOD);
+        evenSimplerBlockItem(ModBlocks.STRIPPED_HICKORY_LOG);
+        evenSimplerBlockItem(ModBlocks.STRIPPED_HICKORY_WOOD);
+        evenSimplerBlockItem(ModBlocks.HICKORY_STAIRS);
+        evenSimplerBlockItem(ModBlocks.HICKORY_SLAB);
+        evenSimplerBlockItem(ModBlocks.HICKORY_FENCE_GATE);
+        evenSimplerBlockItem(ModBlocks.HICKORY_PRESSURE_PLATE);
+        fenceItem(ModBlocks.HICKORY_FENCE, ModBlocks.HICKORY_PLANKS);
+        buttonItem(ModBlocks.HICKORY_BUTTON, ModBlocks.HICKORY_PLANKS);
+        simpleItem(ModItems.HICKORY_SIGN);
+        simpleItem(ModItems.HICKORY_HANGING_SIGN);
+//        simpleItem(ModItems.SUBSTILIUM_BOAT);
+//        simpleItem(ModItems.SUBSTILIUM_CHEST_BOAT);
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {

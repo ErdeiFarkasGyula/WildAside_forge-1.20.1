@@ -35,6 +35,7 @@ public class ModBoatEntity extends Boat {
     public Item getDropItem() {
         return switch (getModVariant()) {
             case SUBSTILIUM -> ModItems.SUBSTILIUM_BOAT.get();
+            case HICKORY -> ModItems.HI.get();
         };
     }
 

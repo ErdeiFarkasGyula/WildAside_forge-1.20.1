@@ -58,6 +58,16 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 ModBlocks.SUBSTILIUM_FENCE_GATE.get(),  ModBlocks.SUBSTILIUM_PRESSURE_PLATE.get(), ModBlocks.SUBSTILIUM_BUTTON.get(),
                 ModBlocks.SUBSTILIUM_DOOR.get(), ModBlocks.SUBSTILIUM_TRAPDOOR.get(), ModBlocks.SUBSTILIUM_SIGN.get(), ModBlocks.SUBSTILIUM_HANGING_SIGN.get(),
                 ModItems.SUBSTILIUM_BOAT.get(), ModItems.SUBSTILIUM_CHEST_BOAT.get());
+        defaultWoodSet(pWriter, SUBSTILIUM_WOODSET);
+
+
+        List<ItemLike> HICKORY_WOODSET = List.of(ModBlocks.HICKORY_LOG.get().asItem(), ModBlocks.STRIPPED_HICKORY_LOG.get(),
+                ModBlocks.HICKORY_WOOD.get(), ModBlocks.STRIPPED_HICKORY_WOOD.get(), ModBlocks.HICKORY_PLANKS.get(),
+                ModBlocks.HICKORY_STAIRS.get(), ModBlocks.HICKORY_SLAB.get(), ModBlocks.HICKORY_FENCE.get(),
+                ModBlocks.HICKORY_FENCE_GATE.get(),  ModBlocks.HICKORY_PRESSURE_PLATE.get(), ModBlocks.HICKORY_BUTTON.get(),
+                ModBlocks.HICKORY_DOOR.get(), ModBlocks.HICKORY_TRAPDOOR.get(), ModBlocks.HICKORY_SIGN.get(), ModBlocks.HICKORY_HANGING_SIGN.get(),
+                ModItems.SUBSTILIUM_BOAT.get(), ModItems.SUBSTILIUM_CHEST_BOAT.get());
+        defaultWoodSet(pWriter, HICKORY_WOODSET);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.COMPRESSED_SUBSTILIUM_SOIL.get(), 2)
                 .pattern("SS")
@@ -106,7 +116,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         oreSmelting(pWriter, List.of(tiles), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_SUBSTILIUM_TILES.get(), 0.20f, 200, "cracked_substilium_tiles");
 
-        defaultWoodSet(pWriter, SUBSTILIUM_WOODSET);
     }
 
     protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTIme, String pGroup) {
