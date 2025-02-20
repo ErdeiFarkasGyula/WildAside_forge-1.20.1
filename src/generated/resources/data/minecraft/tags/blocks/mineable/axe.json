@@ -5,7 +5,6 @@
     "wildaside:substilium_wood",
     "wildaside:stripped_substilium_stem",
     "wildaside:stripped_substilium_wood",
-    "wildaside:substilium_wood",
     "wildaside:substilium_planks",
     "wildaside:substilium_stairs",
     "wildaside:substilium_slab",
@@ -16,6 +15,21 @@
     "wildaside:substilium_fence",
     "wildaside:substilium_fence_gate",
     "wildaside:substilium_sign",
-    "wildaside:substilium_hanging_sign"
+    "wildaside:substilium_hanging_sign",
+    "wildaside:hickory_log",
+    "wildaside:hickory_wood",
+    "wildaside:stripped_hickory_log",
+    "wildaside:stripped_hickory_wood",
+    "wildaside:hickory_planks",
+    "wildaside:hickory_stairs",
+    "wildaside:hickory_slab",
+    "wildaside:hickory_pressure_plate",
+    "wildaside:hickory_button",
+    "wildaside:hickory_door",
+    "wildaside:hickory_trapdoor",
+    "wildaside:hickory_fence",
+    "wildaside:hickory_fence_gate",
+    "wildaside:hickory_sign",
+    "wildaside:hickory_hanging_sign"
   ]
 }

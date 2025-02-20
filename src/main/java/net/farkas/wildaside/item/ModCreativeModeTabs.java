@@ -67,7 +67,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.SUBSTILIUM_SPROUTS.get());
 
                         pOutput.accept(ModBlocks.HICKORY_LOG.get());
-                        pOutput.accept(ModBlocks.STRIPPED_HICKORY_LOG.get());
+                        pOutput.accept(ModBlocks.HICKORY_WOOD.get());
                         pOutput.accept(ModBlocks.STRIPPED_HICKORY_LOG.get());
                         pOutput.accept(ModBlocks.STRIPPED_HICKORY_WOOD.get());
                         pOutput.accept(ModBlocks.HICKORY_PLANKS.get());
@@ -81,8 +81,8 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.HICKORY_BUTTON.get());
                         pOutput.accept(ModBlocks.HICKORY_SIGN.get());
                         pOutput.accept(ModBlocks.HICKORY_HANGING_SIGN.get());
-//                        pOutput.accept(ModItems.SUBSTILIUM_BOAT.get());
-//                        pOutput.accept(ModItems.SUBSTILIUM_CHEST_BOAT.get());
+                        pOutput.accept(ModItems.HICKORY_BOAT.get());
+                        pOutput.accept(ModItems.HICKORY_CHEST_BOAT.get());
 
                     })
                     .build());

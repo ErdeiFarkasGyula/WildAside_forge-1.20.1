@@ -35,7 +35,7 @@ public class ModBoatEntity extends Boat {
     public Item getDropItem() {
         return switch (getModVariant()) {
             case SUBSTILIUM -> ModItems.SUBSTILIUM_BOAT.get();
-            case HICKORY -> ModItems.HI.get();
+            case HICKORY -> ModItems.HICKORY_BOAT.get();
         };
     }
 
@@ -63,7 +63,9 @@ public class ModBoatEntity extends Boat {
     }
 
     public static enum Type implements StringRepresentable {
-        SUBSTILIUM(ModBlocks.SUBSTILIUM_PLANKS.get(), "substilium");
+        SUBSTILIUM(ModBlocks.SUBSTILIUM_PLANKS.get(), "substilium"),
+        HICKORY(ModBlocks.HICKORY_PLANKS.get(), "hickory");
+
         private final String name;
         private final Block planks;
         public static final StringRepresentable.EnumCodec<ModBoatEntity.Type> CODEC = StringRepresentable.fromEnum(ModBoatEntity.Type::values);

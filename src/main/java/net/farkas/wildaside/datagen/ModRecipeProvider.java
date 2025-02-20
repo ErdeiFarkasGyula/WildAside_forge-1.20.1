@@ -66,7 +66,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 ModBlocks.HICKORY_STAIRS.get(), ModBlocks.HICKORY_SLAB.get(), ModBlocks.HICKORY_FENCE.get(),
                 ModBlocks.HICKORY_FENCE_GATE.get(),  ModBlocks.HICKORY_PRESSURE_PLATE.get(), ModBlocks.HICKORY_BUTTON.get(),
                 ModBlocks.HICKORY_DOOR.get(), ModBlocks.HICKORY_TRAPDOOR.get(), ModBlocks.HICKORY_SIGN.get(), ModBlocks.HICKORY_HANGING_SIGN.get(),
-                ModItems.SUBSTILIUM_BOAT.get(), ModItems.SUBSTILIUM_CHEST_BOAT.get());
+                ModItems.HICKORY_BOAT.get(), ModItems.HICKORY_CHEST_BOAT.get());
         defaultWoodSet(pWriter, HICKORY_WOODSET);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.COMPRESSED_SUBSTILIUM_SOIL.get(), 2)

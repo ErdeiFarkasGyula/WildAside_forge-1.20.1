@@ -9,4 +9,8 @@ public class ModModelLayers {
             new ResourceLocation(WildAside.MOD_ID, "boat/substilium"), "main");
     public static final ModelLayerLocation SUBSTILIUM_CHEST_BOAT_LAYER = new ModelLayerLocation(
             new ResourceLocation(WildAside.MOD_ID, "chest_boat/substilium"), "main");
+    public static final ModelLayerLocation HICKORY_BOAT_LAYER = new ModelLayerLocation(
+            new ResourceLocation(WildAside.MOD_ID, "boat/hickory"), "main");
+    public static final ModelLayerLocation HICKORY_CHEST_BOAT_LAYER = new ModelLayerLocation(
+            new ResourceLocation(WildAside.MOD_ID, "chest_boat/hickory"), "main");
 }

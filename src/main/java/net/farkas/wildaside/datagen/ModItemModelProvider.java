@@ -72,8 +72,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         buttonItem(ModBlocks.HICKORY_BUTTON, ModBlocks.HICKORY_PLANKS);
         simpleItem(ModItems.HICKORY_SIGN);
         simpleItem(ModItems.HICKORY_HANGING_SIGN);
-//        simpleItem(ModItems.SUBSTILIUM_BOAT);
-//        simpleItem(ModItems.SUBSTILIUM_CHEST_BOAT);
+        simpleItem(ModItems.HICKORY_BOAT);
+        simpleItem(ModItems.HICKORY_CHEST_BOAT);
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {

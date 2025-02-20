@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "wildaside:block/hickory_log_side",
+    "side": "wildaside:block/hickory_log_side"
+  }
+}

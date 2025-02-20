@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "wildaside:block/hickory_planks",
+    "side": "wildaside:block/hickory_planks",
+    "top": "wildaside:block/hickory_planks"
+  }
+}

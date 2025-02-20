@@ -76,7 +76,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         //leavesBlock(ModBlocks);
         axisBlock(((RotatedPillarBlock) ModBlocks.HICKORY_LOG.get()), modLoc("block/hickory_log_side"), modLoc("block/hickory_log_top"));
         axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_HICKORY_LOG.get()), modLoc("block/stripped_hickory_log_side"), modLoc("block/stripped_hickory_log_top"));
-        axisBlock(((RotatedPillarBlock) ModBlocks.HICKORY_WOOD.get()), modLoc("block/substilium_stem_side"), modLoc("block/substilium_stem_side"));
+        axisBlock(((RotatedPillarBlock) ModBlocks.HICKORY_WOOD.get()), modLoc("block/hickory_log_side"), modLoc("block/hickory_log_side"));
         axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_HICKORY_WOOD.get()), modLoc("block/stripped_hickory_log_side"), modLoc("block/stripped_hickory_log_side"));
         blockWithItem(ModBlocks.HICKORY_PLANKS);
         stairsBlock(((StairBlock)ModBlocks.HICKORY_STAIRS.get()), blockTexture(ModBlocks.HICKORY_PLANKS.get()));
@@ -85,8 +85,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         pressurePlateBlock(((PressurePlateBlock)ModBlocks.HICKORY_PRESSURE_PLATE.get()), blockTexture(ModBlocks.HICKORY_PLANKS.get()));
         fenceBlock(((FenceBlock)ModBlocks.HICKORY_FENCE.get()), blockTexture(ModBlocks.HICKORY_PLANKS.get()));
         fenceGateBlock(((FenceGateBlock)ModBlocks.HICKORY_FENCE_GATE.get()), blockTexture(ModBlocks.HICKORY_PLANKS.get()));
-        doorBlockWithRenderType(((DoorBlock)ModBlocks.HICKORY_DOOR.get()), modLoc("block/substilium_door_bottom"), modLoc("block/substilium_door_top"), "cutout");
-        trapdoorBlockWithRenderType(((TrapDoorBlock)ModBlocks.HICKORY_TRAPDOOR.get()), modLoc("block/substilium_trapdoor"), true, "cutout");
+        doorBlockWithRenderType(((DoorBlock)ModBlocks.HICKORY_DOOR.get()), modLoc("block/hickory_door_bottom"), modLoc("block/hickory_door_top"), "cutout");
+        trapdoorBlockWithRenderType(((TrapDoorBlock)ModBlocks.HICKORY_TRAPDOOR.get()), modLoc("block/hickory_trapdoor"), true, "cutout");
         signBlock(((StandingSignBlock) ModBlocks.HICKORY_SIGN.get()), ((WallSignBlock) ModBlocks.HICKORY_WALL_SIGN.get()), blockTexture(ModBlocks.HICKORY_PLANKS.get()));
         hangingSignBlock((ModBlocks.HICKORY_HANGING_SIGN.get()), (ModBlocks.HICKORY_WALL_HANGING_SIGN.get()), blockTexture(ModBlocks.HICKORY_PLANKS.get()));
     }
