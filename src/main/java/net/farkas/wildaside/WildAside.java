@@ -10,6 +10,8 @@ import net.farkas.wildaside.item.ModCreativeModeTabs;
 import net.farkas.wildaside.item.ModItems;
 import net.farkas.wildaside.particle.ModParticles;
 import net.farkas.wildaside.util.ModWoodTypes;
+import net.farkas.wildaside.worldgen.biome.ModTerraBlenderAPI;
+import net.farkas.wildaside.worldgen.biome.surface.ModSurfaceRules;
 import net.farkas.wildaside.worldgen.mushroom.ModStemPlacerTypes;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -28,6 +30,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
+import terrablender.api.SurfaceRuleManager;
 
 @Mod(WildAside.MOD_ID)
 public class WildAside
@@ -53,6 +56,8 @@ public class WildAside
 
         ModParticles.register(modEventBus);
 
+        ModTerraBlenderAPI.registerRegions();
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -65,6 +70,8 @@ public class WildAside
         event.enqueueWork(() -> {
             ((FlowerPotBlock)Blocks.FLOWER_POT).addPlant(ModBlocks.VIBRION_GROWTH.getId(), ModBlocks.POTTED_VIBRION_GROWTH);
         });
+
+        SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, MOD_ID, ModSurfaceRules.makeRules());
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event)
