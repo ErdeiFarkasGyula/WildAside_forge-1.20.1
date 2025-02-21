@@ -25,10 +25,15 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 .add(ModBlocks.SUBSTILIUM_STEM.get().asItem())
                 .add(ModBlocks.STRIPPED_SUBSTILIUM_STEM.get().asItem())
                 .add(ModBlocks.SUBSTILIUM_WOOD.get().asItem())
-                .add(ModBlocks.STRIPPED_SUBSTILIUM_WOOD.get().asItem());
+                .add(ModBlocks.STRIPPED_SUBSTILIUM_WOOD.get().asItem())
+                .add(ModBlocks.HICKORY_LOG.get().asItem())
+                .add(ModBlocks.STRIPPED_HICKORY_LOG.get().asItem())
+                .add(ModBlocks.HICKORY_WOOD.get().asItem())
+                .add(ModBlocks.STRIPPED_HICKORY_WOOD.get().asItem());
 
         this.tag(ItemTags.PLANKS)
-                .add(ModBlocks.SUBSTILIUM_PLANKS.get().asItem());
+                .add(ModBlocks.SUBSTILIUM_PLANKS.get().asItem())
+                .add(ModBlocks.HICKORY_PLANKS.get().asItem());
 
     }
 }

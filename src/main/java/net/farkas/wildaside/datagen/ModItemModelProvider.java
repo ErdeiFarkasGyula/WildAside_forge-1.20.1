@@ -74,6 +74,17 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.HICKORY_HANGING_SIGN);
         simpleItem(ModItems.HICKORY_BOAT);
         simpleItem(ModItems.HICKORY_CHEST_BOAT);
+
+        evenSimplerBlockItem(ModBlocks.HICKORY_LEAVES);
+        simpleBlockItemBlockTexture(ModBlocks.HICKORY_SAPLING);
+        simpleBlockItemBlockTexture(ModBlocks.RED_GLOWING_HICKORY_SAPLING);
+        simpleBlockItemBlockTexture(ModBlocks.BROWN_GLOWING_HICKORY_SAPLING);
+        simpleBlockItemBlockTexture(ModBlocks.YELLOW_GLOWING_HICKORY_SAPLING);
+        simpleBlockItemBlockTexture(ModBlocks.GREEN_GLOWING_HICKORY_SAPLING);
+
+        simpleBlockItemBlockTexture(ModBlocks.SPOTTED_WINTERGREEN);
+        simpleBlockItemBlockTexture(ModBlocks.PINKSTER_FLOWER);
+
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
@@ -118,6 +129,7 @@ public class ModItemModelProvider extends ItemModelProvider {
                 new ResourceLocation("item/generated")).texture("layer0",
                 new ResourceLocation(WildAside.MOD_ID,"block/" + item2.getId().getPath()));
     }
+
 
     private ItemModelBuilder simpleBlockItemBlockTexture(RegistryObject<Block> item) {
         return withExistingParent(item.getId().getPath(),

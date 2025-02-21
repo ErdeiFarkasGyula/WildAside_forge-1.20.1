@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "wildaside:block/brown_glowing_hickory_sapling"
+  }
+}

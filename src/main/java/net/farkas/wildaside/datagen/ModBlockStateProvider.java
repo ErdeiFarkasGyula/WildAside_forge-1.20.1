@@ -73,7 +73,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.OVERGROWN_ENTORIUM_ORE);
 
         //HICKORY
-        //leavesBlock(ModBlocks);
         axisBlock(((RotatedPillarBlock) ModBlocks.HICKORY_LOG.get()), modLoc("block/hickory_log_side"), modLoc("block/hickory_log_top"));
         axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_HICKORY_LOG.get()), modLoc("block/stripped_hickory_log_side"), modLoc("block/stripped_hickory_log_top"));
         axisBlock(((RotatedPillarBlock) ModBlocks.HICKORY_WOOD.get()), modLoc("block/hickory_log_side"), modLoc("block/hickory_log_side"));
@@ -89,6 +88,23 @@ public class ModBlockStateProvider extends BlockStateProvider {
         trapdoorBlockWithRenderType(((TrapDoorBlock)ModBlocks.HICKORY_TRAPDOOR.get()), modLoc("block/hickory_trapdoor"), true, "cutout");
         signBlock(((StandingSignBlock) ModBlocks.HICKORY_SIGN.get()), ((WallSignBlock) ModBlocks.HICKORY_WALL_SIGN.get()), blockTexture(ModBlocks.HICKORY_PLANKS.get()));
         hangingSignBlock((ModBlocks.HICKORY_HANGING_SIGN.get()), (ModBlocks.HICKORY_WALL_HANGING_SIGN.get()), blockTexture(ModBlocks.HICKORY_PLANKS.get()));
+
+        leavesBlock(ModBlocks.HICKORY_LEAVES);
+
+        crossBlock(ModBlocks.HICKORY_SAPLING);
+        crossBlock(ModBlocks.RED_GLOWING_HICKORY_SAPLING);
+        crossBlock(ModBlocks.BROWN_GLOWING_HICKORY_SAPLING);
+        crossBlock(ModBlocks.YELLOW_GLOWING_HICKORY_SAPLING);
+        crossBlock(ModBlocks.GREEN_GLOWING_HICKORY_SAPLING);
+
+        crossBlock(ModBlocks.SPOTTED_WINTERGREEN);
+        crossBlock(ModBlocks.PINKSTER_FLOWER);
+
+    }
+
+    private void crossBlock(RegistryObject<Block> blockRegistryObject) {
+        simpleBlock(blockRegistryObject.get(),
+                models().cross(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), blockTexture(blockRegistryObject.get())).renderType("cutout"));
     }
 
     public void hangingSignBlock(Block signBlock, Block wallSignBlock, ResourceLocation texture) {

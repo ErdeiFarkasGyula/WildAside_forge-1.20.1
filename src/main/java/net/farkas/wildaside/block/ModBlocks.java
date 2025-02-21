@@ -353,12 +353,26 @@ public class ModBlocks {
     public static final RegistryObject<Block> HICKORY_WALL_HANGING_SIGN = BLOCKS.register("hickory_hanging_wall_sign",
             () ->  new ModWallHangingSignBlock(BlockBehaviour.Properties.copy(HICKORY_PLANKS.get()).strength(1).forceSolidOn().noCollission(),  ModWoodTypes.HICKORY));
 
-//    public static final RegistryObject<Block> SUBSTILIUM_SPROUTS = registerBlock("substilium_sprouts",
-//            () ->  new FlowerBlock(() -> MobEffects.CONFUSION, 5, BlockBehaviour.Properties.copy(VIBRION_GROWTH.get())
-//                    .mapColor(MapColor.COLOR_CYAN)
-//                    .lightLevel(l -> 0)));
-//    public static final RegistryObject<Block> HICKORY_LEAVES = registerBlock("hickory_leaves",
-//            () ->  new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+    public static final RegistryObject<Block> SPOTTED_WINTERGREEN = registerBlock("spotted_wintergreen",
+            () ->  new FlowerBlock(() -> MobEffects.MOVEMENT_SPEED, 10, BlockBehaviour.Properties.copy(Blocks.RED_TULIP)));
+    public static final RegistryObject<Block> PINKSTER_FLOWER = registerBlock("pinkster_flower",
+            () ->  new FlowerBlock(() -> MobEffects.CONFUSION, 10, BlockBehaviour.Properties.copy(Blocks.RED_TULIP)));
+
+
+    public static final RegistryObject<Block> HICKORY_LEAVES = registerBlock("hickory_leaves",
+            () ->  new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+
+    public static final RegistryObject<Block> HICKORY_SAPLING = registerBlock("hickory_sapling",
+            () ->  new SaplingBlock(new SubstiliumMushroomGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+    public static final RegistryObject<Block> RED_GLOWING_HICKORY_SAPLING = registerBlock("red_glowing_hickory_sapling",
+            () ->  new SaplingBlock(new SubstiliumMushroomGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)
+                    .lightLevel(l -> 3)));
+    public static final RegistryObject<Block> BROWN_GLOWING_HICKORY_SAPLING = registerBlock("brown_glowing_hickory_sapling",
+            () ->  new SaplingBlock(new SubstiliumMushroomGrower(), BlockBehaviour.Properties.copy(RED_GLOWING_HICKORY_SAPLING.get())));
+    public static final RegistryObject<Block> YELLOW_GLOWING_HICKORY_SAPLING = registerBlock("yellow_glowing_hickory_sapling",
+            () ->  new SaplingBlock(new SubstiliumMushroomGrower(), BlockBehaviour.Properties.copy(RED_GLOWING_HICKORY_SAPLING.get())));
+    public static final RegistryObject<Block> GREEN_GLOWING_HICKORY_SAPLING = registerBlock("green_glowing_hickory_sapling",
+            () ->  new SaplingBlock(new SubstiliumMushroomGrower(), BlockBehaviour.Properties.copy(RED_GLOWING_HICKORY_SAPLING.get())));
 
 
 

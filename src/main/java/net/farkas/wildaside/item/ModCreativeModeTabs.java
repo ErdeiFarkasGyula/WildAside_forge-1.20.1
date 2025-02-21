@@ -83,6 +83,15 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.HICKORY_HANGING_SIGN.get());
                         pOutput.accept(ModItems.HICKORY_BOAT.get());
                         pOutput.accept(ModItems.HICKORY_CHEST_BOAT.get());
+                        pOutput.accept(ModBlocks.HICKORY_LEAVES.get());
+                        pOutput.accept(ModBlocks.HICKORY_SAPLING.get());
+                        pOutput.accept(ModBlocks.RED_GLOWING_HICKORY_SAPLING.get());
+                        pOutput.accept(ModBlocks.BROWN_GLOWING_HICKORY_SAPLING.get());
+                        pOutput.accept(ModBlocks.YELLOW_GLOWING_HICKORY_SAPLING.get());
+                        pOutput.accept(ModBlocks.GREEN_GLOWING_HICKORY_SAPLING.get());
+                        pOutput.accept(ModBlocks.SPOTTED_WINTERGREEN.get());
+                        pOutput.accept(ModBlocks.PINKSTER_FLOWER.get());
+
 
                     })
                     .build());

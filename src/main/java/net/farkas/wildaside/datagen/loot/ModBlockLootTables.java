@@ -96,8 +96,14 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.add(ModBlocks.SUBSTILIUM_DOOR.get(),
                 block -> createSlabItemTable(ModBlocks.SUBSTILIUM_DOOR.get()));
 
-//        this.add(ModBlocks.PINE_LEAVES.get(), block ->
-//                createLeavesDrops(block, ModBlocks.SAPPHIRE_BLOCK.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+        this.add(ModBlocks.HICKORY_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.HICKORY_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+
+        this.dropSelf(ModBlocks.HICKORY_SAPLING.get());
+        this.dropSelf(ModBlocks.RED_GLOWING_HICKORY_SAPLING.get());
+        this.dropSelf(ModBlocks.BROWN_GLOWING_HICKORY_SAPLING.get());
+        this.dropSelf(ModBlocks.YELLOW_GLOWING_HICKORY_SAPLING.get());
+        this.dropSelf(ModBlocks.GREEN_GLOWING_HICKORY_SAPLING.get());
 
         this.dropSelf(ModBlocks.HICKORY_LOG.get());
         this.dropSelf(ModBlocks.STRIPPED_HICKORY_LOG.get());
@@ -124,6 +130,11 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 block -> createSlabItemTable(ModBlocks.HICKORY_SLAB.get()));
         this.add(ModBlocks.HICKORY_DOOR.get(),
                 block -> createSlabItemTable(ModBlocks.HICKORY_DOOR.get()));
+
+        this.dropSelf(ModBlocks.SPOTTED_WINTERGREEN.get());
+        this.dropSelf(ModBlocks.PINKSTER_FLOWER.get());
+
+
     }
 
     protected LootTable.Builder createSilktouchedFortuneDrops(Block pBlock, Item item, int min, int max) {

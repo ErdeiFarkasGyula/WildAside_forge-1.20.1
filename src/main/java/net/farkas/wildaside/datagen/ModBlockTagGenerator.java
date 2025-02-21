@@ -138,5 +138,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         this.tag(BlockTags.PLANKS)
                 .add(ModBlocks.SUBSTILIUM_PLANKS.get())
                 .add(ModBlocks.HICKORY_PLANKS.get());
+
+        this.tag(BlockTags.LEAVES)
+                .add(ModBlocks.HICKORY_LEAVES.get());
     }
 }

@@ -1,6 +1,8 @@
-// 1.20.1	2025-02-20T18:27:20.4275453	Item Models: wildaside
+// 1.20.1	2025-02-21T20:14:03.1678318	Item Models: wildaside
+657a44b343b52d1185c119350b9599bc495c3976 assets/wildaside/models/item/brown_glowing_hickory_sapling.json
 7c314b9855fa14cfb6f45f4b35479303da8c369e assets/wildaside/models/item/entorium.json
 72ebbdfaa5d8b7399ab25ba412fa3bfdc404a9a3 assets/wildaside/models/item/entorium_ore.json
+38b74d994c2cdaad9628ff8db55869887a2feddf assets/wildaside/models/item/green_glowing_hickory_sapling.json
 8736fb3e4b7f17bd9161702e5696a8b936b15d90 assets/wildaside/models/item/hanging_vibrion_vines.json
 8736fb3e4b7f17bd9161702e5696a8b936b15d90 assets/wildaside/models/item/hanging_vibrion_vines_plant.json
 79072f42524870a091c9a2bb819a59c1661af479 assets/wildaside/models/item/hickory_boat.json
@@ -10,8 +12,10 @@
 a0698b6134905369e8e3a022cf78faaab16f4e46 assets/wildaside/models/item/hickory_fence.json
 9f167d3c821750d96a6f5bd62e9b7a8c80b6845c assets/wildaside/models/item/hickory_fence_gate.json
 a26dc7269bff8cf5a6ca1d2ba5c2a4cd4928e57e assets/wildaside/models/item/hickory_hanging_sign.json
+340552f571f87a113adbe4ddeb347dacd2d64988 assets/wildaside/models/item/hickory_leaves.json
 70771378941d5d2d07294cf895a5d587e82a90f1 assets/wildaside/models/item/hickory_log.json
 03319db4bf5d455645952b5f2ef29a130a99cc3d assets/wildaside/models/item/hickory_pressure_plate.json
+38539f8dbcf382e0a870a176a6a288377e74be93 assets/wildaside/models/item/hickory_sapling.json
 45745fbfaa8eef505ed0c0205c6b00d9a49774e7 assets/wildaside/models/item/hickory_sign.json
 920daeee1e67d9091077b1bd44c3e956949b9ae5 assets/wildaside/models/item/hickory_slab.json
 334830d368001f117a1497682ff7396b2d0d8153 assets/wildaside/models/item/hickory_stairs.json
@@ -19,6 +23,9 @@ a26dc7269bff8cf5a6ca1d2ba5c2a4cd4928e57e assets/wildaside/models/item/hickory_ha
 6423758f57bd46ac66d09d2ec8c876a3f96a78fa assets/wildaside/models/item/hickory_wood.json
 28b841c1b7ab30aa3f867a711da8e464c43ecf6b assets/wildaside/models/item/lit_vibrion_glass_pane.json
 06017fbe89a63026f0f3e0163d65cf1fa156d723 assets/wildaside/models/item/overgrown_entorium_ore.json
+968dcec5a5c71d9ad044f4e3738c602ffad2985d assets/wildaside/models/item/pinkster_flower.json
+d352d1091ffaa4c5a75c1920c4b91cb2664f1592 assets/wildaside/models/item/red_glowing_hickory_sapling.json
+5d6aa0d659537fe959c1581e669c5f9553426425 assets/wildaside/models/item/spotted_wintergreen.json
 62a1de6bc697c207fabeb6f8d1d78c9b09dc6d83 assets/wildaside/models/item/stripped_hickory_log.json
 212244a1472261fd7be8a6832709a5742e218065 assets/wildaside/models/item/stripped_hickory_wood.json
 2773129b6cb8e880b64baee053fa813761be623d assets/wildaside/models/item/stripped_substilium_stem.json
@@ -46,3 +53,4 @@ e64cd79400c73a174556db69ac31d1be127aa727 assets/wildaside/models/item/substilium
 ba9b6c59e041ca210f319502611fc9d1be5045be assets/wildaside/models/item/vibrion.json
 28b841c1b7ab30aa3f867a711da8e464c43ecf6b assets/wildaside/models/item/vibrion_glass_pane.json
 78d1091c6bfee6f5eb6f3d286f67bc150b54208f assets/wildaside/models/item/vibrion_growth.json
+cb73f5747f3c67d57251467433526023962b859a assets/wildaside/models/item/yellow_glowing_hickory_sapling.json
