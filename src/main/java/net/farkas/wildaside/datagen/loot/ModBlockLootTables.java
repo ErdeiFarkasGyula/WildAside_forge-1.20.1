@@ -94,7 +94,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.add(ModBlocks.SUBSTILIUM_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.SUBSTILIUM_SLAB.get()));
         this.add(ModBlocks.SUBSTILIUM_DOOR.get(),
-                block -> createSlabItemTable(ModBlocks.SUBSTILIUM_DOOR.get()));
+                block -> createDoorTable(ModBlocks.SUBSTILIUM_DOOR.get()));
 
         this.add(ModBlocks.HICKORY_LEAVES.get(), block ->
                 createLeavesDrops(block, ModBlocks.HICKORY_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
@@ -129,7 +129,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.add(ModBlocks.HICKORY_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.HICKORY_SLAB.get()));
         this.add(ModBlocks.HICKORY_DOOR.get(),
-                block -> createSlabItemTable(ModBlocks.HICKORY_DOOR.get()));
+                block -> createDoorTable(ModBlocks.HICKORY_DOOR.get()));
 
         this.dropSelf(ModBlocks.SPOTTED_WINTERGREEN.get());
         this.dropSelf(ModBlocks.PINKSTER_FLOWER.get());

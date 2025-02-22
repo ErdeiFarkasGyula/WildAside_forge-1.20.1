@@ -9,6 +9,8 @@ import net.farkas.wildaside.entity.client.ModBoatRenderer;
 import net.farkas.wildaside.item.ModCreativeModeTabs;
 import net.farkas.wildaside.item.ModItems;
 import net.farkas.wildaside.particle.ModParticles;
+import net.farkas.wildaside.potion.BetterBrewingRecipe;
+import net.farkas.wildaside.potion.ModPotions;
 import net.farkas.wildaside.util.ModWoodTypes;
 import net.farkas.wildaside.worldgen.biome.ModTerraBlenderAPI;
 import net.farkas.wildaside.worldgen.biome.surface.ModSurfaceRules;
@@ -17,10 +19,13 @@ import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -53,6 +58,7 @@ public class WildAside
         ModStemPlacerTypes.register(modEventBus);
 
         ModMobEffects.register(modEventBus);
+        ModPotions.register(modEventBus);
 
         ModParticles.register(modEventBus);
 
@@ -72,6 +78,13 @@ public class WildAside
         });
 
         SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, MOD_ID, ModSurfaceRules.makeRules());
+
+        ComposterBlock.COMPOSTABLES.put(ModItems.VIBRION.get(), 0.25f);
+        ComposterBlock.COMPOSTABLES.put(ModItems.ENTORIUM.get(), 0.3f);
+        ComposterBlock.COMPOSTABLES.put(ModBlocks.VIBRION_BLOCK.get(), 1);
+        ComposterBlock.COMPOSTABLES.put(ModBlocks.ENTORIUM_SHROOM.get(), 0.5f);
+
+        BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.AWKWARD, ModItems.VIBRION.get(), ModPotions.CONTAMINATION_POTION.get()));
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event)

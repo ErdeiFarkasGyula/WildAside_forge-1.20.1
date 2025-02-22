@@ -10,6 +10,10 @@
   "item.wildaside.substilium_boat": "Substilium Boat",
   "item.wildaside.substilium_chest_boat": "Substilium Chest Boat",
 
+  "item.minecraft.potion.effect.contamination_potion": "Contamination Potion",
+  "item.minecraft.splash_potion.effect.contamination_potion_potion": "Contamination Splash Potion",
+  "item.minecraft.lingering_potion.effect.contamination_potion_potion": "Contamination Lingering Potion",
+
 
 
   "block.wildaside.vibrion_block": "Vibrion Block",

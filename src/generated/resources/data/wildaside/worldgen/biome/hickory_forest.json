@@ -83,7 +83,9 @@
       "minecraft:brown_mushroom_normal",
       "minecraft:red_mushroom_normal",
       "minecraft:patch_sugar_cane",
-      "minecraft:patch_pumpkin"
+      "minecraft:patch_pumpkin",
+      "wildaside:spotted_wintergreen_placed_key",
+      "wildaside:pinkster_flower_placed_key"
     ]
   ],
   "has_precipitation": true,
