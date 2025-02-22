@@ -15,8 +15,8 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 public class ModBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_ENTORIUM_ORE = registerKey("add_sapphire_ore");
-    public static final ResourceKey<BiomeModifier> ADD_SPOTTED_WINTERGREEN = registerKey("add_spotted_wintergreen");
-    public static final ResourceKey<BiomeModifier> ADD_PINKSTER_FLOWER = registerKey("add_pinkster_flower");
+//    public static final ResourceKey<BiomeModifier> ADD_SPOTTED_WINTERGREEN = registerKey("add_spotted_wintergreen");
+//    public static final ResourceKey<BiomeModifier> ADD_PINKSTER_FLOWER = registerKey("add_pinkster_flower");
 
     public static void bootstrap(BootstapContext<BiomeModifier> context) {
         var placedFeatures = context.lookup(Registries.PLACED_FEATURE);
