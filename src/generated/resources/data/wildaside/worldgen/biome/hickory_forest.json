@@ -85,8 +85,7 @@
       "minecraft:patch_pumpkin",
       "wildaside:spotted_wintergreen_placed_key",
       "wildaside:pinkster_flower_placed_key",
-      "wildaside:hickory_tree_placed_key",
-      "wildaside:hickory_tree_placed_key_2"
+      "wildaside:hickory_tree_placed_key"
     ]
   ],
   "has_precipitation": true,

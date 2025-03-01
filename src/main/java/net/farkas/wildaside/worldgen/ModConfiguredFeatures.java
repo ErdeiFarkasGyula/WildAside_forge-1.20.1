@@ -8,20 +8,17 @@ import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.BlockTags;
-import net.minecraft.util.RandomSource;
 import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.*;
 import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
-import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlacer;
 import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
-import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
+
 import java.util.List;
 
 public class ModConfiguredFeatures {
@@ -34,7 +31,6 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> PINKSTER_FLOWER_KEY = registerKey("pinkster_flower_key");
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> HICKORY_TREE_KEY = registerKey("hickory_tree_key");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> HICKORY_TREE_KEY_2 = registerKey("hickory_tree_key_2");
 
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
@@ -66,13 +62,6 @@ public class ModConfiguredFeatures {
                 BlockStateProvider.simple(ModBlocks.HICKORY_LEAVES.get()),
                 new HickoryTreeFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 12),
                 new TwoLayersFeatureSize(1, 0, 2)).build());
-
-        register(context, HICKORY_TREE_KEY_2, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
-                BlockStateProvider.simple(ModBlocks.HICKORY_LOG.get()),
-                new StraightTrunkPlacer(20, 4, 10),
-                BlockStateProvider.simple(ModBlocks.HICKORY_LEAVES.get()),
-                new HickoryTreeFoliagePlacer(ConstantInt.of(3), ConstantInt.of(0), 16),
-                new TwoLayersFeatureSize(1, 1, 1)).build());
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {
