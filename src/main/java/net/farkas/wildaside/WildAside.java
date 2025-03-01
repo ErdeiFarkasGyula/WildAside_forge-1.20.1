@@ -15,6 +15,7 @@ import net.farkas.wildaside.util.ModWoodTypes;
 import net.farkas.wildaside.worldgen.biome.ModTerraBlenderAPI;
 import net.farkas.wildaside.worldgen.biome.surface.ModSurfaceRules;
 import net.farkas.wildaside.worldgen.mushroom.ModStemPlacerTypes;
+import net.farkas.wildaside.worldgen.tree.ModFoliagePlacers;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.Sheets;
@@ -63,6 +64,8 @@ public class WildAside
         ModParticles.register(modEventBus);
 
         ModTerraBlenderAPI.registerRegions();
+
+        ModFoliagePlacers.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 

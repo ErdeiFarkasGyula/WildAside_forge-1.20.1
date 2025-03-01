@@ -79,13 +79,14 @@
       "minecraft:glow_lichen",
       "minecraft:forest_flowers",
       "minecraft:patch_large_fern",
-      "minecraft:trees_plains",
       "minecraft:brown_mushroom_normal",
       "minecraft:red_mushroom_normal",
       "minecraft:patch_sugar_cane",
       "minecraft:patch_pumpkin",
       "wildaside:spotted_wintergreen_placed_key",
-      "wildaside:pinkster_flower_placed_key"
+      "wildaside:pinkster_flower_placed_key",
+      "wildaside:hickory_tree_placed_key",
+      "wildaside:hickory_tree_placed_key_2"
     ]
   ],
   "has_precipitation": true,

@@ -14,6 +14,8 @@ import net.farkas.wildaside.block.custom.vibrion.hanging_vines.HangingVibrionVin
 import net.farkas.wildaside.item.ModItems;
 import net.farkas.wildaside.util.ModWoodTypes;
 import net.farkas.wildaside.worldgen.mushroom.SubstiliumMushroomGrower;
+import net.farkas.wildaside.worldgen.tree.HickoryTree2Grower;
+import net.farkas.wildaside.worldgen.tree.HickoryTreeGrower;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvents;
@@ -363,9 +365,9 @@ public class ModBlocks {
             () ->  new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
 
     public static final RegistryObject<Block> HICKORY_SAPLING = registerBlock("hickory_sapling",
-            () ->  new SaplingBlock(new SubstiliumMushroomGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+            () ->  new SaplingBlock(new HickoryTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
     public static final RegistryObject<Block> RED_GLOWING_HICKORY_SAPLING = registerBlock("red_glowing_hickory_sapling",
-            () ->  new SaplingBlock(new SubstiliumMushroomGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)
+            () ->  new SaplingBlock(new HickoryTree2Grower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)
                     .lightLevel(l -> 3)));
     public static final RegistryObject<Block> BROWN_GLOWING_HICKORY_SAPLING = registerBlock("brown_glowing_hickory_sapling",
             () ->  new SaplingBlock(new SubstiliumMushroomGrower(), BlockBehaviour.Properties.copy(RED_GLOWING_HICKORY_SAPLING.get())));

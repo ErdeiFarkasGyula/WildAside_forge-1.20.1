@@ -31,11 +31,7 @@ public class ModBiomeModifiers {
 //                biomes.getOrThrow(Tags.Biomes.IS_PLAINS),
 //                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.SPOTTED_WINTERGREEN_PLACED_KEY)),
 //                GenerationStep.Decoration.VEGETAL_DECORATION));
-//
-//        context.register(ADD_SPOTTED_WINTERGREEN, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-//                biomes.getOrThrow(Tags.Biomes.IS_PLAINS),
-//                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.PINKSTER_FLOWER_PLACED_KEY)),
-//                GenerationStep.Decoration.VEGETAL_DECORATION));
+
     }
 
     private static ResourceKey<BiomeModifier> registerKey(String name) {
