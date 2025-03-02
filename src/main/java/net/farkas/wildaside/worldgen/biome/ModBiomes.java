@@ -29,6 +29,7 @@ public class ModBiomes {
         BiomeDefaultFeatures.addDefaultMonsterRoom(builder);
         BiomeDefaultFeatures.addDefaultUndergroundVariety(builder);
         BiomeDefaultFeatures.addDefaultSprings(builder);
+        BiomeDefaultFeatures.addDefaultGrass(builder);
     }
 
     public static Biome hickoryForest(BootstapContext<Biome> context) {

@@ -1,4 +1,4 @@
-// 1.20.1	2025-02-21T20:14:03.1783674	Block States: wildaside
+// 1.20.1	2025-03-02T15:58:17.9702277	Block States: wildaside
 fa64f943551c3309b74c342bd1fa550093c63be0 assets/wildaside/blockstates/brown_glowing_hickory_sapling.json
 2235d06a121270e6c50a94443648f4db1146865f assets/wildaside/blockstates/chiselled_substilium_soil.json
 e0090c081fdf71ca83008af77579982529623080 assets/wildaside/blockstates/compressed_substilium_soil.json
@@ -94,7 +94,7 @@ f1a8a5c0fa5e31578290e3c519ae718b681335bb assets/wildaside/models/block/hickory_d
 4cfe4831af935f8f922abccba7ddf04b21a02f2f assets/wildaside/models/block/hickory_fence_post.json
 b9bab931c624b6b28003c78a877c0df3a326d429 assets/wildaside/models/block/hickory_fence_side.json
 1e9207604f11c525d5963b3e7855f3d049aaf9c0 assets/wildaside/models/block/hickory_hanging_sign.json
-29823f17826dfcc80b0a080e57c29dc17bb2dab0 assets/wildaside/models/block/hickory_leaves.json
+ff6b61a7f7c53861987bdd041842341a26f0472c assets/wildaside/models/block/hickory_leaves.json
 c1ae761935363d7adbe8bb8037dde0c42ed70cb6 assets/wildaside/models/block/hickory_log.json
 345d520e2e7c2836f1bd039f7dd74012592b5840 assets/wildaside/models/block/hickory_log_horizontal.json
 1d1d6296cf7293c0bf82a2d77ac83ded38e0e691 assets/wildaside/models/block/hickory_planks.json
