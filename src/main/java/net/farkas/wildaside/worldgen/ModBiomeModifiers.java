@@ -19,13 +19,13 @@ public class ModBiomeModifiers {
 //    public static final ResourceKey<BiomeModifier> ADD_PINKSTER_FLOWER = registerKey("add_pinkster_flower");
 
     public static void bootstrap(BootstapContext<BiomeModifier> context) {
-        var placedFeatures = context.lookup(Registries.PLACED_FEATURE);
-        var biomes = context.lookup(Registries.BIOME);
+//        var placedFeatures = context.lookup(Registries.PLACED_FEATURE);
+//        var biomes = context.lookup(Registries.BIOME);
 
-        context.register(ADD_ENTORIUM_ORE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
-                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.ENTORIUM_ORE_PLACED_KEY)),
-                GenerationStep.Decoration.UNDERGROUND_ORES));
+//        context.register(ADD_ENTORIUM_ORE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+//                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
+//                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.ENTORIUM_ORE_PLACED_KEY)),
+//                GenerationStep.Decoration.UNDERGROUND_ORES));
 
 //        context.register(ADD_SPOTTED_WINTERGREEN, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
 //                biomes.getOrThrow(Tags.Biomes.IS_PLAINS),

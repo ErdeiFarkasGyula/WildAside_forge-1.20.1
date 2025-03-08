@@ -17,6 +17,13 @@ import net.minecraft.world.level.levelgen.placement.*;
 import java.util.List;
 
 public class ModPlacedFeatures {
+    public static final ResourceKey<PlacedFeature> REDLIKE_SUBSTILIUM_MUSHROOM_PLACED_KEY = registerKey("redlike_substilium_mushroom_placed_key");
+    public static final ResourceKey<PlacedFeature> BROWNLIKE_SUBSTILIUM_MUSHROOM_PLACED_KEY = registerKey("brownlike_substilium_mushroom_placed_key");
+
+    public static final ResourceKey<PlacedFeature> VIBRION_GROWTH_PLACED_KEY = registerKey("vibrion_growth_placed_key");
+    public static final ResourceKey<PlacedFeature> VIBRION_SPOREHOLDER_PLACED_KEY = registerKey("vibrion_sporeholder_placed_key");
+    public static final ResourceKey<PlacedFeature> SUBSTILIUM_SPROUTS_PLACED_KEY = registerKey("substilium_sprouts_placed_key");
+
     public static final ResourceKey<PlacedFeature> ENTORIUM_ORE_PLACED_KEY = registerKey("entorium_ore_placed");
 
     public static final ResourceKey<PlacedFeature> SPOTTED_WINTERGREEN_PLACED_KEY = registerKey("spotted_wintergreen_placed_key");
@@ -26,6 +33,18 @@ public class ModPlacedFeatures {
 
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
+
+        register(context, REDLIKE_SUBSTILIUM_MUSHROOM_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.REDLIKE_SUBSTILIUM_MUSHROOM_KEY),
+                List.of(PlacementUtils.countExtra(16, 1, 2), InSquarePlacement.spread(), PlacementUtils.RANGE_BOTTOM_TO_MAX_TERRAIN_HEIGHT, BiomeFilter.biome()));
+        register(context, BROWNLIKE_SUBSTILIUM_MUSHROOM_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.BROWNLIKE_SUBSTILIUM_MUSHROOM_KEY),
+                List.of(PlacementUtils.countExtra(16, 1, 2), InSquarePlacement.spread(), PlacementUtils.RANGE_BOTTOM_TO_MAX_TERRAIN_HEIGHT, BiomeFilter.biome()));
+
+        register(context, VIBRION_GROWTH_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.VIBRION_GROWTH_KEY),
+                List.of(PlacementUtils.countExtra(64, 1f, 16), InSquarePlacement.spread(), PlacementUtils.RANGE_BOTTOM_TO_MAX_TERRAIN_HEIGHT, BiomeFilter.biome()));
+        register(context, VIBRION_SPOREHOLDER_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.VIBRION_SPOREHOLDER_KEY),
+                List.of(PlacementUtils.countExtra(48, 0.5f, 32), InSquarePlacement.spread(), PlacementUtils.RANGE_BOTTOM_TO_MAX_TERRAIN_HEIGHT, BiomeFilter.biome()));
+        register(context, SUBSTILIUM_SPROUTS_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.SUBSTILIUM_SPROUTS_KEY),
+                List.of(PlacementUtils.countExtra(64, 1f, 16), InSquarePlacement.spread(), PlacementUtils.RANGE_BOTTOM_TO_MAX_TERRAIN_HEIGHT, BiomeFilter.biome()));
 
         register(context, ENTORIUM_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_ENTORIUM_ORE_KEY),
                 ModOrePlacement.commonOrePlacement(12, HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80))));

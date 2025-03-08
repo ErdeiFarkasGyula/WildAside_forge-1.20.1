@@ -22,26 +22,41 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
 import java.util.List;
 
 public class ModConfiguredFeatures {
-    public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_ENTORIUM_ORE_KEY = registerKey("entorium_ore");
-
     public static final ResourceKey<ConfiguredFeature<?, ?>> REDLIKE_SUBSTILIUM_MUSHROOM_KEY = registerKey("redlike_substilium_mushroom");
     public static final ResourceKey<ConfiguredFeature<?, ?>> BROWNLIKE_SUBSTILIUM_MUSHROOM_KEY = registerKey("brownlike_substilium_mushroom");
 
-    public static final ResourceKey<ConfiguredFeature<?, ?>> SPOTTED_EVERGREEN_KEY = registerKey("spotted_evergreen_key");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> PINKSTER_FLOWER_KEY = registerKey("pinkster_flower_key");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> VIBRION_GROWTH_KEY = registerKey("vibrion_growth");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> VIBRION_SPOREHOLDER_KEY = registerKey("vibrion_sporeholder");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SUBSTILIUM_SPROUTS_KEY = registerKey("substilium_sprouts");
 
-    public static final ResourceKey<ConfiguredFeature<?, ?>> HICKORY_TREE_KEY = registerKey("hickory_tree_key");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_ENTORIUM_ORE_KEY = registerKey("entorium_ore");
+
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SPOTTED_EVERGREEN_KEY = registerKey("spotted_evergreen");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> PINKSTER_FLOWER_KEY = registerKey("pinkster_flower");
+
+    public static final ResourceKey<ConfiguredFeature<?, ?>> HICKORY_TREE_KEY = registerKey("hickory_tree");
 
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
-        //RuleTest entorium_ore_replaceables = new BlockMatchTest(ModBlocks.SUBSTILIUM_SOIL.get());
-        RuleTest entorium_ore_replaceables = new BlockMatchTest(Blocks.STONE);
+        RuleTest entorium_ore_replaceables = new BlockMatchTest(ModBlocks.SUBSTILIUM_SOIL.get());
 
         List<OreConfiguration.TargetBlockState> entoriumOres = List.of(
-                OreConfiguration.target(entorium_ore_replaceables, ModBlocks.ENTORIUM_ORE.get().defaultBlockState()),
-                OreConfiguration.target(entorium_ore_replaceables, ModBlocks.ENTORIUM_ORE.get().defaultBlockState()));
+                OreConfiguration.target(entorium_ore_replaceables, ModBlocks.OVERGROWN_ENTORIUM_ORE.get().defaultBlockState()),
+                OreConfiguration.target(entorium_ore_replaceables, ModBlocks.OVERGROWN_ENTORIUM_ORE.get().defaultBlockState()));
 
         register(context, OVERWORLD_ENTORIUM_ORE_KEY, Feature.ORE, new OreConfiguration(entoriumOres, 9));
+
+        register(context, VIBRION_GROWTH_KEY, Feature.FLOWER,
+                new RandomPatchConfiguration(32, 6, 3, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.VIBRION_GROWTH.get())))));
+
+        register(context, VIBRION_SPOREHOLDER_KEY, Feature.FLOWER,
+                new RandomPatchConfiguration(32, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.VIBRION_SPOREHOLDER.get())))));
+
+        register(context, SUBSTILIUM_SPROUTS_KEY, Feature.FLOWER,
+                new RandomPatchConfiguration(32, 6, 3, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.SUBSTILIUM_SPROUTS.get())))));
 
         register(context, REDLIKE_SUBSTILIUM_MUSHROOM_KEY, Feature.HUGE_RED_MUSHROOM, new HugeMushroomFeatureConfiguration(
                 BlockStateProvider.simple(ModBlocks.ENTORIUM_SHROOM.get()), BlockStateProvider.simple(ModBlocks.SUBSTILIUM_STEM.get()), 2));

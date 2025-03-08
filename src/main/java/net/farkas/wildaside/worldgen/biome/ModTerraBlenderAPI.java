@@ -9,6 +9,6 @@ import terrablender.api.Regions;
 public class ModTerraBlenderAPI {
     public static void registerRegions() {
         Regions.register(new ModOverworldRegion(new ResourceLocation(WildAside.MOD_ID, "overworld"), 5));
-        Regions.register(new ModCaveRegion(new ResourceLocation(WildAside.MOD_ID, "overworld"), 10));
+        Regions.register(new ModCaveRegion(new ResourceLocation(WildAside.MOD_ID, "cave"), 10));
     }
 }

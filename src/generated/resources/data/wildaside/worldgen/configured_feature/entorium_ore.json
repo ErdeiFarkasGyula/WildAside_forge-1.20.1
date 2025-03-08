@@ -6,19 +6,19 @@
     "targets": [
       {
         "state": {
-          "Name": "wildaside:entorium_ore"
+          "Name": "wildaside:overgrown_entorium_ore"
         },
         "target": {
-          "block": "minecraft:stone",
+          "block": "wildaside:substilium_soil",
           "predicate_type": "minecraft:block_match"
         }
       },
       {
         "state": {
-          "Name": "wildaside:entorium_ore"
+          "Name": "wildaside:overgrown_entorium_ore"
         },
         "target": {
-          "block": "minecraft:stone",
+          "block": "wildaside:substilium_soil",
           "predicate_type": "minecraft:block_match"
         }
       }

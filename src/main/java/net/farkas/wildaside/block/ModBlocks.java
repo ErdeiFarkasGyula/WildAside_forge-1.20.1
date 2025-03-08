@@ -124,7 +124,6 @@ public class ModBlocks {
             () ->  new FlowerBlock(() -> MobEffects.POISON, 5, BlockBehaviour.Properties.of()
                     .mapColor(MapColor.COLOR_YELLOW)
                     .sound(SoundType.ROOTS)
-                    .lightLevel(l -> 3)
                     .noCollission()
                     .noOcclusion()
                     .replaceable()
@@ -135,7 +134,6 @@ public class ModBlocks {
     public static final RegistryObject<Block> POTTED_VIBRION_GROWTH = BLOCKS.register("potted_vibrion_growth",
             () ->  new FlowerPotBlock(() -> (FlowerPotBlock)Blocks.FLOWER_POT, ModBlocks.VIBRION_GROWTH, BlockBehaviour.Properties.copy(Blocks.POTTED_CRIMSON_ROOTS)
                     .mapColor(MapColor.COLOR_YELLOW)
-                    .lightLevel(l -> 3)
                     .instabreak()
                     .pushReaction(PushReaction.DESTROY)));
 

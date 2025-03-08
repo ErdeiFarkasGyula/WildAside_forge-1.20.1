@@ -1,7 +1,6 @@
 package net.farkas.wildaside.worldgen.mushroom;
 
 import net.farkas.wildaside.WildAside;
-import net.farkas.wildaside.worldgen.mushroom.custom.SubstiliumMushroomStemPlacer;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.TrunkPlacerType;
 import net.minecraftforge.eventbus.api.IEventBus;

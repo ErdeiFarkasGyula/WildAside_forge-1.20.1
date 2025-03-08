@@ -1,8 +1,7 @@
-package net.farkas.wildaside.worldgen.mushroom.custom;
+package net.farkas.wildaside.worldgen.mushroom;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import net.farkas.wildaside.worldgen.mushroom.ModStemPlacerTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.LevelSimulatedReader;
