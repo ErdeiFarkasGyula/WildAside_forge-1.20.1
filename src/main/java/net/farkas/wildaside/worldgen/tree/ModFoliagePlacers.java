@@ -1,6 +1,7 @@
 package net.farkas.wildaside.worldgen.tree;
 
 import net.farkas.wildaside.WildAside;
+import net.farkas.wildaside.worldgen.tree.hickory.HickoryTreeFoliagePlacer;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacerType;
 import net.minecraftforge.eventbus.api.IEventBus;

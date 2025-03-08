@@ -1,4 +1,4 @@
-package net.farkas.wildaside.worldgen.tree;
+package net.farkas.wildaside.worldgen.tree.hickory;
 
 import net.farkas.wildaside.worldgen.ModConfiguredFeatures;
 import net.minecraft.resources.ResourceKey;

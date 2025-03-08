@@ -14,7 +14,7 @@ import net.farkas.wildaside.block.custom.vibrion.hanging_vines.HangingVibrionVin
 import net.farkas.wildaside.item.ModItems;
 import net.farkas.wildaside.util.ModWoodTypes;
 import net.farkas.wildaside.worldgen.mushroom.SubstiliumMushroomGrower;
-import net.farkas.wildaside.worldgen.tree.HickoryTreeGrower;
+import net.farkas.wildaside.worldgen.tree.hickory.HickoryTreeGrower;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvents;

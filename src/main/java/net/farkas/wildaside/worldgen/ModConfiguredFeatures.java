@@ -2,7 +2,7 @@ package net.farkas.wildaside.worldgen;
 
 import net.farkas.wildaside.WildAside;
 import net.farkas.wildaside.block.ModBlocks;
-import net.farkas.wildaside.worldgen.tree.HickoryTreeFoliagePlacer;
+import net.farkas.wildaside.worldgen.tree.hickory.HickoryTreeFoliagePlacer;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
