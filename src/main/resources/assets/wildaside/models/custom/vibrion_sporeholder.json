@@ -107,7 +107,7 @@
 	},
 	"groups": [
 		{
-			"name": "leave things",
+			"name": "leaf things",
 			"origin": [0, 0, 0],
 			"color": 0,
 			"children": [0, 1, 2, 3]

@@ -2,14 +2,20 @@ package net.farkas.wildaside.worldgen;
 
 import net.farkas.wildaside.WildAside;
 import net.farkas.wildaside.block.ModBlocks;
+import net.farkas.wildaside.worldgen.feature.HangingVibrionVinesFeature;
 import net.farkas.wildaside.worldgen.tree.hickory.HickoryTreeFoliagePlacer;
+import net.minecraft.core.Direction;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.RandomSource;
 import net.minecraft.util.valueproviders.ConstantInt;
+import net.minecraft.util.valueproviders.IntProvider;
+import net.minecraft.util.valueproviders.IntProviderType;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.*;
@@ -28,6 +34,9 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> VIBRION_GROWTH_KEY = registerKey("vibrion_growth");
     public static final ResourceKey<ConfiguredFeature<?, ?>> VIBRION_SPOREHOLDER_KEY = registerKey("vibrion_sporeholder");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SUBSTILIUM_SPROUTS_KEY = registerKey("substilium_sprouts");
+
+    public static final ResourceKey<ConfiguredFeature<?, ?>> HANGING_VIBRION_VINES_KEY = registerKey("hanging_vibrion_vines_key");
+
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_ENTORIUM_ORE_KEY = registerKey("entorium_ore");
 
@@ -49,11 +58,9 @@ public class ModConfiguredFeatures {
         register(context, VIBRION_GROWTH_KEY, Feature.FLOWER,
                 new RandomPatchConfiguration(32, 6, 3, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                         new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.VIBRION_GROWTH.get())))));
-
         register(context, VIBRION_SPOREHOLDER_KEY, Feature.FLOWER,
                 new RandomPatchConfiguration(32, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                         new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.VIBRION_SPOREHOLDER.get())))));
-
         register(context, SUBSTILIUM_SPROUTS_KEY, Feature.FLOWER,
                 new RandomPatchConfiguration(32, 6, 3, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                         new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.SUBSTILIUM_SPROUTS.get())))));

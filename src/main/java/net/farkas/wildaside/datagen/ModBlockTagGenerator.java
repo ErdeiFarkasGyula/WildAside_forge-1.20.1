@@ -56,6 +56,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         //
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .add(ModBlocks.SPORE_BLASTER.get())
                 .add(ModBlocks.COMPRESSED_SUBSTILIUM_SOIL.get())
                 .add(ModBlocks.SMOOTH_SUBSTILIUM_SOIL.get())
                 .add(ModBlocks.CHISELLED_SUBSTILIUM_SOIL.get())
@@ -68,6 +69,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.SUBSTILIUM_TILE_WALLS.get());
 
         this.tag(BlockTags.MINEABLE_WITH_SHOVEL)
+                .add(ModBlocks.SPORE_BLASTER.get())
                 .add(ModBlocks.SUBSTILIUM_SOIL.get())
                 .add(ModBlocks.OVERGROWN_ENTORIUM_ORE.get())
                 .add(ModBlocks.ENTORIUM_ORE.get());

@@ -1,4 +1,4 @@
-// 1.20.1	2025-02-22T11:53:11.7145563	Loot Tables
+// 1.20.1	2025-03-09T13:58:18.1855632	Loot Tables
 806c305e5b6bdf1e690e0d5df8ae5f63031a6a21 data/wildaside/loot_tables/blocks/brown_glowing_hickory_sapling.json
 3c8b39c2cbec8838dcc9cf9e53d6b1423b79a414 data/wildaside/loot_tables/blocks/chiselled_substilium_soil.json
 111fee04e3401afeea79a69eefe18e3d47c2bbdb data/wildaside/loot_tables/blocks/compressed_substilium_soil.json
@@ -33,6 +33,7 @@ e226fc4b5e9efd3ffcf7ce37883dfd1c3d197ab3 data/wildaside/loot_tables/blocks/overg
 2cb5b5d8b37cbd4e705a80f1af8d47ce607e2ffa data/wildaside/loot_tables/blocks/potted_vibrion_growth.json
 e928ca40de410c55fa7ae34dc96f758f5d6ed7a7 data/wildaside/loot_tables/blocks/red_glowing_hickory_sapling.json
 ead2a9edc65fa4962636d9f1c3c16db608af54e9 data/wildaside/loot_tables/blocks/smooth_substilium_soil.json
+76bc0673fde3ed2d091f046180680af35935fcc9 data/wildaside/loot_tables/blocks/spore_blaster.json
 c3486c9600e2530973aebeb3b2a64c57b7ebb45b data/wildaside/loot_tables/blocks/spotted_wintergreen.json
 cf70d33fdd34abe813646879c3c6a4c0fc96db44 data/wildaside/loot_tables/blocks/stripped_hickory_log.json
 2d2d51097e03f56b924a56d005c3064b823f3960 data/wildaside/loot_tables/blocks/stripped_hickory_wood.json

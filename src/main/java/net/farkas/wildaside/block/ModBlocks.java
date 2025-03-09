@@ -6,9 +6,7 @@ import net.farkas.wildaside.block.custom.sign.ModHangingSignBlock;
 import net.farkas.wildaside.block.custom.sign.ModStandingSignBlock;
 import net.farkas.wildaside.block.custom.sign.ModWallHangingSignBlock;
 import net.farkas.wildaside.block.custom.sign.ModWallSignBlock;
-import net.farkas.wildaside.block.custom.vibrion.Sporeholder;
-import net.farkas.wildaside.block.custom.vibrion.VibrionGel;
-import net.farkas.wildaside.block.custom.vibrion.VibrionGlass;
+import net.farkas.wildaside.block.custom.vibrion.*;
 import net.farkas.wildaside.block.custom.vibrion.hanging_vines.HangingVibrionVines;
 import net.farkas.wildaside.block.custom.vibrion.hanging_vines.HangingVibrionVinesPlant;
 import net.farkas.wildaside.item.ModItems;
@@ -163,6 +161,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> HANGING_VIBRION_VINES_PLANT = registerBlock("hanging_vibrion_vines_plant",
             () ->  new HangingVibrionVinesPlant(BlockBehaviour.Properties.copy(ModBlocks.HANGING_VIBRION_VINES.get())));
 
+    public static final RegistryObject<Block> SPORE_AIR = registerBlock("spore_air",
+            () ->  new SporeAir(BlockBehaviour.Properties.copy(Blocks.AIR).mapColor(MapColor.COLOR_YELLOW).noLootTable()));
+
     //ENTORIUM
     public static final RegistryObject<Block> ENTORIUM_SHROOM = registerBlock("entorium_shroom",
             () ->  new HugeMushroomBlock(BlockBehaviour.Properties.of()
@@ -201,6 +202,10 @@ public class ModBlocks {
                     return true;
                 }
             });
+
+    public static final RegistryObject<Block> SPORE_BLASTER = registerBlock("spore_blaster",
+            () ->  new SporeBlaster(BlockBehaviour.Properties.copy(ModBlocks.COMPRESSED_SUBSTILIUM_SOIL.get())
+                    .noOcclusion().strength(6f, 12f).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> SMOOTH_SUBSTILIUM_SOIL = registerBlock("smooth_substilium_soil",
             () ->  new Block(BlockBehaviour.Properties.copy(COMPRESSED_SUBSTILIUM_SOIL.get())));
