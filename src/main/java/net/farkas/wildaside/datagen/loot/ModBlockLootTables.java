@@ -49,6 +49,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 block -> createSilktouchedDrops(ModBlocks.VIBRION_BLOCK.get(), ModItems.VIBRION.get()));
 
         this.dropSelf(ModBlocks.SPORE_BLASTER.get());
+        this.dropSelf(ModBlocks.NATURAL_SPORE_BLASTER.get());
 
         //ENTORIUM
         this.dropSelf(ModBlocks.ENTORIUM_SHROOM.get());

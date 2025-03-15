@@ -29,6 +29,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.LIT_VIBRION_GLASS.get());
                         pOutput.accept(ModBlocks.VIBRION_GLASS_PANE.get());
                         pOutput.accept(ModBlocks.LIT_VIBRION_GLASS_PANE.get());
+                        pOutput.accept(ModBlocks.NATURAL_SPORE_BLASTER.get());
                         pOutput.accept(ModBlocks.SPORE_BLASTER.get());
 
                         pOutput.accept(ModItems.ENTORIUM.get());

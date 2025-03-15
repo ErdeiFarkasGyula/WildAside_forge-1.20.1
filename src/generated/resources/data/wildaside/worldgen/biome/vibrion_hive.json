@@ -59,7 +59,8 @@
       "minecraft:ore_andesite_lower",
       "minecraft:ore_tuff",
       "wildaside:overgrown_entorium_ore_placed",
-      "wildaside:entorium_ore_placed"
+      "wildaside:entorium_ore_placed",
+      "wildaside:compressed_substilium_soil_placed"
     ],
     [
       "wildaside:redlike_substilium_mushroom_placed",

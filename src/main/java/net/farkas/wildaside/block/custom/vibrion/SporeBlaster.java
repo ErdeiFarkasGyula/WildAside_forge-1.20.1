@@ -9,21 +9,21 @@ import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.DirectionalBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
-import net.minecraft.world.phys.Vec3;
-import net.minecraft.world.phys.shapes.CollisionContext;
-import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 
 public class SporeBlaster extends Block {
     public static final DirectionProperty FACING = DirectionalBlock.FACING;
+    public boolean natural = false;
 
-    public SporeBlaster(Properties pProperties) {
+    BlockState spore_air = ModBlocks.SPORE_AIR.get().defaultBlockState();
+
+    public SporeBlaster(Properties pProperties, boolean natural) {
         super(pProperties);
+        this.natural = natural;
         this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
     }
 
@@ -49,33 +49,35 @@ public class SporeBlaster extends Block {
 
     @Override
     public void tick(BlockState pState, ServerLevel pLevel, BlockPos pPos, RandomSource pRandom) {
-        spawnSporeAir(pLevel, pPos);
+        spawnSporeAir(pLevel, pPos, pRandom);
+        if (natural) spawnSporeAirOpposite(pLevel, pPos, pRandom);
         pLevel.scheduleTick(pPos, this, 5);
         super.tick(pState, pLevel, pPos, pRandom);
     }
 
-    public void spawnSporeAir(ServerLevel level, BlockPos pos) {
+    public void spawnSporeAir(ServerLevel level, BlockPos pos, RandomSource random) {
         Direction direction = level.getBlockState(pos).getValue(FACING);
-        int power = level.getBestNeighborSignal(pos);
-        BlockState block = ModBlocks.SPORE_AIR.get().defaultBlockState();
+        int power = natural ? random.nextIntBetweenInclusive(1, 15) : level.getBestNeighborSignal(pos);
 
         for (int i = 1; i <= power; i++) {
             var nextBlock = level.getBlockState(pos.relative(direction, i));
             var position = pos.relative(direction, i);
 
             if (nextBlock.isCollisionShapeFullBlock(level, position)) return;
+            if (nextBlock.isAir()) level.setBlockAndUpdate(position, spore_air);
+        }
+    }
 
-            if (nextBlock.isAir()) {
-//                var chunkPos = level.getChunkAt(position).getPos();
-//                level.setChunkForced(chunkPos.x, chunkPos.z, false);
+    public void spawnSporeAirOpposite(ServerLevel level, BlockPos pos, RandomSource random) {
+        Direction direction = level.getBlockState(pos).getValue(FACING).getOpposite();
+        int power = random.nextIntBetweenInclusive(1, 15);
 
-//                level.startTickingChunk(level.getChunkAt(position));
-//                level.getChunk(position).setBlockState(position, block, false);
+        for (int i = 1; i <= power; i++) {
+            var nextBlock = level.getBlockState(pos.relative(direction, i));
+            var position = pos.relative(direction, i);
 
-                level.setBlockAndUpdate(position, block);
-
-            }
-
+            if (nextBlock.isCollisionShapeFullBlock(level, position)) return;
+            if (nextBlock.isAir()) level.setBlockAndUpdate(position, spore_air);
         }
     }
 }
