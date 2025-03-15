@@ -1,0 +1,55 @@
+{
+  "carvers": {},
+  "downfall": 0.5,
+  "effects": {
+    "fog_color": 12638463,
+    "foliage_color": -6184663,
+    "grass_color": -6184663,
+    "mood_sound": {
+      "block_search_extent": 8,
+      "offset": 2.0,
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 6000
+    },
+    "music": {
+      "max_delay": 24000,
+      "min_delay": 12000,
+      "replace_current_music": false,
+      "sound": "minecraft:ambient.crimson_forest.loop"
+    },
+    "sky_color": 7972607,
+    "water_color": -6184663,
+    "water_fog_color": -6184663
+  },
+  "features": [
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [
+      "wildaside:entorium_ore_placed"
+    ],
+    [
+      "wildaside:redlike_substilium_mushroom_placed_key",
+      "wildaside:brownlike_substilium_mushroom_placed_key",
+      "wildaside:vibrion_growth_placed_key",
+      "wildaside:vibrion_sporeholder_placed_key",
+      "wildaside:substilium_sprouts_placed_key"
+    ]
+  ],
+  "has_precipitation": false,
+  "spawn_costs": {},
+  "spawners": {
+    "ambient": [],
+    "axolotls": [],
+    "creature": [],
+    "misc": [],
+    "monster": [],
+    "underground_water_creature": [],
+    "water_ambient": [],
+    "water_creature": []
+  },
+  "temperature": 0.5
+}

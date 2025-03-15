@@ -2,7 +2,6 @@ package net.farkas.wildaside.worldgen;
 
 import net.farkas.wildaside.WildAside;
 import net.farkas.wildaside.block.ModBlocks;
-import net.farkas.wildaside.worldgen.feature.HangingVibrionVinesFeature;
 import net.farkas.wildaside.worldgen.tree.hickory.HickoryTreeFoliagePlacer;
 import net.minecraft.core.Direction;
 import net.minecraft.core.registries.Registries;
@@ -14,7 +13,7 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.util.valueproviders.IntProvider;
 import net.minecraft.util.valueproviders.IntProviderType;
-import net.minecraft.world.level.block.Blocks;
+import net.minecraft.util.valueproviders.WeightedListInt;
 import net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
@@ -54,6 +53,8 @@ public class ModConfiguredFeatures {
                 OreConfiguration.target(entorium_ore_replaceables, ModBlocks.OVERGROWN_ENTORIUM_ORE.get().defaultBlockState()));
 
         register(context, OVERWORLD_ENTORIUM_ORE_KEY, Feature.ORE, new OreConfiguration(entoriumOres, 9));
+
+        //register(context, HANGING_VIBRION_VINES_KEY, Feature.BLOCK_COLUMN, new BlockColumnConfiguration(List.of(layer, layer), Direction.DOWN, BlockPredicate.ONLY_IN_AIR_PREDICATE, true));
 
         register(context, VIBRION_GROWTH_KEY, Feature.FLOWER,
                 new RandomPatchConfiguration(32, 6, 3, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,

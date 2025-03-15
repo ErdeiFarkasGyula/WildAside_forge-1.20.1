@@ -17,16 +17,15 @@ public class ModSurfaceRules {
         SurfaceRules.RuleSource grassSurface = SurfaceRules.sequence(SurfaceRules.ifTrue(isAtOrAboveWaterLevel, GRASS_BLOCK), DIRT);
 
         return SurfaceRules.sequence(
-                SurfaceRules.sequence(SurfaceRules.ifTrue(
-                                SurfaceRules.isBiome(ModBiomes.VIBRION_HIVE),
-                                SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, SUBSTILIUM)),
-                                SurfaceRules.ifTrue(SurfaceRules.ON_CEILING, SUBSTILIUM)),
-                SurfaceRules.ifTrue(SurfaceRules.UNDER_FLOOR, SUBSTILIUM),
+                SurfaceRules.sequence(
+                        SurfaceRules.ifTrue(SurfaceRules.isBiome(ModBiomes.VIBRION_HIVE), SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, SUBSTILIUM)),
+                        SurfaceRules.ifTrue(SurfaceRules.ON_CEILING, SUBSTILIUM)),
 
                 SurfaceRules.sequence(SurfaceRules.ifTrue(
-                                SurfaceRules.isBiome(ModBiomes.HICKORY_FOREST),
-                                SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, grassSurface))
-        ));
+                        SurfaceRules.isBiome(ModBiomes.HICKORY_FOREST), SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, grassSurface)),
+                        SurfaceRules.ifTrue(SurfaceRules.UNDER_FLOOR, DIRT))
+
+        );
     }
 
     private static SurfaceRules.RuleSource makeStateRule(Block block) {

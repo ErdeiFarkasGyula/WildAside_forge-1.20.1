@@ -57,15 +57,25 @@ public class SporeBlaster extends Block {
     public void spawnSporeAir(ServerLevel level, BlockPos pos) {
         Direction direction = level.getBlockState(pos).getValue(FACING);
         int power = level.getBestNeighborSignal(pos);
+        BlockState block = ModBlocks.SPORE_AIR.get().defaultBlockState();
 
         for (int i = 1; i <= power; i++) {
             var nextBlock = level.getBlockState(pos.relative(direction, i));
+            var position = pos.relative(direction, i);
 
-            if (nextBlock.isCollisionShapeFullBlock(level, pos.relative(direction, i))) return;
+            if (nextBlock.isCollisionShapeFullBlock(level, position)) return;
 
             if (nextBlock.isAir()) {
-                level.setBlock(pos.relative(direction, i), ModBlocks.SPORE_AIR.get().defaultBlockState(), 1);
+//                var chunkPos = level.getChunkAt(position).getPos();
+//                level.setChunkForced(chunkPos.x, chunkPos.z, false);
+
+//                level.startTickingChunk(level.getChunkAt(position));
+//                level.getChunk(position).setBlockState(position, block, false);
+
+                level.setBlockAndUpdate(position, block);
+
             }
+
         }
     }
 }
