@@ -4,9 +4,7 @@ import net.farkas.wildaside.WildAside;
 import net.farkas.wildaside.block.ModBlocks;
 import net.farkas.wildaside.block.entity.ModBlockEntities;
 import net.farkas.wildaside.entity.client.ModModelLayers;
-import net.farkas.wildaside.particle.EntoriumParticles;
-import net.farkas.wildaside.particle.ModParticles;
-import net.farkas.wildaside.particle.SubstiliumParticle;
+import net.farkas.wildaside.particle.*;
 import net.minecraft.client.model.BoatModel;
 import net.minecraft.client.model.ChestBoatModel;
 import net.minecraft.client.renderer.BiomeColors;
@@ -35,16 +33,16 @@ public class ModEventBusClientEvents {
 
     @SubscribeEvent
     public static void registerBER(EntityRenderersEvent.RegisterRenderers event) {
-        //event.registerBlockEntityRenderer(ModBlockEntities.GEM_POLISHING_BE.get(), GemPolishingBlockEntityRenderer::new);
-
         event.registerBlockEntityRenderer(ModBlockEntities.MOD_SIGN.get(), SignRenderer::new);
         event.registerBlockEntityRenderer(ModBlockEntities.MOD_HANGING_SIGN.get(), HangingSignRenderer::new);
     }
 
     @SubscribeEvent
     public static void registerParticleFactories(RegisterParticleProvidersEvent event) {
-        event.registerSpriteSet(ModParticles.ENTORIUM_PARTICLES.get(), EntoriumParticles.Provider::new);
-        event.registerSpriteSet(ModParticles.SUBSTILIUM_PARTICLES.get(), SubstiliumParticle.Provider::new);
+        event.registerSpriteSet(ModParticles.ENTORIUM_PARTICLE.get(), EntoriumParticle.Provider::new);
+        event.registerSpriteSet(ModParticles.SUBSTILIUM_PARTICLE.get(), SubstiliumParticle.Provider::new);
+        event.registerSpriteSet(ModParticles.STILL_SUBSTILIUM_PARTICLE.get(), StillSubstiliumParticle.Provider::new);
+        event.registerSpriteSet(ModParticles.VIBRION_PARTICLE.get(), VibrionParticle.Provider::new);
     }
 
     @SubscribeEvent

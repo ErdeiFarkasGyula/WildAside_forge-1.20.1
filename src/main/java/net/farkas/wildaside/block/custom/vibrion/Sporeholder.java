@@ -1,22 +1,19 @@
 package net.farkas.wildaside.block.custom.vibrion;
 
 import net.farkas.wildaside.effect.ModMobEffects;
+import net.farkas.wildaside.particle.ModParticles;
 import net.minecraft.core.BlockPos;
-import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.FlowerBlock;
 import net.minecraft.world.level.block.SaplingBlock;
 import net.minecraft.world.level.block.grower.AbstractTreeGrower;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-
-import java.util.function.Supplier;
 
 public class Sporeholder extends SaplingBlock {
     public Sporeholder(AbstractTreeGrower pTreeGrower, Properties pProperties) {
@@ -31,8 +28,9 @@ public class Sporeholder extends SaplingBlock {
 
     @Override
     public void entityInside(BlockState pState, Level pLevel, BlockPos pPos, Entity pEntity) {
+        pLevel.addParticle(ModParticles.VIBRION_PARTICLE.get(), (pPos.getX() + 0.5), pPos.getY(), (pPos.getZ() + 0.5), 0, 0, 0);
         if (pEntity instanceof Player) {
-            ((Player)pEntity).addEffect(new MobEffectInstance(ModMobEffects.CONTAMINATION.get(), 2000));
+            ((Player)pEntity).addEffect(new MobEffectInstance(ModMobEffects.CONTAMINATION.get(), 400));
         }
         super.entityInside(pState, pLevel, pPos, pEntity);
     }

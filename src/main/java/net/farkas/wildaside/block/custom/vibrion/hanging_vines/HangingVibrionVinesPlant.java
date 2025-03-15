@@ -1,19 +1,19 @@
 package net.farkas.wildaside.block.custom.vibrion.hanging_vines;
 
 import net.farkas.wildaside.block.ModBlocks;
+import net.farkas.wildaside.particle.ModParticles;
 import net.minecraft.core.BlockPos;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.GrowingPlantHeadBlock;
 import net.minecraft.world.level.block.WeepingVinesPlantBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.HitResult;
-import net.minecraft.world.phys.Vec3;
-import net.minecraft.world.phys.shapes.CollisionContext;
-import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class HangingVibrionVinesPlant extends WeepingVinesPlantBlock {
     public HangingVibrionVinesPlant(Properties p_154975_) {
@@ -33,5 +33,11 @@ public class HangingVibrionVinesPlant extends WeepingVinesPlantBlock {
     @Override
     public ItemStack getCloneItemStack(BlockState state, HitResult target, BlockGetter world, BlockPos pos, Player player) {
         return new ItemStack(ModBlocks.HANGING_VIBRION_VINES.get());
+    }
+
+    @Override
+    public void entityInside(BlockState pState, Level pLevel, BlockPos pPos, Entity pEntity) {
+        super.entityInside(pState, pLevel, pPos, pEntity);
+        pLevel.addParticle(ModParticles.VIBRION_PARTICLE.get(), (pPos.getX() + Math.random()), (pPos.getY() + Math.random()), (pPos.getZ() + Math.random()), 0, 0, 0);
     }
 }

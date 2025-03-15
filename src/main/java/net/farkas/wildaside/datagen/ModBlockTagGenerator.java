@@ -143,5 +143,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
         this.tag(BlockTags.LEAVES)
                 .add(ModBlocks.HICKORY_LEAVES.get());
+
+        this.tag(BlockTags.MUSHROOM_GROW_BLOCK)
+                .add(ModBlocks.SUBSTILIUM_SOIL.get());
     }
 }

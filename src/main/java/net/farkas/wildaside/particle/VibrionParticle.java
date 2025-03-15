@@ -1,14 +1,10 @@
 package net.farkas.wildaside.particle;
 
-import net.minecraft.core.particles.SimpleParticleType;
-import net.minecraft.client.particle.TextureSheetParticle;
-import net.minecraft.client.particle.SpriteSet;
-import net.minecraft.client.particle.ParticleRenderType;
-import net.minecraft.client.particle.ParticleProvider;
-import net.minecraft.client.particle.Particle;
 import net.minecraft.client.multiplayer.ClientLevel;
+import net.minecraft.client.particle.*;
+import net.minecraft.core.particles.SimpleParticleType;
 
-public class EntoriumParticles extends TextureSheetParticle {
+public class VibrionParticle extends TextureSheetParticle {
     public static class Provider implements ParticleProvider<SimpleParticleType> {
         private final SpriteSet spriteSet;
 
@@ -17,7 +13,7 @@ public class EntoriumParticles extends TextureSheetParticle {
         }
 
         public Particle createParticle(SimpleParticleType typeIn, ClientLevel worldIn, double x, double y, double z, double xSpeed, double ySpeed, double zSpeed) {
-            return new EntoriumParticles(worldIn, x, y, z, xSpeed, ySpeed, zSpeed, this.spriteSet);
+            return new VibrionParticle(worldIn, x, y, z, xSpeed, ySpeed, zSpeed, this.spriteSet);
         }
     }
 
@@ -25,20 +21,19 @@ public class EntoriumParticles extends TextureSheetParticle {
     private float angularVelocity;
     private float angularAcceleration;
 
-    protected EntoriumParticles(ClientLevel world, double x, double y, double z, double vx, double vy, double vz, SpriteSet spriteSet) {
+    protected VibrionParticle(ClientLevel world, double x, double y, double z, double vx, double vy, double vz, SpriteSet spriteSet) {
         super(world, x, y, z);
-        //this.alpha = 1.0f;
         this.spriteSet = spriteSet;
         this.setSize(0.2f, 0.2f);
-        this.lifetime = (int) Math.max(1, 40 + (this.random.nextInt(20) - 10));
-        this.gravity = -0.05f;
-        this.hasPhysics = false;
+        this.lifetime = (int) Math.max(1, 40 + (this.random.nextInt(40) - 20));
+        this.gravity = 0f;
+        this.hasPhysics = true;
         this.xd = vx * 1;
         this.yd = vy * 1;
         this.zd = vz * 1;
-        this.angularVelocity = 0.05f;
+        this.angularVelocity = 0.1f;
         this.angularAcceleration = 0.01f;
-        this.setSpriteFromAge(spriteSet);
+        this.pickSprite(spriteSet);
     }
 
     @Override

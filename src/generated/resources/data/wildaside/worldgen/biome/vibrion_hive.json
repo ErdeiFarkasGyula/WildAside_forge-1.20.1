@@ -1,5 +1,11 @@
 {
-  "carvers": {},
+  "carvers": {
+    "air": [
+      "minecraft:cave",
+      "minecraft:cave_extra_underground",
+      "minecraft:canyon"
+    ]
+  },
   "downfall": 0.5,
   "effects": {
     "fog_color": 12638463,
@@ -17,26 +23,60 @@
       "replace_current_music": false,
       "sound": "minecraft:ambient.crimson_forest.loop"
     },
+    "particle": {
+      "options": {
+        "type": "wildaside:still_substilium_particle"
+      },
+      "probability": 0.1
+    },
     "sky_color": 7972607,
     "water_color": -6184663,
     "water_fog_color": -6184663
   },
   "features": [
     [],
-    [],
-    [],
-    [],
+    [
+      "minecraft:lake_lava_underground",
+      "minecraft:lake_lava_surface"
+    ],
+    [
+      "minecraft:amethyst_geode"
+    ],
+    [
+      "minecraft:monster_room",
+      "minecraft:monster_room_deep"
+    ],
     [],
     [],
     [
+      "minecraft:ore_dirt",
+      "minecraft:ore_gravel",
+      "minecraft:ore_granite_upper",
+      "minecraft:ore_granite_lower",
+      "minecraft:ore_diorite_upper",
+      "minecraft:ore_diorite_lower",
+      "minecraft:ore_andesite_upper",
+      "minecraft:ore_andesite_lower",
+      "minecraft:ore_tuff",
+      "wildaside:overgrown_entorium_ore_placed",
       "wildaside:entorium_ore_placed"
     ],
     [
-      "wildaside:redlike_substilium_mushroom_placed_key",
-      "wildaside:brownlike_substilium_mushroom_placed_key",
-      "wildaside:vibrion_growth_placed_key",
-      "wildaside:vibrion_sporeholder_placed_key",
-      "wildaside:substilium_sprouts_placed_key"
+      "wildaside:redlike_substilium_mushroom_placed",
+      "wildaside:brownlike_substilium_mushroom_placed",
+      "wildaside:vibrion_growth_placed",
+      "wildaside:vibrion_sporeholder_placed",
+      "wildaside:substilium_sprouts_placed",
+      "wildaside:hanging_vibrion_vines",
+      "wildaside:hanging_vibrion_gel",
+      "wildaside:hanging_lit_vibrion_gel"
+    ],
+    [
+      "minecraft:spring_water",
+      "minecraft:spring_lava"
+    ],
+    [
+      "minecraft:glow_lichen"
     ]
   ],
   "has_precipitation": false,

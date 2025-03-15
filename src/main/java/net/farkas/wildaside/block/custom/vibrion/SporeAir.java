@@ -1,10 +1,8 @@
 package net.farkas.wildaside.block.custom.vibrion;
 
-import net.farkas.wildaside.block.ModBlocks;
 import net.farkas.wildaside.effect.ModMobEffects;
 import net.farkas.wildaside.particle.ModParticles;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -31,7 +29,7 @@ public class SporeAir extends AirBlock {
     @Override
     public void entityInside(BlockState pState, Level pLevel, BlockPos pPos, Entity pEntity) {
         if (pEntity instanceof Player) {
-            ((Player)pEntity).addEffect(new MobEffectInstance(ModMobEffects.CONTAMINATION.get(), 5));
+            ((Player)pEntity).addEffect(new MobEffectInstance(ModMobEffects.CONTAMINATION.get(), 400));
         }
         super.entityInside(pState, pLevel, pPos, pEntity);
     }
@@ -60,7 +58,7 @@ public class SporeAir extends AirBlock {
     @Override
     public void animateTick(BlockState pState, Level pLevel, BlockPos pPos, RandomSource pRandom) {
         for (int i = 0; i < pRandom.nextInt(5, 10); i++) {
-            pLevel.addParticle((SimpleParticleType)(ModParticles.ENTORIUM_PARTICLES.get()), (pPos.getX() + Math.random()), (pPos.getY() + Math.random()), (pPos.getZ() + Math.random()), 0, 0, 0);
+            pLevel.addParticle(ModParticles.VIBRION_PARTICLE.get(), (pPos.getX() + Math.random()), (pPos.getY() + Math.random()), (pPos.getZ() + Math.random()), 0, 0, 0);
         }
         super.animateTick(pState, pLevel, pPos, pRandom);
     }

@@ -1,5 +1,5 @@
 {
-  "feature": "wildaside:redlike_substilium_mushroom",
+  "feature": "wildaside:brownlike_substilium_mushroom",
   "placement": [
     {
       "type": "minecraft:count",
@@ -7,11 +7,11 @@
         "type": "minecraft:weighted_list",
         "distribution": [
           {
-            "data": 16,
-            "weight": 0
+            "data": 128,
+            "weight": 1
           },
           {
-            "data": 18,
+            "data": 192,
             "weight": 1
           }
         ]

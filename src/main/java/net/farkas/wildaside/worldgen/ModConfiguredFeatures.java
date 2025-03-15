@@ -9,11 +9,8 @@ import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.util.RandomSource;
-import net.minecraft.util.valueproviders.ConstantInt;
-import net.minecraft.util.valueproviders.IntProvider;
-import net.minecraft.util.valueproviders.IntProviderType;
-import net.minecraft.util.valueproviders.WeightedListInt;
+import net.minecraft.util.random.SimpleWeightedRandomList;
+import net.minecraft.util.valueproviders.*;
 import net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
@@ -27,59 +24,84 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
 import java.util.List;
 
 public class ModConfiguredFeatures {
-    public static final ResourceKey<ConfiguredFeature<?, ?>> REDLIKE_SUBSTILIUM_MUSHROOM_KEY = registerKey("redlike_substilium_mushroom");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> BROWNLIKE_SUBSTILIUM_MUSHROOM_KEY = registerKey("brownlike_substilium_mushroom");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> REDLIKE_SUBSTILIUM_MUSHROOM = registerKey("redlike_substilium_mushroom");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> BROWNLIKE_SUBSTILIUM_MUSHROOM = registerKey("brownlike_substilium_mushroom");
 
-    public static final ResourceKey<ConfiguredFeature<?, ?>> VIBRION_GROWTH_KEY = registerKey("vibrion_growth");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> VIBRION_SPOREHOLDER_KEY = registerKey("vibrion_sporeholder");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> SUBSTILIUM_SPROUTS_KEY = registerKey("substilium_sprouts");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> VIBRION_GROWTH = registerKey("vibrion_growth");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> VIBRION_SPOREHOLDER = registerKey("vibrion_sporeholder");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SUBSTILIUM_SPROUTS = registerKey("substilium_sprouts");
 
-    public static final ResourceKey<ConfiguredFeature<?, ?>> HANGING_VIBRION_VINES_KEY = registerKey("hanging_vibrion_vines_key");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> HANGING_VIBRION_VINES = registerKey("hanging_vibrion_vines");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> HANGING_VIBRION_GEL = registerKey("hanging_vibrion_gel");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> HANGING_LIT_VIBRION_GEL = registerKey("hanging_lit_vibrion_gel");
 
+    public static final ResourceKey<ConfiguredFeature<?, ?>> OVERGROWN_ENTORIUM_ORE = registerKey("overgrown_entorium_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> ENTORIUM_ORE = registerKey("entorium_ore");
 
-    public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_ENTORIUM_ORE_KEY = registerKey("entorium_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> COMPRESSED_SUBSTILIUM_SOIL = registerKey("compressed_substilium_soil");
 
-    public static final ResourceKey<ConfiguredFeature<?, ?>> SPOTTED_EVERGREEN_KEY = registerKey("spotted_evergreen");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> PINKSTER_FLOWER_KEY = registerKey("pinkster_flower");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SPOTTED_EVERGREEN = registerKey("spotted_evergreen");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> PINKSTER_FLOWER = registerKey("pinkster_flower");
 
-    public static final ResourceKey<ConfiguredFeature<?, ?>> HICKORY_TREE_KEY = registerKey("hickory_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> HICKORY_TREE = registerKey("hickory_tree");
 
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
-        RuleTest entorium_ore_replaceables = new BlockMatchTest(ModBlocks.SUBSTILIUM_SOIL.get());
+        RuleTest overgrown_entorium_ore_replaceables = new BlockMatchTest(ModBlocks.SUBSTILIUM_SOIL.get());
+        RuleTest entorium_ore_replaceables = new BlockMatchTest(ModBlocks.OVERGROWN_ENTORIUM_ORE.get());
+        RuleTest compressed_substilium_soil_replaceables = new BlockMatchTest(ModBlocks.SUBSTILIUM_SOIL.get());
 
-        List<OreConfiguration.TargetBlockState> entoriumOres = List.of(
-                OreConfiguration.target(entorium_ore_replaceables, ModBlocks.OVERGROWN_ENTORIUM_ORE.get().defaultBlockState()),
-                OreConfiguration.target(entorium_ore_replaceables, ModBlocks.OVERGROWN_ENTORIUM_ORE.get().defaultBlockState()));
+        List<OreConfiguration.TargetBlockState> overgrown_entorium_ore = List.of(OreConfiguration.target(overgrown_entorium_ore_replaceables, ModBlocks.OVERGROWN_ENTORIUM_ORE.get().defaultBlockState()));
+        List<OreConfiguration.TargetBlockState> entorium_ore = List.of(OreConfiguration.target(entorium_ore_replaceables, ModBlocks.ENTORIUM_ORE.get().defaultBlockState()));
+        List<OreConfiguration.TargetBlockState> compressed_substilium_soil = List.of(OreConfiguration.target(overgrown_entorium_ore_replaceables, ModBlocks.COMPRESSED_SUBSTILIUM_SOIL.get().defaultBlockState()));
 
-        register(context, OVERWORLD_ENTORIUM_ORE_KEY, Feature.ORE, new OreConfiguration(entoriumOres, 9));
+        register(context, OVERGROWN_ENTORIUM_ORE, Feature.ORE, new OreConfiguration(overgrown_entorium_ore, 9));
+        register(context, ENTORIUM_ORE, Feature.ORE, new OreConfiguration(entorium_ore, 6));
 
-        //register(context, HANGING_VIBRION_VINES_KEY, Feature.BLOCK_COLUMN, new BlockColumnConfiguration(List.of(layer, layer), Direction.DOWN, BlockPredicate.ONLY_IN_AIR_PREDICATE, true));
+        register(context, COMPRESSED_SUBSTILIUM_SOIL, Feature.ORE, new OreConfiguration(compressed_substilium_soil, 24));
 
-        register(context, VIBRION_GROWTH_KEY, Feature.FLOWER,
-                new RandomPatchConfiguration(32, 6, 3, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+        register(context, VIBRION_GROWTH, Feature.FLOWER,
+                new RandomPatchConfiguration(32, 8, 3, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                         new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.VIBRION_GROWTH.get())))));
-        register(context, VIBRION_SPOREHOLDER_KEY, Feature.FLOWER,
-                new RandomPatchConfiguration(32, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+        register(context, VIBRION_SPOREHOLDER, Feature.FLOWER,
+                new RandomPatchConfiguration(32, 8, 3, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                         new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.VIBRION_SPOREHOLDER.get())))));
-        register(context, SUBSTILIUM_SPROUTS_KEY, Feature.FLOWER,
-                new RandomPatchConfiguration(32, 6, 3, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+        register(context, SUBSTILIUM_SPROUTS, Feature.FLOWER,
+                new RandomPatchConfiguration(32, 8, 3, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                         new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.SUBSTILIUM_SPROUTS.get())))));
 
-        register(context, REDLIKE_SUBSTILIUM_MUSHROOM_KEY, Feature.HUGE_RED_MUSHROOM, new HugeMushroomFeatureConfiguration(
+        BlockStateProvider vines_plant = BlockStateProvider.simple(ModBlocks.HANGING_VIBRION_VINES_PLANT.get());
+        BlockStateProvider vines = BlockStateProvider.simple(ModBlocks.HANGING_VIBRION_VINES.get());
+
+        register(context, HANGING_VIBRION_VINES, Feature.BLOCK_COLUMN, new BlockColumnConfiguration(List.of(BlockColumnConfiguration.layer(
+                new WeightedListInt(SimpleWeightedRandomList.<IntProvider>builder().add(UniformInt.of(0, 25), 3)
+                        .add(UniformInt.of(0, 2), 3).add(UniformInt.of(0, 6), 7).build()), vines_plant),
+                BlockColumnConfiguration.layer(ConstantInt.of(1), vines)), Direction.DOWN, BlockPredicate.ONLY_IN_AIR_PREDICATE, true));
+
+        register(context, HANGING_VIBRION_GEL, Feature.BLOCK_COLUMN, new BlockColumnConfiguration(List.of(BlockColumnConfiguration.layer(
+                        new WeightedListInt(SimpleWeightedRandomList.<IntProvider>builder().add(UniformInt.of(0, 19), 3)
+                                .add(UniformInt.of(0, 2), 3).add(UniformInt.of(0, 6), 7).build()),
+                BlockStateProvider.simple(ModBlocks.VIBRION_GEL.get()))), Direction.DOWN, BlockPredicate.ONLY_IN_AIR_PREDICATE, true));
+
+        register(context, HANGING_LIT_VIBRION_GEL, Feature.BLOCK_COLUMN, new BlockColumnConfiguration(List.of(BlockColumnConfiguration.layer(
+                new WeightedListInt(SimpleWeightedRandomList.<IntProvider>builder().add(UniformInt.of(0, 19), 3)
+                        .add(UniformInt.of(0, 2), 3).add(UniformInt.of(0, 6), 7).build()),
+                BlockStateProvider.simple(ModBlocks.LIT_VIBRION_GEL.get()))), Direction.DOWN, BlockPredicate.ONLY_IN_AIR_PREDICATE, true));
+
+        register(context, REDLIKE_SUBSTILIUM_MUSHROOM, Feature.HUGE_RED_MUSHROOM, new HugeMushroomFeatureConfiguration(
                 BlockStateProvider.simple(ModBlocks.ENTORIUM_SHROOM.get()), BlockStateProvider.simple(ModBlocks.SUBSTILIUM_STEM.get()), 2));
-        register(context, BROWNLIKE_SUBSTILIUM_MUSHROOM_KEY, Feature.HUGE_BROWN_MUSHROOM, new HugeMushroomFeatureConfiguration(
+        register(context, BROWNLIKE_SUBSTILIUM_MUSHROOM, Feature.HUGE_BROWN_MUSHROOM, new HugeMushroomFeatureConfiguration(
                 BlockStateProvider.simple(ModBlocks.ENTORIUM_SHROOM.get()), BlockStateProvider.simple(ModBlocks.SUBSTILIUM_STEM.get()), 3));
 
-        register(context, SPOTTED_EVERGREEN_KEY, Feature.FLOWER,
-                new RandomPatchConfiguration(32, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+        register(context, SPOTTED_EVERGREEN, Feature.FLOWER,
+                new RandomPatchConfiguration(64, 10, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                         new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.SPOTTED_WINTERGREEN.get())))));
 
-        register(context, PINKSTER_FLOWER_KEY, Feature.FLOWER,
-                new RandomPatchConfiguration(32, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+        register(context, PINKSTER_FLOWER, Feature.FLOWER,
+                new RandomPatchConfiguration(64, 10, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                         new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.PINKSTER_FLOWER.get())))));
 
-        register(context, HICKORY_TREE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+        register(context, HICKORY_TREE, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(ModBlocks.HICKORY_LOG.get()),
                 new StraightTrunkPlacer(14, 0, 6),
                 BlockStateProvider.simple(ModBlocks.HICKORY_LEAVES.get()),

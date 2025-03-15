@@ -10,6 +10,6 @@ import org.jetbrains.annotations.Nullable;
 public class HickoryTreeGrower extends AbstractTreeGrower {
     @Override
     protected @Nullable ResourceKey<ConfiguredFeature<?, ?>> getConfiguredFeature(RandomSource randomSource, boolean b) {
-        return ModConfiguredFeatures.HICKORY_TREE_KEY;
+        return ModConfiguredFeatures.HICKORY_TREE;
     }
 }
