@@ -36,6 +36,10 @@ public class ModPlacedFeatures {
 
     public static final ResourceKey<PlacedFeature> COMPRESSED_SUBSTILIUM_SOIL_PLACED = registerKey("compressed_substilium_soil_placed");
 
+    public static final ResourceKey<PlacedFeature> NATURAL_SPORE_BLASTER_X_PLACED = registerKey("natural_spore_blaster_x_placed");
+    public static final ResourceKey<PlacedFeature> NATURAL_SPORE_BLASTER_Y_PLACED = registerKey("natural_spore_blaster_y_placed");
+    public static final ResourceKey<PlacedFeature> NATURAL_SPORE_BLASTER_Z_PLACED = registerKey("natural_spore_blaster_z_placed");
+
     public static final ResourceKey<PlacedFeature> SPOTTED_WINTERGREEN_PLACED = registerKey("spotted_wintergreen_placed");
     public static final ResourceKey<PlacedFeature> PINKSTER_FLOWER_PLACED = registerKey("pinkster_flower_placed");
 
@@ -76,6 +80,13 @@ public class ModPlacedFeatures {
 
         register(context, COMPRESSED_SUBSTILIUM_SOIL_PLACED, configuredFeatures.getOrThrow(ModConfiguredFeatures.COMPRESSED_SUBSTILIUM_SOIL),
                 ModOrePlacement.commonOrePlacement(32, HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80))));
+
+        register(context, NATURAL_SPORE_BLASTER_X_PLACED, configuredFeatures.getOrThrow(ModConfiguredFeatures.NATURAL_SPORE_BLASTER_X),
+                ModOrePlacement.commonOrePlacement(64, HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80))));
+        register(context, NATURAL_SPORE_BLASTER_Y_PLACED, configuredFeatures.getOrThrow(ModConfiguredFeatures.NATURAL_SPORE_BLASTER_Y),
+                ModOrePlacement.commonOrePlacement(64, HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80))));
+        register(context, NATURAL_SPORE_BLASTER_Z_PLACED, configuredFeatures.getOrThrow(ModConfiguredFeatures.NATURAL_SPORE_BLASTER_Z),
+                ModOrePlacement.commonOrePlacement(64, HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80))));
 
         register(context, SPOTTED_WINTERGREEN_PLACED, configuredFeatures.getOrThrow(ModConfiguredFeatures.SPOTTED_EVERGREEN),
                 List.of(RarityFilter.onAverageOnceEvery(16), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));

@@ -1,30 +1,16 @@
 {
   "variants": {
-    "facing=down": {
-      "model": "wildaside:custom/natural_spore_blaster",
-      "x": 180
-    },
-    "facing=east": {
-      "model": "wildaside:custom/natural_spore_blaster",
+    "axis=x": {
+      "model": "wildaside:block/natural_spore_blaster_horizontal",
       "x": 90,
       "y": 90
     },
-    "facing=north": {
-      "model": "wildaside:custom/natural_spore_blaster",
+    "axis=y": {
+      "model": "wildaside:block/natural_spore_blaster"
+    },
+    "axis=z": {
+      "model": "wildaside:block/natural_spore_blaster_horizontal",
       "x": 90
-    },
-    "facing=south": {
-      "model": "wildaside:custom/natural_spore_blaster",
-      "x": 90,
-      "y": 180
-    },
-    "facing=up": {
-      "model": "wildaside:custom/natural_spore_blaster"
-    },
-    "facing=west": {
-      "model": "wildaside:custom/natural_spore_blaster",
-      "x": 90,
-      "y": 270
     }
   }
 }

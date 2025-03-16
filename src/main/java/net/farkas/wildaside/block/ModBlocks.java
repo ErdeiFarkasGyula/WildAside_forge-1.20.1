@@ -206,11 +206,11 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> SPORE_BLASTER = registerBlock("spore_blaster",
             () ->  new SporeBlaster(BlockBehaviour.Properties.copy(ModBlocks.COMPRESSED_SUBSTILIUM_SOIL.get())
-                    .noOcclusion().strength(6f, 12f).requiresCorrectToolForDrops(), false));
+                    .noOcclusion().strength(6f, 12f).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> NATURAL_SPORE_BLASTER = registerBlock("natural_spore_blaster",
-            () ->  new SporeBlaster(BlockBehaviour.Properties.copy(ModBlocks.COMPRESSED_SUBSTILIUM_SOIL.get())
-                    .noOcclusion().strength(6f, 12f).requiresCorrectToolForDrops(), true));
+            () ->  new NaturalSporeBlaster(BlockBehaviour.Properties.copy(ModBlocks.COMPRESSED_SUBSTILIUM_SOIL.get())
+                    .noOcclusion().strength(6f, 12f).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> SMOOTH_SUBSTILIUM_SOIL = registerBlock("smooth_substilium_soil",
             () ->  new Block(BlockBehaviour.Properties.copy(COMPRESSED_SUBSTILIUM_SOIL.get())));

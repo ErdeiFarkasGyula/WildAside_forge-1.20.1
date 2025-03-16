@@ -37,8 +37,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         directionalBlock(ModBlocks.SPORE_BLASTER.get(),  new ModelFile.UncheckedModelFile(modLoc("custom/spore_blaster")));
         simpleBlockItem(ModBlocks.SPORE_BLASTER.get(), new ModelFile.UncheckedModelFile(modLoc("custom/spore_blaster")));
         blockWithItem(ModBlocks.SPORE_AIR);
-        directionalBlock(ModBlocks.NATURAL_SPORE_BLASTER.get(),  new ModelFile.UncheckedModelFile(modLoc("custom/natural_spore_blaster")));
-        simpleBlockItem(ModBlocks.NATURAL_SPORE_BLASTER.get(), new ModelFile.UncheckedModelFile(modLoc("custom/natural_spore_blaster")));
+        axisBlock(((RotatedPillarBlock)ModBlocks.NATURAL_SPORE_BLASTER.get()), modLoc("block/substilium_soil"), modLoc("block/natural_spore_blaster"));
 
         //SUBSTILIUM
         blockWithItem(ModBlocks.SUBSTILIUM_SOIL);

@@ -2,6 +2,8 @@ package net.farkas.wildaside.worldgen;
 
 import net.farkas.wildaside.WildAside;
 import net.farkas.wildaside.block.ModBlocks;
+import net.farkas.wildaside.block.custom.SubstiliumSoil;
+import net.farkas.wildaside.block.custom.vibrion.NaturalSporeBlaster;
 import net.farkas.wildaside.worldgen.tree.hickory.HickoryTreeFoliagePlacer;
 import net.minecraft.core.Direction;
 import net.minecraft.core.registries.Registries;
@@ -40,6 +42,10 @@ public class ModConfiguredFeatures {
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> COMPRESSED_SUBSTILIUM_SOIL = registerKey("compressed_substilium_soil");
 
+    public static final ResourceKey<ConfiguredFeature<?, ?>> NATURAL_SPORE_BLASTER_X = registerKey("natural_spore_blaster_x");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> NATURAL_SPORE_BLASTER_Y = registerKey("natural_spore_blaster_y");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> NATURAL_SPORE_BLASTER_Z = registerKey("natural_spore_blaster_z");
+
     public static final ResourceKey<ConfiguredFeature<?, ?>> SPOTTED_EVERGREEN = registerKey("spotted_evergreen");
     public static final ResourceKey<ConfiguredFeature<?, ?>> PINKSTER_FLOWER = registerKey("pinkster_flower");
 
@@ -59,6 +65,10 @@ public class ModConfiguredFeatures {
         register(context, ENTORIUM_ORE, Feature.ORE, new OreConfiguration(entorium_ore, 6));
 
         register(context, COMPRESSED_SUBSTILIUM_SOIL, Feature.ORE, new OreConfiguration(compressed_substilium_soil, 24));
+
+        register(context, NATURAL_SPORE_BLASTER_X, Feature.REPLACE_SINGLE_BLOCK, new ReplaceBlockConfiguration(ModBlocks.SUBSTILIUM_SOIL.get().defaultBlockState().setValue(SubstiliumSoil.FREE_X, true), ModBlocks.NATURAL_SPORE_BLASTER.get().defaultBlockState().setValue(NaturalSporeBlaster.AXIS, Direction.Axis.X)));
+        register(context, NATURAL_SPORE_BLASTER_Y, Feature.REPLACE_SINGLE_BLOCK, new ReplaceBlockConfiguration(ModBlocks.SUBSTILIUM_SOIL.get().defaultBlockState().setValue(SubstiliumSoil.FREE_Y, true), ModBlocks.NATURAL_SPORE_BLASTER.get().defaultBlockState().setValue(NaturalSporeBlaster.AXIS, Direction.Axis.Y)));
+        register(context, NATURAL_SPORE_BLASTER_Z, Feature.REPLACE_SINGLE_BLOCK, new ReplaceBlockConfiguration(ModBlocks.SUBSTILIUM_SOIL.get().defaultBlockState().setValue(SubstiliumSoil.FREE_Z, true), ModBlocks.NATURAL_SPORE_BLASTER.get().defaultBlockState().setValue(NaturalSporeBlaster.AXIS, Direction.Axis.Z)));
 
         register(context, VIBRION_GROWTH, Feature.FLOWER,
                 new RandomPatchConfiguration(32, 8, 3, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,

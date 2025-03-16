@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:replace_single_block",
+  "config": {
+    "targets": [
+      {
+        "state": {
+          "Name": "wildaside:natural_spore_blaster",
+          "Properties": {
+            "axis": "x"
+          }
+        },
+        "target": {
+          "block_state": {
+            "Name": "wildaside:substilium_soil",
+            "Properties": {
+              "free_x": "true",
+              "free_y": "true",
+              "free_z": "false"
+            }
+          },
+          "predicate_type": "minecraft:blockstate_match"
+        }
+      }
+    ]
+  }
+}
