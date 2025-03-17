@@ -20,9 +20,9 @@ public class ModMobEffects {
     public static final RegistryObject<MobEffect> CONTAMINATION = MOB_EFFECTS.register("contamination",
             () -> new ContaminationEffect(MobEffectCategory.HARMFUL, -6184663)
                     .addAttributeModifier(Attributes.ARMOR, "FA233E1C-6969-4200-B01B-BCCE9785ACA4", -0.25 , AttributeModifier.Operation.MULTIPLY_TOTAL)
+                    .addAttributeModifier(Attributes.ATTACK_DAMAGE, "FA233E1C-6969-4200-B01B-BCCE9785ACA4", -0.5 , AttributeModifier.Operation.MULTIPLY_TOTAL)
                     .addAttributeModifier(Attributes.SPAWN_REINFORCEMENTS_CHANCE, "FB233E1C-6969-4200-B01B-BCCE9785ACA4", 0.1, AttributeModifier.Operation.ADDITION)
     );
-
 
     public static void register(IEventBus eventBus) {
         MOB_EFFECTS.register(eventBus);

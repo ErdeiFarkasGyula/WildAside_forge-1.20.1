@@ -71,6 +71,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         simpleBlockWithItem(ModBlocks.SUBSTILIUM_SPROUTS.get(), models().cross(blockTexture(ModBlocks.SUBSTILIUM_SPROUTS.get()).getPath(), blockTexture(ModBlocks.SUBSTILIUM_SPROUTS.get())).renderType("cutout"));
 
+        simpleBlock(ModBlocks.BIOENGINEER_WORKSTATION.get());
+
         //ENTORIUM
         blockWithItem(ModBlocks.ENTORIUM_SHROOM);
         blockWithItem(ModBlocks.ENTORIUM_ORE);

@@ -10,6 +10,7 @@ import net.farkas.wildaside.block.custom.vibrion.*;
 import net.farkas.wildaside.block.custom.vibrion.hanging_vines.HangingVibrionVines;
 import net.farkas.wildaside.block.custom.vibrion.hanging_vines.HangingVibrionVinesPlant;
 import net.farkas.wildaside.block.custom.vibrion.SporeBlaster;
+import net.farkas.wildaside.block.custom.BioengineeringWorkstation;
 import net.farkas.wildaside.item.ModItems;
 import net.farkas.wildaside.util.ModWoodTypes;
 import net.farkas.wildaside.worldgen.mushroom.SubstiliumMushroomGrower;
@@ -305,6 +306,9 @@ public class ModBlocks {
             () ->  new FlowerBlock(() -> MobEffects.CONFUSION, 5, BlockBehaviour.Properties.copy(VIBRION_GROWTH.get())
                     .mapColor(MapColor.COLOR_CYAN)
                     .lightLevel(l -> 0)));
+
+    public static final RegistryObject<Block> BIOENGINEER_WORKSTATION = registerBlock("bioengineer_workstation",
+            () ->  new BioengineeringWorkstation(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
 
 
     //HICKORY

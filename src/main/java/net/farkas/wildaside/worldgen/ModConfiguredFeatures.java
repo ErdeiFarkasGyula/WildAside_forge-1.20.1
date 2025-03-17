@@ -65,7 +65,7 @@ public class ModConfiguredFeatures {
         register(context, OVERGROWN_ENTORIUM_ORE, Feature.ORE, new OreConfiguration(overgrown_entorium_ore, 9));
         register(context, ENTORIUM_ORE, Feature.ORE, new OreConfiguration(entorium_ore, 6));
 
-        register(context, COMPRESSED_SUBSTILIUM_SOIL, Feature.ORE, new OreConfiguration(compressed_substilium_soil, 24));
+        register(context, COMPRESSED_SUBSTILIUM_SOIL, Feature.ORE, new OreConfiguration(compressed_substilium_soil, 36));
 
         register(context, NATURAL_SPORE_BLASTER_X, ModFeatures.UPDATE_REPLACE_SINGLE_BLOCK.get(), new ReplaceBlockConfiguration(ModBlocks.SUBSTILIUM_SOIL.get().defaultBlockState(), ModBlocks.NATURAL_SPORE_BLASTER.get().defaultBlockState().setValue(NaturalSporeBlaster.AXIS, Direction.Axis.X)));
         register(context, NATURAL_SPORE_BLASTER_Y, ModFeatures.UPDATE_REPLACE_SINGLE_BLOCK.get(), new ReplaceBlockConfiguration(ModBlocks.SUBSTILIUM_SOIL.get().defaultBlockState(), ModBlocks.NATURAL_SPORE_BLASTER.get().defaultBlockState().setValue(NaturalSporeBlaster.AXIS, Direction.Axis.Y)));

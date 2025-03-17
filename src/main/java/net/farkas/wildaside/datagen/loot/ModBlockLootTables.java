@@ -50,6 +50,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         this.dropSelf(ModBlocks.SPORE_BLASTER.get());
         this.dropSelf(ModBlocks.NATURAL_SPORE_BLASTER.get());
+        this.dropSelf(ModBlocks.BIOENGINEER_WORKSTATION.get());
 
         //ENTORIUM
         this.dropSelf(ModBlocks.ENTORIUM_SHROOM.get());

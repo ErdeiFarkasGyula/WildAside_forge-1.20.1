@@ -16,9 +16,4 @@ public class ContaminationEffect extends MobEffect {
     public ContaminationEffect(MobEffectCategory pCategory, int pColor) {
         super(pCategory, pColor);
     }
-
-//    @Override
-//    public void addAttributeModifiers(LivingEntity pLivingEntity, AttributeMap pAttributeMap, int pAmplifier) {
-//        super.addAttributeModifiers(pLivingEntity, pAttributeMap, pAmplifier);
-//    }
 }

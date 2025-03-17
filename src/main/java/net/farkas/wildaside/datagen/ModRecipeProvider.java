@@ -52,6 +52,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         //ENTORIUM
 
         //SUBSTILIUM
+//        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.SPORE_BLASTER.get())
+//                .pattern("S")
+//                .pattern("S")
+//                .define('S', ModBlocks.NATURAL_SPORE_BLASTER.get())
+//                .unlockedBy(getHasName(ModItems.VIBRION.get()), has(ModItems.VIBRION.get()))
+//                .save(pWriter);
+
         List<ItemLike> SUBSTILIUM_WOODSET = List.of(ModBlocks.SUBSTILIUM_STEM.get().asItem(), ModBlocks.STRIPPED_SUBSTILIUM_STEM.get(),
                 ModBlocks.SUBSTILIUM_WOOD.get(), ModBlocks.STRIPPED_SUBSTILIUM_WOOD.get(), ModBlocks.SUBSTILIUM_PLANKS.get(),
                 ModBlocks.SUBSTILIUM_STAIRS.get(), ModBlocks.SUBSTILIUM_SLAB.get(), ModBlocks.SUBSTILIUM_FENCE.get(),
