@@ -1,5 +1,5 @@
 {
-  "type": "minecraft:replace_single_block",
+  "type": "wildaside:update_replace_single_block",
   "config": {
     "targets": [
       {
@@ -11,12 +11,7 @@
         },
         "target": {
           "block_state": {
-            "Name": "wildaside:substilium_soil",
-            "Properties": {
-              "free_x": "true",
-              "free_y": "true",
-              "free_z": "true"
-            }
+            "Name": "wildaside:substilium_soil"
           },
           "predicate_type": "minecraft:blockstate_match"
         }

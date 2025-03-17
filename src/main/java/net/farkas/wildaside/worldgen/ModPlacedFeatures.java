@@ -82,11 +82,11 @@ public class ModPlacedFeatures {
                 ModOrePlacement.commonOrePlacement(32, HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80))));
 
         register(context, NATURAL_SPORE_BLASTER_X_PLACED, configuredFeatures.getOrThrow(ModConfiguredFeatures.NATURAL_SPORE_BLASTER_X),
-                ModOrePlacement.commonOrePlacement(64, HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80))));
+                ModOrePlacement.commonOrePlacement(128, HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80))));
         register(context, NATURAL_SPORE_BLASTER_Y_PLACED, configuredFeatures.getOrThrow(ModConfiguredFeatures.NATURAL_SPORE_BLASTER_Y),
-                ModOrePlacement.commonOrePlacement(64, HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80))));
+                ModOrePlacement.commonOrePlacement(128, HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80))));
         register(context, NATURAL_SPORE_BLASTER_Z_PLACED, configuredFeatures.getOrThrow(ModConfiguredFeatures.NATURAL_SPORE_BLASTER_Z),
-                ModOrePlacement.commonOrePlacement(64, HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80))));
+                ModOrePlacement.commonOrePlacement(128, HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80))));
 
         register(context, SPOTTED_WINTERGREEN_PLACED, configuredFeatures.getOrThrow(ModConfiguredFeatures.SPOTTED_EVERGREEN),
                 List.of(RarityFilter.onAverageOnceEvery(16), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));

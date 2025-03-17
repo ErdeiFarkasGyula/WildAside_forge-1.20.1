@@ -393,7 +393,6 @@ public class ModBlocks {
 
     private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {
         return ModItems.ITEMS.register(name, ()  -> new BlockItem(block.get(), new Item.Properties()));
-
     }
 
     private static <T extends Block> RegistryObject<T> registerBlockWithStackLimit(String name, Supplier<T> block, int stackLimit) {
@@ -404,7 +403,6 @@ public class ModBlocks {
 
     private static <T extends Block> RegistryObject<Item> registerBlockItemWithStackLimit(String name, RegistryObject<T> block, int stackLimit) {
         return ModItems.ITEMS.register(name, ()  -> new BlockItem(block.get(), new Item.Properties().stacksTo(stackLimit)));
-
     }
 
     public static void register(IEventBus eventBus) {
