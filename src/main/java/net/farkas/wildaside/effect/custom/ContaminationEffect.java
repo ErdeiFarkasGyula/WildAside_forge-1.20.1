@@ -16,4 +16,5 @@ public class ContaminationEffect extends MobEffect {
     public ContaminationEffect(MobEffectCategory pCategory, int pColor) {
         super(pCategory, pColor);
     }
+
 }
