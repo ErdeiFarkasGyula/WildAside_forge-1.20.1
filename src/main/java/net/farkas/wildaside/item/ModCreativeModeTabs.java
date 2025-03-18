@@ -29,13 +29,6 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.LIT_VIBRION_GLASS.get());
                         pOutput.accept(ModBlocks.VIBRION_GLASS_PANE.get());
                         pOutput.accept(ModBlocks.LIT_VIBRION_GLASS_PANE.get());
-                        pOutput.accept(ModBlocks.NATURAL_SPORE_BLASTER.get());
-                        pOutput.accept(ModBlocks.SPORE_BLASTER.get());
-
-                        pOutput.accept(ModItems.ENTORIUM.get());
-                        pOutput.accept(ModBlocks.ENTORIUM_SHROOM.get());
-                        pOutput.accept(ModBlocks.ENTORIUM_ORE.get());
-                        pOutput.accept(ModBlocks.OVERGROWN_ENTORIUM_ORE.get());
 
                         pOutput.accept(ModBlocks.SUBSTILIUM_SOIL.get());
                         pOutput.accept(ModBlocks.COMPRESSED_SUBSTILIUM_SOIL.get());
@@ -48,6 +41,15 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.SUBSTILIUM_TILE_WALLS.get());
                         pOutput.accept(ModBlocks.SUBSTILIUM_TILE_PRESSURE_PLATE.get());
                         pOutput.accept(ModBlocks.SUBSTILIUM_TILE_BUTTON.get());
+
+                        pOutput.accept(ModItems.ENTORIUM.get());
+                        pOutput.accept(ModBlocks.ENTORIUM_SHROOM.get());
+                        pOutput.accept(ModBlocks.ENTORIUM_ORE.get());
+                        pOutput.accept(ModBlocks.OVERGROWN_ENTORIUM_ORE.get());
+                        pOutput.accept(ModBlocks.BIOENGINEERING_WORKSTATION.get());
+
+                        pOutput.accept(ModBlocks.NATURAL_SPORE_BLASTER.get());
+                        pOutput.accept(ModBlocks.SPORE_BLASTER.get());
 
                         pOutput.accept(ModBlocks.SUBSTILIUM_STEM.get());
                         pOutput.accept(ModBlocks.SUBSTILIUM_WOOD.get());

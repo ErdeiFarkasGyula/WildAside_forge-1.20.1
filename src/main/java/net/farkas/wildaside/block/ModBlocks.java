@@ -307,7 +307,7 @@ public class ModBlocks {
                     .mapColor(MapColor.COLOR_CYAN)
                     .lightLevel(l -> 0)));
 
-    public static final RegistryObject<Block> BIOENGINEER_WORKSTATION = registerBlock("bioengineer_workstation",
+    public static final RegistryObject<Block> BIOENGINEERING_WORKSTATION = registerBlock("bioengineering_workstation",
             () ->  new BioengineeringWorkstation(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
 
 

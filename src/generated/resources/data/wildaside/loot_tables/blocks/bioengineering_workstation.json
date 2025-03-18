@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "wildaside:bioengineer_workstation"
+          "name": "wildaside:bioengineering_workstation"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "wildaside:blocks/bioengineer_workstation"
+  "random_sequence": "wildaside:blocks/bioengineering_workstation"
 }

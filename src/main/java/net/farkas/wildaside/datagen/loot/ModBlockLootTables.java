@@ -3,10 +3,8 @@ package net.farkas.wildaside.datagen.loot;
 import net.farkas.wildaside.block.ModBlocks;
 import net.farkas.wildaside.item.ModItems;
 import net.minecraft.data.loot.BlockLootSubProvider;
-import net.minecraft.world.flag.FeatureFlagSet;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.storage.loot.LootTable;
@@ -50,7 +48,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         this.dropSelf(ModBlocks.SPORE_BLASTER.get());
         this.dropSelf(ModBlocks.NATURAL_SPORE_BLASTER.get());
-        this.dropSelf(ModBlocks.BIOENGINEER_WORKSTATION.get());
+        this.dropSelf(ModBlocks.BIOENGINEERING_WORKSTATION.get());
 
         //ENTORIUM
         this.dropSelf(ModBlocks.ENTORIUM_SHROOM.get());

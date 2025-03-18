@@ -21,6 +21,10 @@ public class ModBlockEntities {
                     ModBlocks.SUBSTILIUM_HANGING_SIGN.get(), ModBlocks.SUBSTILIUM_WALL_HANGING_SIGN.get(),
                     ModBlocks.HICKORY_HANGING_SIGN.get(),  ModBlocks.HICKORY_WALL_HANGING_SIGN.get()).build(null));
 
+    public static final RegistryObject<BlockEntityType<BioengineeringWorkstationBlockEntity>> BIOENGINEERING_WORKSTATION =
+            BLOCK_ENTITIES.register("bioengineering_workstation", () -> BlockEntityType.Builder.of(BioengineeringWorkstationBlockEntity::new,
+                    ModBlocks.BIOENGINEERING_WORKSTATION.get()).build(null));
+
 
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);

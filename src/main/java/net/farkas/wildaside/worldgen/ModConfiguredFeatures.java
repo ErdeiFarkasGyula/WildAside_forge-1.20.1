@@ -60,7 +60,7 @@ public class ModConfiguredFeatures {
 
         List<OreConfiguration.TargetBlockState> overgrown_entorium_ore = List.of(OreConfiguration.target(overgrown_entorium_ore_replaceables, ModBlocks.OVERGROWN_ENTORIUM_ORE.get().defaultBlockState()));
         List<OreConfiguration.TargetBlockState> entorium_ore = List.of(OreConfiguration.target(entorium_ore_replaceables, ModBlocks.ENTORIUM_ORE.get().defaultBlockState()));
-        List<OreConfiguration.TargetBlockState> compressed_substilium_soil = List.of(OreConfiguration.target(overgrown_entorium_ore_replaceables, ModBlocks.COMPRESSED_SUBSTILIUM_SOIL.get().defaultBlockState()));
+        List<OreConfiguration.TargetBlockState> compressed_substilium_soil = List.of(OreConfiguration.target(compressed_substilium_soil_replaceables, ModBlocks.COMPRESSED_SUBSTILIUM_SOIL.get().defaultBlockState()));
 
         register(context, OVERGROWN_ENTORIUM_ORE, Feature.ORE, new OreConfiguration(overgrown_entorium_ore, 9));
         register(context, ENTORIUM_ORE, Feature.ORE, new OreConfiguration(entorium_ore, 6));
