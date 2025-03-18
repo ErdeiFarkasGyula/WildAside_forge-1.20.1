@@ -21,7 +21,6 @@ public class BioengineeringWorkstationScreen extends AbstractContainerScreen<Bio
         super.init();
         this.inventoryLabelY = 9999;
         this.titleLabelY = 9999;
-
     }
 
     @Override
