@@ -11,6 +11,7 @@ import net.farkas.wildaside.item.ModItems;
 import net.farkas.wildaside.particle.ModParticles;
 import net.farkas.wildaside.potion.BetterBrewingRecipe;
 import net.farkas.wildaside.potion.ModPotions;
+import net.farkas.wildaside.recipe.ModRecipes;
 import net.farkas.wildaside.screen.BioengineeringWorkstationScreen;
 import net.farkas.wildaside.screen.ModMenuTypes;
 import net.farkas.wildaside.util.ModWoodTypes;
@@ -61,6 +62,7 @@ public class WildAside
         ModBlockEntities.register(modEventBus);
 
         ModMenuTypes.register(modEventBus);
+        ModRecipes.register(modEventBus);
 
         ModStemPlacerTypes.register(modEventBus);
 

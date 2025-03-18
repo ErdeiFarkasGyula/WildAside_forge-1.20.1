@@ -1,6 +1,7 @@
 package net.farkas.wildaside.block.entity;
 
 import net.farkas.wildaside.block.ModBlocks;
+import net.farkas.wildaside.recipe.BioengineeringWorkstationRecipe;
 import net.farkas.wildaside.screen.BioengineeringWorkstationMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -25,6 +26,8 @@ import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+
+import java.util.Optional;
 
 public class BioengineeringWorkstationBlockEntity extends BlockEntity implements MenuProvider {
     private final ItemStackHandler itemHandler = new ItemStackHandler(6);
@@ -144,17 +147,36 @@ public class BioengineeringWorkstationBlockEntity extends BlockEntity implements
     }
 
     private void craftItem() {
-        ItemStack result = new ItemStack(ModBlocks.SPORE_BLASTER.get(), 1);
+        Optional<BioengineeringWorkstationRecipe> recipe = getCurrentRecipe();
+        ItemStack result = recipe.get().getResultItem(null);
+
         this.itemHandler.extractItem(INPUT_1, 1, false);
+        this.itemHandler.extractItem(INPUT_2, 1, false);
+        this.itemHandler.extractItem(INPUT_3, 1, false);
+        this.itemHandler.extractItem(INPUT_4, 1, false);
+        this.itemHandler.extractItem(INPUT_5, 1, false);
 
         this.itemHandler.setStackInSlot(OUTPUT_1, new ItemStack(result.getItem(), this.itemHandler.getStackInSlot(OUTPUT_1).getCount() + result.getCount()));
     }
 
     private boolean hasRecipe() {
-        boolean hasCraftingItem = this.itemHandler.getStackInSlot(INPUT_1).getItem() == ModBlocks.NATURAL_SPORE_BLASTER.get().asItem();
-        ItemStack result = new ItemStack(ModBlocks.SPORE_BLASTER.get());
+        Optional<BioengineeringWorkstationRecipe> recipe = getCurrentRecipe();
 
-        return hasCraftingItem && canInsertAmountIntoOutputSlot(result.getCount()) && canInsertItemIntoOutputSlot(result.getItem());
+        if (recipe.isEmpty()) return false;
+
+        ItemStack result = recipe.get().getResultItem(getLevel().registryAccess());
+
+        return canInsertAmountIntoOutputSlot(result.getCount()) && canInsertItemIntoOutputSlot(result.getItem());
+    }
+
+    private Optional<BioengineeringWorkstationRecipe> getCurrentRecipe() {
+        SimpleContainer inventory = new SimpleContainer(this.itemHandler.getSlots());
+
+        for (int i = 0; i < itemHandler.getSlots(); i++) {
+            inventory.setItem(i, this.itemHandler.getStackInSlot(i));
+        }
+
+        return this.level.getRecipeManager().getRecipeFor(BioengineeringWorkstationRecipe.Type.INSTANCE, inventory, level);
     }
 
     private boolean canInsertItemIntoOutputSlot(Item item) {
