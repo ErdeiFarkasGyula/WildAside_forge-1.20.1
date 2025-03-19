@@ -27,7 +27,7 @@ public class BioengineeringCategory implements IRecipeCategory<BioengineeringWor
     private final IDrawable icon;
 
     public BioengineeringCategory(IGuiHelper helper) {
-        this.background = helper.createDrawable(TEXTURE, 0, 0, 176, 85);
+        this.background = helper.createDrawable(TEXTURE, 17, 10, 140, 65);
         this.icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(ModBlocks.BIOENGINEERING_WORKSTATION.get()));
     }
 
@@ -53,11 +53,11 @@ public class BioengineeringCategory implements IRecipeCategory<BioengineeringWor
 
     @Override
     public void setRecipe(IRecipeLayoutBuilder builder, BioengineeringWorkstationRecipe recipe, IFocusGroup focuses) {
-        builder.addSlot(RecipeIngredientRole.INPUT, 43, 32).addIngredients(recipe.getIngredients().get(0));
-        builder.addSlot(RecipeIngredientRole.INPUT, 43, 14).addIngredients(recipe.getIngredients().get(1));
-        builder.addSlot(RecipeIngredientRole.INPUT, 61, 32).addIngredients(recipe.getIngredients().get(2));
-        builder.addSlot(RecipeIngredientRole.INPUT, 43, 50).addIngredients(recipe.getIngredients().get(3));
-        builder.addSlot(RecipeIngredientRole.INPUT, 25, 32).addIngredients(recipe.getIngredients().get(4));
-        builder.addSlot(RecipeIngredientRole.OUTPUT, 134, 32).addItemStack(recipe.getResultItem(null));
+        builder.addSlot(RecipeIngredientRole.INPUT, 27, 24).addIngredients(recipe.getIngredients().get(0));
+        builder.addSlot(RecipeIngredientRole.INPUT, 27, 6).addIngredients(recipe.getIngredients().get(1));
+        builder.addSlot(RecipeIngredientRole.INPUT, 45, 24).addIngredients(recipe.getIngredients().get(2));
+        builder.addSlot(RecipeIngredientRole.INPUT, 27, 42).addIngredients(recipe.getIngredients().get(3));
+        builder.addSlot(RecipeIngredientRole.INPUT, 9, 24).addIngredients(recipe.getIngredients().get(4));
+        builder.addSlot(RecipeIngredientRole.OUTPUT, 117, 24).addItemStack(recipe.getResultItem(null));
     }
 }

@@ -33,12 +33,12 @@ public class BioengineeringWorkstationMenu extends AbstractContainerMenu {
         addPlayerHotbar(inv);
 
         this.blockEntity.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(iItemHandler -> {
-            this.addSlot(new SlotItemHandler(iItemHandler, 0, 43, 32));
-            this.addSlot(new SlotItemHandler(iItemHandler, 1, 43, 14));
-            this.addSlot(new SlotItemHandler(iItemHandler, 2, 61, 32));
-            this.addSlot(new SlotItemHandler(iItemHandler, 3, 43, 50));
-            this.addSlot(new SlotItemHandler(iItemHandler, 4, 25, 32));
-            this.addSlot(new SlotItemHandler(iItemHandler, 5, 134, 32));
+            this.addSlot(new SlotItemHandler(iItemHandler, 0, 44, 34));
+            this.addSlot(new SlotItemHandler(iItemHandler, 1, 44, 16));
+            this.addSlot(new SlotItemHandler(iItemHandler, 2, 62, 34));
+            this.addSlot(new SlotItemHandler(iItemHandler, 3, 44, 52));
+            this.addSlot(new SlotItemHandler(iItemHandler, 4, 26, 34));
+            this.addSlot(new SlotItemHandler(iItemHandler, 5, 134, 34));
         });
 
         addDataSlots(data);
