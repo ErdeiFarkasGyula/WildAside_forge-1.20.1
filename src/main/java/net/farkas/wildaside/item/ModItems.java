@@ -3,6 +3,7 @@ package net.farkas.wildaside.item;
 import net.farkas.wildaside.WildAside;
 import net.farkas.wildaside.block.ModBlocks;
 import net.farkas.wildaside.entity.custom.ModBoatEntity;
+import net.farkas.wildaside.item.custom.EntoriumPill;
 import net.farkas.wildaside.item.custom.ModBoatItem;
 import net.minecraft.world.item.HangingSignItem;
 import net.minecraft.world.item.Item;
@@ -20,6 +21,9 @@ public class ModItems {
             () ->  new Item(new Item.Properties().food(ModFoods.VIBRION)));
     public static final RegistryObject<Item> ENTORIUM = ITEMS.register("entorium",
             () ->  new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> ENTORIUM_PILL = ITEMS.register("entorium_pill",
+            () ->  new EntoriumPill(new Item.Properties().food(ModFoods.ENTORIUM_PILL)));
 
     public static final RegistryObject<Item> SUBSTILIUM_SIGN = ITEMS.register("substilium_sign",
             () ->  new SignItem(new Item.Properties().stacksTo(16), ModBlocks.SUBSTILIUM_SIGN.get(), ModBlocks.SUBSTILIUM_WALL_SIGN.get()));

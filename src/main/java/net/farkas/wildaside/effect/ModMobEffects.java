@@ -2,6 +2,7 @@ package net.farkas.wildaside.effect;
 
 import net.farkas.wildaside.WildAside;
 import net.farkas.wildaside.effect.custom.ContaminationEffect;
+import net.farkas.wildaside.effect.custom.ImmunityEffect;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
@@ -22,6 +23,10 @@ public class ModMobEffects {
                     .addAttributeModifier(Attributes.ARMOR, "FA233E1C-6969-4200-B01B-BCCE9785ACA4", -0.25 , AttributeModifier.Operation.MULTIPLY_TOTAL)
                     .addAttributeModifier(Attributes.ATTACK_DAMAGE, "FA233E1C-6969-4200-B01B-BCCE9785ACA4", -0.5 , AttributeModifier.Operation.MULTIPLY_TOTAL)
                     .addAttributeModifier(Attributes.SPAWN_REINFORCEMENTS_CHANCE, "FB233E1C-6969-4200-B01B-BCCE9785ACA4", 0.1, AttributeModifier.Operation.ADDITION)
+    );
+
+    public static final RegistryObject<MobEffect> IMMUNITY = MOB_EFFECTS.register("immunity",
+            () -> new ImmunityEffect(MobEffectCategory.BENEFICIAL, -3579177)
     );
 
     public static void register(IEventBus eventBus) {

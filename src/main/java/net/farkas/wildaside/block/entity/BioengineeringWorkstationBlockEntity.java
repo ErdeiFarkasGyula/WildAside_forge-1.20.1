@@ -29,7 +29,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Optional;
 
-public class BioengineeringWorkstationBlockEntity extends BlockEntity implements MenuProvider {
+public class  BioengineeringWorkstationBlockEntity extends BlockEntity implements MenuProvider {
     private final ItemStackHandler itemHandler = new ItemStackHandler(6);
 
     private static final int INPUT_1 = 0;

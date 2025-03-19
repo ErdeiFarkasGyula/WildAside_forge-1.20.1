@@ -1,7 +1,9 @@
 package net.farkas.wildaside.block.custom.vibrion;
 
+import net.farkas.wildaside.block.ModBlocks;
 import net.farkas.wildaside.effect.ModMobEffects;
 import net.farkas.wildaside.particle.ModParticles;
+import net.farkas.wildaside.util.ContaminationUtil;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
@@ -29,7 +31,7 @@ public class SporeAir extends AirBlock {
     @Override
     public void entityInside(BlockState pState, Level pLevel, BlockPos pPos, Entity pEntity) {
         if (pEntity instanceof Player) {
-            ((Player)pEntity).addEffect(new MobEffectInstance(ModMobEffects.CONTAMINATION.get(), 400));
+            ContaminationUtil.givePlayerContamination((Player)pEntity, 15);
         }
         super.entityInside(pState, pLevel, pPos, pEntity);
     }

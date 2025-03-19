@@ -14,7 +14,9 @@ public class ModPotions {
             DeferredRegister.create(ForgeRegistries.POTIONS, WildAside.MOD_ID);
 
     public static final RegistryObject<Potion> CONTAMINATION_POTION = POTIONS.register("contamination_potion",
-            () -> new Potion(new MobEffectInstance(ModMobEffects.CONTAMINATION.get(), 200, 0)));
+            () -> new Potion(new MobEffectInstance(ModMobEffects.CONTAMINATION.get(), 400, 0)));
+    public static final RegistryObject<Potion> IMMUNITY_POTION = POTIONS.register("immunity_potion",
+            () -> new Potion(new MobEffectInstance(ModMobEffects.IMMUNITY.get(), 400, 0)));
 
     public static void register(IEventBus eventBus) {
         POTIONS.register(eventBus);

@@ -49,6 +49,20 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModBlocks.VIBRION_BLOCK.get()), has(ModBlocks.VIBRION_BLOCK.get()))
                 .save(pWriter);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.VIBRION_GLASS_PANE.get(), 16)
+                .pattern("SS")
+                .pattern("SS")
+                .define('S', ModBlocks.VIBRION_GLASS.get())
+                .unlockedBy(getHasName( ModBlocks.VIBRION_GLASS.get()), has( ModBlocks.VIBRION_GLASS.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.LIT_VIBRION_GLASS_PANE.get(), 16)
+                .pattern("SS")
+                .pattern("SS")
+                .define('S', ModBlocks.LIT_VIBRION_GLASS.get())
+                .unlockedBy(getHasName( ModBlocks.LIT_VIBRION_GLASS.get()), has( ModBlocks.LIT_VIBRION_GLASS.get()))
+                .save(pWriter);
+
         //ENTORIUM
 
         //SUBSTILIUM

@@ -32,7 +32,7 @@ public class BetterBrewingRecipe implements IBrewingRecipe {
 
     @Override
     public ItemStack getOutput(ItemStack input, ItemStack ingredient) {
-        if(!this.isInput(input) || !this.isIngredient(ingredient)) {
+        if (!this.isInput(input) || !this.isIngredient(ingredient)) {
             return ItemStack.EMPTY;
         }
 
