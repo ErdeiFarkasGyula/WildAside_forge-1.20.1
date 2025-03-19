@@ -1,4 +1,8 @@
-// 1.20.1	2025-03-19T20:10:32.0800932	Recipes
+// 1.20.1	2025-03-19T21:16:14.2672583	Recipes
+5b465bf35c1e00856e7257bae2fff66fe82f57d2 data/minecraft/advancements/recipes/misc/pink_dye.json
+014dd0b0a092b0f828ef3ffa797760789fac71c3 data/minecraft/advancements/recipes/misc/white_dye.json
+bbb8f19ec76f96d30bceac1d6e41467033513f70 data/minecraft/recipes/pink_dye.json
+b0858ddd522b0adb41aea589238f31575bd5ea5f data/minecraft/recipes/white_dye.json
 45aecb3612fbfd0d0aa73746789fec63bf05a3f9 data/wildaside/advancements/recipes/building_blocks/chiselled_substilium_soilcut_from_compressed_substilium_soil.json
 eee1d58dc03d2e3cc8d25aeac94a4f974880d646 data/wildaside/advancements/recipes/building_blocks/compressed_substilium_soil.json
 330d1dd92001caf446d594798519c41fe737d71e data/wildaside/advancements/recipes/building_blocks/cracked_substilium_tilescut_from_compressed_substilium_soil.json

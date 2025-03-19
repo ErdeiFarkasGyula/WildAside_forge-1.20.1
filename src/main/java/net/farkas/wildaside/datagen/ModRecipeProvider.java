@@ -90,6 +90,16 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 ModItems.HICKORY_BOAT.get(), ModItems.HICKORY_CHEST_BOAT.get());
         defaultWoodSet(pWriter, HICKORY_WOODSET);
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.PINK_DYE, 1)
+                .requires(ModBlocks.PINKSTER_FLOWER.get())
+                .unlockedBy(getHasName(ModBlocks.PINKSTER_FLOWER.get()), has(ModBlocks.PINKSTER_FLOWER.get()))
+                .save(pWriter);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.WHITE_DYE, 1)
+                .requires(ModBlocks.SPOTTED_WINTERGREEN.get())
+                .unlockedBy(getHasName(ModBlocks.SPOTTED_WINTERGREEN.get()), has(ModBlocks.SPOTTED_WINTERGREEN.get()))
+                .save(pWriter);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.COMPRESSED_SUBSTILIUM_SOIL.get(), 2)
                 .pattern("SS")
                 .pattern("SS")
