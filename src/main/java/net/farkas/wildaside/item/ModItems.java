@@ -9,7 +9,6 @@ import net.minecraft.world.item.HangingSignItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.SignItem;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -42,6 +41,9 @@ public class ModItems {
             () ->  new ModBoatItem(false, ModBoatEntity.Type.HICKORY, new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> HICKORY_CHEST_BOAT = ITEMS.register("hickory_chest_boat",
             () ->  new ModBoatItem(true, ModBoatEntity.Type.HICKORY, new Item.Properties().stacksTo(1)));
+
+    public static final RegistryObject<Item> HICKORY_NUT = ITEMS.register("hickory_nut",
+            () ->  new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

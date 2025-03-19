@@ -29,26 +29,6 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.VIBRION_GLASS.get())
                 .add(ModBlocks.LIT_VIBRION_GLASS.get());
 
-        this.tag(ModTags.Blocks.SUBSTILIUM_WOODSET)
-                .add(ModBlocks.SUBSTILIUM_STEM.get())
-                .add(ModBlocks.SUBSTILIUM_WOOD.get())
-                .add(ModBlocks.STRIPPED_SUBSTILIUM_STEM.get())
-                .add(ModBlocks.STRIPPED_SUBSTILIUM_WOOD.get())
-                .add(ModBlocks.SUBSTILIUM_WOOD.get())
-                .add(ModBlocks.SUBSTILIUM_PLANKS.get())
-                .add(ModBlocks.SUBSTILIUM_STAIRS.get())
-                .add(ModBlocks.SUBSTILIUM_SLAB.get())
-                .add(ModBlocks.SUBSTILIUM_PRESSURE_PLATE.get())
-                .add(ModBlocks.SUBSTILIUM_BUTTON.get())
-                .add(ModBlocks.SUBSTILIUM_DOOR.get())
-                .add(ModBlocks.SUBSTILIUM_TRAPDOOR.get())
-                .add(ModBlocks.SUBSTILIUM_FENCE.get())
-                .add(ModBlocks.SUBSTILIUM_FENCE_GATE.get())
-                .add(ModBlocks.SUBSTILIUM_SIGN.get())
-                .add(ModBlocks.SUBSTILIUM_HANGING_SIGN.get());
-
-
-
         this.tag(ModTags.Blocks.HUGE_MUSHROOM_GROW_BLOCK)
                 .add(ModBlocks.SUBSTILIUM_SOIL.get())
                 .add(ModBlocks.OVERGROWN_ENTORIUM_ORE.get());
@@ -116,6 +96,24 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.ENTORIUM_ORE.get())
                 .add(ModBlocks.OVERGROWN_ENTORIUM_ORE.get());
 
+        this.tag(ModTags.Blocks.SUBSTILIUM_WOODSET)
+                .add(ModBlocks.SUBSTILIUM_STEM.get())
+                .add(ModBlocks.SUBSTILIUM_WOOD.get())
+                .add(ModBlocks.STRIPPED_SUBSTILIUM_STEM.get())
+                .add(ModBlocks.STRIPPED_SUBSTILIUM_WOOD.get())
+                .add(ModBlocks.SUBSTILIUM_WOOD.get())
+                .add(ModBlocks.SUBSTILIUM_PLANKS.get())
+                .add(ModBlocks.SUBSTILIUM_STAIRS.get())
+                .add(ModBlocks.SUBSTILIUM_SLAB.get())
+                .add(ModBlocks.SUBSTILIUM_PRESSURE_PLATE.get())
+                .add(ModBlocks.SUBSTILIUM_BUTTON.get())
+                .add(ModBlocks.SUBSTILIUM_DOOR.get())
+                .add(ModBlocks.SUBSTILIUM_TRAPDOOR.get())
+                .add(ModBlocks.SUBSTILIUM_FENCE.get())
+                .add(ModBlocks.SUBSTILIUM_FENCE_GATE.get())
+                .add(ModBlocks.SUBSTILIUM_SIGN.get())
+                .add(ModBlocks.SUBSTILIUM_HANGING_SIGN.get());
+
         //
 
         this.tag(BlockTags.FENCES)
@@ -142,7 +140,11 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.HICKORY_PLANKS.get());
 
         this.tag(BlockTags.LEAVES)
-                .add(ModBlocks.HICKORY_LEAVES.get());
+                .add(ModBlocks.HICKORY_LEAVES.get())
+                .add(ModBlocks.RED_GLOWING_HICKORY_LEAVES.get())
+                .add(ModBlocks.BROWN_GLOWING_HICKORY_LEAVES.get())
+                .add(ModBlocks.YELLOW_GLOWING_HICKORY_LEAVES.get())
+                .add(ModBlocks.GREEN_GLOWING_HICKORY_LEAVES.get());
 
         this.tag(BlockTags.MUSHROOM_GROW_BLOCK)
                 .add(ModBlocks.SUBSTILIUM_SOIL.get());

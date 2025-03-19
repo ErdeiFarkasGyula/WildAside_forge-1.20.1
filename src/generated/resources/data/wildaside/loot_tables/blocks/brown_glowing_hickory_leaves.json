@@ -37,7 +37,7 @@
                   ]
                 }
               ],
-              "name": "wildaside:hickory_leaves"
+              "name": "wildaside:brown_glowing_hickory_leaves"
             },
             {
               "type": "minecraft:item",
@@ -51,7 +51,7 @@
                   "enchantment": "minecraft:fortune"
                 }
               ],
-              "name": "wildaside:hickory_sapling"
+              "name": "wildaside:brown_glowing_hickory_sapling"
             }
           ]
         }
@@ -180,5 +180,5 @@
       "rolls": 1.0
     }
   ],
-  "random_sequence": "wildaside:blocks/hickory_leaves"
+  "random_sequence": "wildaside:blocks/brown_glowing_hickory_leaves"
 }

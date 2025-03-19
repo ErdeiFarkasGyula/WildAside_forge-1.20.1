@@ -1,5 +1,9 @@
 {
   "values": [
-    "wildaside:hickory_leaves"
+    "wildaside:hickory_leaves",
+    "wildaside:red_glowing_hickory_leaves",
+    "wildaside:brown_glowing_hickory_leaves",
+    "wildaside:yellow_glowing_hickory_leaves",
+    "wildaside:green_glowing_hickory_leaves"
   ]
 }

@@ -1,7 +1,7 @@
-// 1.20.1	2025-03-15T21:56:09.826548	Tags for minecraft:block mod id wildaside
+// 1.20.1	2025-03-19T22:19:11.5558257	Tags for minecraft:block mod id wildaside
 d1f85e88be042254e820879eaaf2cffeedd7706d data/minecraft/tags/blocks/fences.json
 91a3e6d389cd000ab12cedc46ba98c4026da8887 data/minecraft/tags/blocks/fence_gates.json
-1b24c9491da975f9655e4c09971924a6278e9a73 data/minecraft/tags/blocks/leaves.json
+1a6ca65cc7729f3e05799bc6055ee7ceee68f7be data/minecraft/tags/blocks/leaves.json
 402b09c377097ca6dd840fb311f468713011a465 data/minecraft/tags/blocks/logs_that_burn.json
 127676f0cc4343483bedd610df15bfb22a00ecd4 data/minecraft/tags/blocks/mineable/axe.json
 6f7e60eb213042f490c5c09a0997bdc37c78da26 data/minecraft/tags/blocks/mineable/hoe.json

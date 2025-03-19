@@ -374,6 +374,14 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> HICKORY_LEAVES = registerBlock("hickory_leaves",
             () ->  new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+    public static final RegistryObject<Block> RED_GLOWING_HICKORY_LEAVES = registerBlock("red_glowing_hickory_leaves",
+            () ->  new GlowingLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+    public static final RegistryObject<Block> BROWN_GLOWING_HICKORY_LEAVES = registerBlock("brown_glowing_hickory_leaves",
+            () ->  new GlowingLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+    public static final RegistryObject<Block> YELLOW_GLOWING_HICKORY_LEAVES = registerBlock("yellow_glowing_hickory_leaves",
+            () ->  new GlowingLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+    public static final RegistryObject<Block> GREEN_GLOWING_HICKORY_LEAVES = registerBlock("green_glowing_hickory_leaves",
+            () ->  new GlowingLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
 
     public static final RegistryObject<Block> HICKORY_SAPLING = registerBlock("hickory_sapling",
             () ->  new SaplingBlock(new HickoryTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));

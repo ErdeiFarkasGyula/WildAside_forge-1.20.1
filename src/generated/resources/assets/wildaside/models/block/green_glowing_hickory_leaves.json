@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "wildaside:block/green_glowing_hickory_leaves"
+  }
+}

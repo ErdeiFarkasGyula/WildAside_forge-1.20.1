@@ -98,6 +98,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
         hangingSignBlock((ModBlocks.HICKORY_HANGING_SIGN.get()), (ModBlocks.HICKORY_WALL_HANGING_SIGN.get()), blockTexture(ModBlocks.HICKORY_PLANKS.get()));
 
         leavesBlock(ModBlocks.HICKORY_LEAVES);
+        leavesBlock(ModBlocks.RED_GLOWING_HICKORY_LEAVES);
+        leavesBlock(ModBlocks.BROWN_GLOWING_HICKORY_LEAVES);
+        leavesBlock(ModBlocks.YELLOW_GLOWING_HICKORY_LEAVES);
+        leavesBlock(ModBlocks.GREEN_GLOWING_HICKORY_LEAVES);
 
         crossBlock(ModBlocks.HICKORY_SAPLING);
         crossBlock(ModBlocks.RED_GLOWING_HICKORY_SAPLING);
