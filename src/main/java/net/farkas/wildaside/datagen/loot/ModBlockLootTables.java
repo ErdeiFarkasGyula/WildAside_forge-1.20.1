@@ -114,16 +114,26 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 block -> createDoorTable(ModBlocks.SUBSTILIUM_DOOR.get()));
 
         this.add(ModBlocks.HICKORY_LEAVES.get(), block ->
-                createBiggerLeavesDrops(ModBlocks.HICKORY_LEAVES.get(), ModBlocks.HICKORY_SAPLING.get(), ModItems.HICKORY_NUT.get()));
+                createBiggerLeavesDrops(block, ModBlocks.HICKORY_SAPLING.get(), ModItems.HICKORY_NUT.get()));
         this.add(ModBlocks.RED_GLOWING_HICKORY_LEAVES.get(), block ->
-                createBiggerLeavesDrops(ModBlocks.RED_GLOWING_HICKORY_LEAVES.get(), ModBlocks.RED_GLOWING_HICKORY_SAPLING.get(), ModItems.HICKORY_NUT.get()));
+                createBiggerLeavesDrops(block, ModBlocks.RED_GLOWING_HICKORY_SAPLING.get(), ModItems.HICKORY_NUT.get()));
         this.add(ModBlocks.BROWN_GLOWING_HICKORY_LEAVES.get(), block ->
-                createBiggerLeavesDrops(ModBlocks.BROWN_GLOWING_HICKORY_LEAVES.get(), ModBlocks.BROWN_GLOWING_HICKORY_SAPLING.get(), ModItems.HICKORY_NUT.get()));
+                createBiggerLeavesDrops(block, ModBlocks.BROWN_GLOWING_HICKORY_SAPLING.get(), ModItems.HICKORY_NUT.get()));
         this.add(ModBlocks.YELLOW_GLOWING_HICKORY_LEAVES.get(), block ->
-                createBiggerLeavesDrops(ModBlocks.YELLOW_GLOWING_HICKORY_LEAVES.get(), ModBlocks.YELLOW_GLOWING_HICKORY_SAPLING.get(), ModItems.HICKORY_NUT.get()));
+                createBiggerLeavesDrops(block, ModBlocks.YELLOW_GLOWING_HICKORY_SAPLING.get(), ModItems.HICKORY_NUT.get()));
         this.add(ModBlocks.GREEN_GLOWING_HICKORY_LEAVES.get(), block ->
-                createBiggerLeavesDrops(ModBlocks.GREEN_GLOWING_HICKORY_LEAVES.get(), ModBlocks.GREEN_GLOWING_HICKORY_SAPLING.get(), ModItems.HICKORY_NUT.get()));
+                createBiggerLeavesDrops(block, ModBlocks.GREEN_GLOWING_HICKORY_SAPLING.get(), ModItems.HICKORY_NUT.get()));
 
+//        this.add(ModBlocks.HICKORY_LEAVES.get(), block ->
+//                createLeavesDrops(block, ModBlocks.HICKORY_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+//        this.add(ModBlocks.RED_GLOWING_HICKORY_LEAVES.get(), block ->
+//                createLeavesDrops(block, ModBlocks.HICKORY_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+//        this.add(ModBlocks.BROWN_GLOWING_HICKORY_LEAVES.get(), block ->
+//                createLeavesDrops(block, ModBlocks.HICKORY_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+//        this.add(ModBlocks.YELLOW_GLOWING_HICKORY_LEAVES.get(), block ->
+//                createLeavesDrops(block, ModBlocks.HICKORY_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+//        this.add(ModBlocks.GREEN_GLOWING_HICKORY_LEAVES.get(), block ->
+//                createLeavesDrops(block, ModBlocks.HICKORY_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
 
         this.dropSelf(ModBlocks.HICKORY_SAPLING.get());
         this.dropSelf(ModBlocks.RED_GLOWING_HICKORY_SAPLING.get());
@@ -186,7 +196,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
     }
 
     protected LootTable.Builder createBiggerLeavesDrops(Block leaves, Block sapling, Item otherDrop) {
-        return createLeavesDrops(leaves, sapling).withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F)).when(HAS_NO_SHEARS_OR_SILK_TOUCH).add(this.applyExplosionCondition(leaves, LootItem.lootTableItem(otherDrop)).when(BonusLevelTableCondition.bonusLevelFlatChance(Enchantments.BLOCK_FORTUNE, 0.3f))));
+        return createLeavesDrops(leaves, sapling, NORMAL_LEAVES_SAPLING_CHANCES).withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F)).when(HAS_NO_SHEARS_OR_SILK_TOUCH).add(this.applyExplosionCondition(leaves, LootItem.lootTableItem(otherDrop)).when(BonusLevelTableCondition.bonusLevelFlatChance(Enchantments.BLOCK_FORTUNE, 0.1F, 0.15f, 0.2f, 0.3f, 0.35f))));
     }
 
     @Override
