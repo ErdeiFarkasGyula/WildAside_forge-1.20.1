@@ -83,7 +83,10 @@
       "minecraft:patch_pumpkin",
       "wildaside:spotted_wintergreen_placed",
       "wildaside:pinkster_flower_placed",
-      "wildaside:hickory_tree_placed"
+      "wildaside:red_glowing_hickory_tree_placed",
+      "wildaside:brown_glowing_hickory_tree_placed",
+      "wildaside:yellow_glowing_hickory_tree_placed",
+      "wildaside:green_glowing_hickory_tree_placed"
     ]
   ],
   "has_precipitation": true,

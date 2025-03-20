@@ -13,8 +13,8 @@ import terrablender.api.RegionType;
 
 import java.util.function.Consumer;
 
-public class ModOverworldRegion extends Region {
-    public ModOverworldRegion(ResourceLocation name, int weight) {
+public class ModVibrionHiveRegion extends Region {
+    public ModVibrionHiveRegion(ResourceLocation name, int weight) {
         super(name, RegionType.OVERWORLD, weight);
     }
 
@@ -23,8 +23,7 @@ public class ModOverworldRegion extends Region {
             ResourceKey<Biome>>> mapper) {
 
         this.addModifiedVanillaOverworldBiomes(mapper, modifiedVanillaOverworldBuilder -> {
-            modifiedVanillaOverworldBuilder.replaceBiome(Biomes.FOREST, ModBiomes.HICKORY_FOREST);
+            modifiedVanillaOverworldBuilder.replaceBiome(Biomes.LUSH_CAVES, ModBiomes.VIBRION_HIVE);
         });
-
     }
 }

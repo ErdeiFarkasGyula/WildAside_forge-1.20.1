@@ -34,6 +34,15 @@ public class ModSurfaceRules {
                 ),
 
                 SurfaceRules.sequence(
+                        SurfaceRules.ifTrue(SurfaceRules.isBiome(ModBiomes.GLOWING_HICKORY_FOREST),
+                                SurfaceRules.ifTrue(SurfaceRules.abovePreliminarySurface(),
+                                        SurfaceRules.sequence(
+                                                SurfaceRules.ifTrue(SurfaceRules.stoneDepthCheck(0, false, 0, CaveSurface.FLOOR), grassSurface),
+                                                SurfaceRules.ifTrue(SurfaceRules.stoneDepthCheck(0, true, 0, CaveSurface.FLOOR), DIRT)
+                                        )))
+                ),
+
+                SurfaceRules.sequence(
                         SurfaceRules.ifTrue(SurfaceRules.isBiome(ModBiomes.VIBRION_HIVE),
                                 SurfaceRules.sequence(
                                         SurfaceRules.ifTrue(SurfaceRules.verticalGradient("bedrock_floor", VerticalAnchor.bottom(), VerticalAnchor.aboveBottom(5)), BEDROCK),

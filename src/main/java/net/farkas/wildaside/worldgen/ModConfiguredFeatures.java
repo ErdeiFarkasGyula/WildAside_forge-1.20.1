@@ -51,6 +51,10 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> PINKSTER_FLOWER = registerKey("pinkster_flower");
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> HICKORY_TREE = registerKey("hickory_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> RED_GLOWING_HICKORY_TREE = registerKey("red_glowing_hickory_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> BROWN_GLOWING_HICKORY_TREE = registerKey("brown_glowing_hickory_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> YELLOW_GLOWING_HICKORY_TREE = registerKey("yellow_glowing_hickory_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> GREEN_GLOWING_HICKORY_TREE = registerKey("green_glowing_hickory_tree");
 
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
@@ -116,6 +120,31 @@ public class ModConfiguredFeatures {
                 BlockStateProvider.simple(ModBlocks.HICKORY_LOG.get()),
                 new StraightTrunkPlacer(14, 0, 6),
                 BlockStateProvider.simple(ModBlocks.HICKORY_LEAVES.get()),
+                new HickoryTreeFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 12),
+                new TwoLayersFeatureSize(1, 0, 2)).build());
+
+        register(context, RED_GLOWING_HICKORY_TREE, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.HICKORY_LOG.get()),
+                new StraightTrunkPlacer(14, 0, 6),
+                BlockStateProvider.simple(ModBlocks.RED_GLOWING_HICKORY_LEAVES.get()),
+                new HickoryTreeFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 12),
+                new TwoLayersFeatureSize(1, 0, 2)).build());
+        register(context, BROWN_GLOWING_HICKORY_TREE, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.HICKORY_LOG.get()),
+                new StraightTrunkPlacer(14, 0, 6),
+                BlockStateProvider.simple(ModBlocks.BROWN_GLOWING_HICKORY_LEAVES.get()),
+                new HickoryTreeFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 12),
+                new TwoLayersFeatureSize(1, 0, 2)).build());
+        register(context, YELLOW_GLOWING_HICKORY_TREE, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.HICKORY_LOG.get()),
+                new StraightTrunkPlacer(14, 0, 6),
+                BlockStateProvider.simple(ModBlocks.YELLOW_GLOWING_HICKORY_LEAVES.get()),
+                new HickoryTreeFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 12),
+                new TwoLayersFeatureSize(1, 0, 2)).build());
+        register(context, GREEN_GLOWING_HICKORY_TREE, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.HICKORY_LOG.get()),
+                new StraightTrunkPlacer(14, 0, 6),
+                BlockStateProvider.simple(ModBlocks.GREEN_GLOWING_HICKORY_LEAVES.get()),
                 new HickoryTreeFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 12),
                 new TwoLayersFeatureSize(1, 0, 2)).build());
     }
