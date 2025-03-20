@@ -48,6 +48,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.ENTORIUM_ORE.get());
                         pOutput.accept(ModBlocks.BIOENGINEERING_WORKSTATION.get());
                         pOutput.accept(ModItems.ENTORIUM_PILL.get());
+                        pOutput.accept(ModItems.SPORE_BOMB.get());
 
                         pOutput.accept(ModBlocks.NATURAL_SPORE_BLASTER.get());
                         pOutput.accept(ModBlocks.SPORE_BLASTER.get());

@@ -4,6 +4,7 @@
   "item.wildaside.vibrion": "Vibrion",
   "item.wildaside.entorium": "Entorium",
   "item.wildaside.entorium_pill": "Entorium Pill",
+  "item.wildaside.spore_bomb": "Spore Bomb",
 
   "item.wildaside.substilium_boat": "Substilium Boat",
   "item.wildaside.substilium_chest_boat": "Substilium Chest Boat",
@@ -85,6 +86,10 @@
   "block.wildaside.hickory_hanging_sign": "Hickory Hanging Sign",
   "block.wildaside.hickory_hanging_wall_sign": "Hickory Hanging Wall Sign",
   "block.wildaside.hickory_leaves": "Hickory Leaves",
+  "block.wildaside.red_glowing_hickory_leaves": "Red Glowing Hickory Leaves",
+  "block.wildaside.brown_glowing_hickory_leaves": "Brown Glowing Hickory Leaves",
+  "block.wildaside.yellow_glowing_hickory_leaves": "Yellow Glowing Hickory Leaves",
+  "block.wildaside.green_glowing_hickory_leaves": "Green Glowing Hickory Leaves",
   "block.wildaside.hickory_sapling": "Hickory Sapling",
   "block.wildaside.red_glowing_hickory_sapling": "Red Glowing Hickory Sapling",
   "block.wildaside.brown_glowing_hickory_sapling": "Brown Glowing Hickory Sapling",

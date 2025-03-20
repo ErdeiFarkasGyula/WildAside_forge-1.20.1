@@ -5,6 +5,7 @@ import net.farkas.wildaside.block.ModBlocks;
 import net.farkas.wildaside.entity.custom.ModBoatEntity;
 import net.farkas.wildaside.item.custom.EntoriumPill;
 import net.farkas.wildaside.item.custom.ModBoatItem;
+import net.farkas.wildaside.item.custom.SporeBomb;
 import net.minecraft.world.item.HangingSignItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.SignItem;
@@ -23,6 +24,8 @@ public class ModItems {
 
     public static final RegistryObject<Item> ENTORIUM_PILL = ITEMS.register("entorium_pill",
             () ->  new EntoriumPill(new Item.Properties().food(ModFoods.ENTORIUM_PILL)));
+    public static final RegistryObject<Item> SPORE_BOMB = ITEMS.register("spore_bomb",
+            () ->  new SporeBomb(new Item.Properties()));
 
     public static final RegistryObject<Item> SUBSTILIUM_SIGN = ITEMS.register("substilium_sign",
             () ->  new SignItem(new Item.Properties().stacksTo(16), ModBlocks.SUBSTILIUM_SIGN.get(), ModBlocks.SUBSTILIUM_WALL_SIGN.get()));
