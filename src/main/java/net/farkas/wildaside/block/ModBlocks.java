@@ -13,8 +13,8 @@ import net.farkas.wildaside.block.custom.vibrion.SporeBlaster;
 import net.farkas.wildaside.block.custom.BioengineeringWorkstation;
 import net.farkas.wildaside.item.ModItems;
 import net.farkas.wildaside.util.ModWoodTypes;
-import net.farkas.wildaside.worldgen.mushroom.SubstiliumMushroomGrower;
-import net.farkas.wildaside.worldgen.tree.hickory.HickoryTreeGrower;
+import net.farkas.wildaside.worldgen.feature.tree.substilium.SubstiliumMushroomGrower;
+import net.farkas.wildaside.worldgen.feature.tree.hickory.HickoryTreeGrower;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvents;
@@ -50,12 +50,8 @@ public class ModBlocks {
                     .strength(2F,  1F)
                     .lightLevel(l -> 7),  UniformInt.of(1, 2)));
 
-//    public static final RegistryObject<Block> COMPRESSED_VIBRION_BLOCK = registerBlock("vibrion_block",
-//            () ->  new DropExperienceBlock(BlockBehaviour.Properties.of()
-//                    .mapColor(MapColor.COLOR_YELLOW)
-//                    .sound(SoundType.SHROOMLIGHT)
-//                    .strength(2F,  1F)
-//                    .lightLevel(l -> 7),  UniformInt.of(1, 2)));
+    public static final RegistryObject<Block> COMPRESSED_VIBRION_BLOCK = registerBlock("compressed_vibrion_block",
+            () ->  new DropExperienceBlock(BlockBehaviour.Properties.copy(VIBRION_BLOCK.get())));
 
     public static final RegistryObject<Block> VIBRION_GEL = registerBlock("vibrion_gel",
             () ->  new VibrionGel(BlockBehaviour.Properties.of()
@@ -70,17 +66,7 @@ public class ModBlocks {
                     .noOcclusion()));
 
     public static final RegistryObject<Block> LIT_VIBRION_GEL = registerBlock("lit_vibrion_gel",
-            () ->  new VibrionGel(BlockBehaviour.Properties.of()
-                    .mapColor(MapColor.COLOR_YELLOW)
-                    .sound(SoundType.HONEY_BLOCK)
-                    .strength(0.1F,  0F)
-                    .lightLevel(l -> 7)
-                    .noCollission()
-                    .noOcclusion()
-                    .isRedstoneConductor((bs, br, bp) -> false)
-                    .speedFactor(0.2f)
-                    .jumpFactor(0.6f)
-                    .noOcclusion()));
+            () ->  new VibrionGel(BlockBehaviour.Properties.copy(VIBRION_GEL.get()).lightLevel(s -> 7)));
 
     public static final RegistryObject<Block> VIBRION_GLASS = registerBlock("vibrion_glass",
             () ->  new VibrionGlass(BlockBehaviour.Properties.of()
@@ -92,33 +78,13 @@ public class ModBlocks {
                     .instrument(NoteBlockInstrument.HAT)));
 
     public static final RegistryObject<Block> LIT_VIBRION_GLASS = registerBlock("lit_vibrion_glass",
-            () ->  new VibrionGlass(BlockBehaviour.Properties.of()
-                    .mapColor(MapColor.COLOR_YELLOW)
-                    .sound(SoundType.GLASS)
-                    .strength(0.4F,  0.3F)
-                    .noOcclusion()
-                    .isRedstoneConductor((bs, br, bp) -> false)
-                    .lightLevel(l -> 7)
-                    .instrument(NoteBlockInstrument.HAT)));
+            () ->  new VibrionGlass(BlockBehaviour.Properties.copy(VIBRION_GLASS.get()).lightLevel(s -> 7)));
 
     public static final RegistryObject<Block> VIBRION_GLASS_PANE = registerBlock("vibrion_glass_pane",
-            () ->  new IronBarsBlock(BlockBehaviour.Properties.of()
-                    .mapColor(MapColor.COLOR_YELLOW)
-                    .sound(SoundType.GLASS)
-                    .strength(0.4F,  0.3F)
-                    .noOcclusion()
-                    .isRedstoneConductor((bs, br, bp) -> false)
-                    .instrument(NoteBlockInstrument.HAT)));
+            () ->  new IronBarsBlock(BlockBehaviour.Properties.copy(VIBRION_GLASS.get())));
 
     public static final RegistryObject<Block> LIT_VIBRION_GLASS_PANE = registerBlock("lit_vibrion_glass_pane",
-            () ->  new IronBarsBlock(BlockBehaviour.Properties.of()
-                    .mapColor(MapColor.COLOR_YELLOW)
-                    .sound(SoundType.GLASS)
-                    .strength(0.4F,  0.3F)
-                    .noOcclusion()
-                    .isRedstoneConductor((bs, br, bp) -> false)
-                    .lightLevel(l -> 7)
-                    .instrument(NoteBlockInstrument.HAT)));
+            () ->  new IronBarsBlock(BlockBehaviour.Properties.copy(VIBRION_GLASS_PANE.get()).lightLevel(s -> 7)));
 
     public static final RegistryObject<Block> VIBRION_GROWTH = registerBlock("vibrion_growth",
             () ->  new FlowerBlock(() -> MobEffects.POISON, 5, BlockBehaviour.Properties.of()

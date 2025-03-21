@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "wildaside:item/entorium_pickaxe"
+  }
+}

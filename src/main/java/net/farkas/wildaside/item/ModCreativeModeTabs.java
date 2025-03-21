@@ -20,6 +20,7 @@ public class ModCreativeModeTabs {
                     .displayItems((pParamateres, pOutput) -> {
                         pOutput.accept(ModItems.VIBRION.get());
                         pOutput.accept(ModBlocks.VIBRION_BLOCK.get());
+                        pOutput.accept(ModBlocks.COMPRESSED_VIBRION_BLOCK.get());
                         pOutput.accept(ModBlocks.VIBRION_GEL.get());
                         pOutput.accept(ModBlocks.LIT_VIBRION_GEL.get());
                         pOutput.accept(ModBlocks.VIBRION_GROWTH.get());
@@ -49,6 +50,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.BIOENGINEERING_WORKSTATION.get());
                         pOutput.accept(ModItems.ENTORIUM_PILL.get());
                         pOutput.accept(ModItems.SPORE_BOMB.get());
+                        pOutput.accept(ModItems.ENTORIUM_PICKAXE.get());
 
                         pOutput.accept(ModBlocks.NATURAL_SPORE_BLASTER.get());
                         pOutput.accept(ModBlocks.SPORE_BLASTER.get());

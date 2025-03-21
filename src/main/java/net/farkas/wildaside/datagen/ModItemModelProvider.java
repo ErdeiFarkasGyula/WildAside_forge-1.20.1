@@ -34,6 +34,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.SPORE_BOMB);
         evenSimplerBlockItem(ModBlocks.ENTORIUM_ORE);
         evenSimplerBlockItem(ModBlocks.OVERGROWN_ENTORIUM_ORE);
+        handheldItem(ModItems.ENTORIUM_PICKAXE);
 
         //SUBSTILIUM
         simpleBlockItem(ModBlocks.SUBSTILIUM_DOOR);
@@ -58,6 +59,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.SUBSTILIUM_BOAT);
         simpleItem(ModItems.SUBSTILIUM_CHEST_BOAT);
         simpleBlockItemBlockTexture(ModBlocks.SUBSTILIUM_SPROUTS);
+
+
 
         //HICKORY
         simpleBlockItem(ModBlocks.HICKORY_DOOR);
@@ -137,5 +140,12 @@ public class ModItemModelProvider extends ItemModelProvider {
         return withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",
                 new ResourceLocation(WildAside.MOD_ID,"block/" + item.getId().getPath()));
+    }
+
+
+    private ItemModelBuilder handheldItem(RegistryObject<Item> item) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/handheld")).texture("layer0",
+                new ResourceLocation(WildAside.MOD_ID,"item/" + item.getId().getPath()));
     }
 }

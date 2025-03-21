@@ -5,6 +5,8 @@
   "item.wildaside.entorium": "Entorium",
   "item.wildaside.entorium_pill": "Entorium Pill",
   "item.wildaside.spore_bomb": "Spore Bomb",
+  "item.wildaside.entorium_pickaxe": "Entorium Pickaxe",
+  "item.wildaside.hickory_nut": "Hickory Nut",
 
   "item.wildaside.substilium_boat": "Substilium Boat",
   "item.wildaside.substilium_chest_boat": "Substilium Chest Boat",
@@ -21,6 +23,7 @@
   "item.minecraft.tipped_arrow.effect.immunity_potion": "Immunity Potion",
 
   "block.wildaside.vibrion_block": "Vibrion Block",
+  "block.wildaside.compressed_vibrion_block": "Compressed Vibrion Block",
   "block.wildaside.vibrion_gel": "Vibrion Gel",
   "block.wildaside.lit_vibrion_gel": "Lit Vibrion Gel",
   "block.wildaside.vibrion_glass": "Vibrion Glass",

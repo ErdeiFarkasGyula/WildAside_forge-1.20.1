@@ -1,8 +1,8 @@
-package net.farkas.wildaside.worldgen.tree.hickory;
+package net.farkas.wildaside.worldgen.feature.tree.hickory;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import net.farkas.wildaside.worldgen.tree.ModFoliagePlacers;
+import net.farkas.wildaside.worldgen.feature.ModFoliagePlacers;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.valueproviders.IntProvider;
 import net.minecraft.world.level.LevelSimulatedReader;
@@ -12,11 +12,11 @@ import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacerTy
 import org.joml.Math;
 
 public class HickoryTreeFoliagePlacer extends FoliagePlacer {
+    private final int height;
+
     public static final Codec<HickoryTreeFoliagePlacer> CODEC = RecordCodecBuilder.create(hickoryFoliagePlacerInstance
             -> foliagePlacerParts(hickoryFoliagePlacerInstance).and(Codec.intRange(0, 30).fieldOf("height")
             .forGetter(fp -> fp.height)).apply(hickoryFoliagePlacerInstance, HickoryTreeFoliagePlacer::new));
-
-    private final int height;
 
     public HickoryTreeFoliagePlacer(IntProvider pRadius, IntProvider pOffset, int height) {
         super(pRadius, pOffset);

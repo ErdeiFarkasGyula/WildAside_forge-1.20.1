@@ -40,6 +40,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
     protected void generate() {
         //VIBRION
         this.dropSelf(ModBlocks.VIBRION_GEL.get());
+        this.dropSelf(ModBlocks.COMPRESSED_VIBRION_BLOCK.get());
         this.dropSelf(ModBlocks.LIT_VIBRION_GEL.get());
         this.dropSelf(ModBlocks.VIBRION_GROWTH.get());
         this.dropSelf(ModBlocks.HANGING_VIBRION_VINES.get());

@@ -1,4 +1,4 @@
-package net.farkas.wildaside.worldgen.mushroom;
+package net.farkas.wildaside.worldgen.feature.tree.substilium;
 
 
 import net.farkas.wildaside.worldgen.ModConfiguredFeatures;

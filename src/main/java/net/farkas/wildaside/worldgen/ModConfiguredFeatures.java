@@ -2,10 +2,9 @@ package net.farkas.wildaside.worldgen;
 
 import net.farkas.wildaside.WildAside;
 import net.farkas.wildaside.block.ModBlocks;
-import net.farkas.wildaside.block.custom.SubstiliumSoil;
 import net.farkas.wildaside.block.custom.vibrion.NaturalSporeBlaster;
 import net.farkas.wildaside.worldgen.feature.ModFeatures;
-import net.farkas.wildaside.worldgen.tree.hickory.HickoryTreeFoliagePlacer;
+import net.farkas.wildaside.worldgen.feature.tree.hickory.HickoryTreeFoliagePlacer;
 import net.minecraft.core.Direction;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;

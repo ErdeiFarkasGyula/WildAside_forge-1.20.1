@@ -1,7 +1,7 @@
-package net.farkas.wildaside.worldgen.tree;
+package net.farkas.wildaside.worldgen.feature;
 
 import net.farkas.wildaside.WildAside;
-import net.farkas.wildaside.worldgen.tree.hickory.HickoryTreeFoliagePlacer;
+import net.farkas.wildaside.worldgen.feature.tree.hickory.HickoryTreeFoliagePlacer;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacerType;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -14,6 +14,8 @@ public class ModFoliagePlacers {
 
     public static final RegistryObject<FoliagePlacerType<HickoryTreeFoliagePlacer>> HICKORY_FOLIAGE_PLACER =
             FOLIAGE_PLACERS.register("hickory_foliage_placer", () -> new FoliagePlacerType<>(HickoryTreeFoliagePlacer.CODEC));
+    public static final RegistryObject<FoliagePlacerType<HickoryTreeFoliagePlacer>> SUBSTILIUM_STICK_MUSHROOM_FOLIAGE_PLACER =
+            FOLIAGE_PLACERS.register("substilium_stick_mushroom_foliage_placer", () -> new FoliagePlacerType<>(HickoryTreeFoliagePlacer.CODEC));
 
     public static void register(IEventBus eventBus) {
         FOLIAGE_PLACERS.register(eventBus);

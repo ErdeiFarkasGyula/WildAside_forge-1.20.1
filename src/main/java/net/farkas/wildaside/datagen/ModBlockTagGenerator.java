@@ -29,10 +29,6 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.VIBRION_GLASS.get())
                 .add(ModBlocks.LIT_VIBRION_GLASS.get());
 
-        this.tag(ModTags.Blocks.HUGE_MUSHROOM_GROW_BLOCK)
-                .add(ModBlocks.SUBSTILIUM_SOIL.get())
-                .add(ModBlocks.OVERGROWN_ENTORIUM_ORE.get());
-
         //
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
@@ -113,6 +109,12 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.SUBSTILIUM_FENCE_GATE.get())
                 .add(ModBlocks.SUBSTILIUM_SIGN.get())
                 .add(ModBlocks.SUBSTILIUM_HANGING_SIGN.get());
+
+        this.tag(ModTags.Blocks.ENTORIUM_PICKAXE_BREAKABLE)
+                .addTags(BlockTags.MINEABLE_WITH_PICKAXE)
+                .addTags(BlockTags.MINEABLE_WITH_AXE)
+                .addTags(BlockTags.MINEABLE_WITH_SHOVEL)
+                .addTags(BlockTags.MINEABLE_WITH_SHOVEL);
 
         //
 
