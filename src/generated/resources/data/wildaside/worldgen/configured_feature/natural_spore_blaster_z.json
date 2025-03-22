@@ -1,5 +1,5 @@
 {
-  "type": "wildaside:update_replace_single_block",
+  "type": "wildaside:tick_replace_single_block",
   "config": {
     "targets": [
       {

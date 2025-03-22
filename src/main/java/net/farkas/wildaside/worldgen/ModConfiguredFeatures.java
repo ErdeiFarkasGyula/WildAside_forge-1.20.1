@@ -70,9 +70,9 @@ public class ModConfiguredFeatures {
 
         register(context, COMPRESSED_SUBSTILIUM_SOIL, Feature.ORE, new OreConfiguration(compressed_substilium_soil, 36));
 
-        register(context, NATURAL_SPORE_BLASTER_X, ModFeatures.UPDATE_REPLACE_SINGLE_BLOCK.get(), new ReplaceBlockConfiguration(ModBlocks.SUBSTILIUM_SOIL.get().defaultBlockState(), ModBlocks.NATURAL_SPORE_BLASTER.get().defaultBlockState().setValue(NaturalSporeBlaster.AXIS, Direction.Axis.X)));
-        register(context, NATURAL_SPORE_BLASTER_Y, ModFeatures.UPDATE_REPLACE_SINGLE_BLOCK.get(), new ReplaceBlockConfiguration(ModBlocks.SUBSTILIUM_SOIL.get().defaultBlockState(), ModBlocks.NATURAL_SPORE_BLASTER.get().defaultBlockState().setValue(NaturalSporeBlaster.AXIS, Direction.Axis.Y)));
-        register(context, NATURAL_SPORE_BLASTER_Z, ModFeatures.UPDATE_REPLACE_SINGLE_BLOCK.get(), new ReplaceBlockConfiguration(ModBlocks.SUBSTILIUM_SOIL.get().defaultBlockState(), ModBlocks.NATURAL_SPORE_BLASTER.get().defaultBlockState().setValue(NaturalSporeBlaster.AXIS, Direction.Axis.Z)));
+        register(context, NATURAL_SPORE_BLASTER_X, ModFeatures.TICK_REPLACE_SINGLE_BLOCK.get(), new ReplaceBlockConfiguration(ModBlocks.SUBSTILIUM_SOIL.get().defaultBlockState(), ModBlocks.NATURAL_SPORE_BLASTER.get().defaultBlockState().setValue(NaturalSporeBlaster.AXIS, Direction.Axis.X)));
+        register(context, NATURAL_SPORE_BLASTER_Y, ModFeatures.TICK_REPLACE_SINGLE_BLOCK.get(), new ReplaceBlockConfiguration(ModBlocks.SUBSTILIUM_SOIL.get().defaultBlockState(), ModBlocks.NATURAL_SPORE_BLASTER.get().defaultBlockState().setValue(NaturalSporeBlaster.AXIS, Direction.Axis.Y)));
+        register(context, NATURAL_SPORE_BLASTER_Z, ModFeatures.TICK_REPLACE_SINGLE_BLOCK.get(), new ReplaceBlockConfiguration(ModBlocks.SUBSTILIUM_SOIL.get().defaultBlockState(), ModBlocks.NATURAL_SPORE_BLASTER.get().defaultBlockState().setValue(NaturalSporeBlaster.AXIS, Direction.Axis.Z)));
 
         register(context, VIBRION_GROWTH, Feature.FLOWER,
                 new RandomPatchConfiguration(32, 8, 3, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
@@ -102,7 +102,7 @@ public class ModConfiguredFeatures {
                         .add(UniformInt.of(0, 2), 3).add(UniformInt.of(0, 6), 7).build()),
                 BlockStateProvider.simple(ModBlocks.LIT_VIBRION_GEL.get()))), Direction.DOWN, BlockPredicate.ONLY_IN_AIR_PREDICATE, true));
 
-        register(context, REDLIKE_SUBSTILIUM_MUSHROOM, Feature.HUGE_RED_MUSHROOM, new HugeMushroomFeatureConfiguration(
+        register(context, REDLIKE_SUBSTILIUM_MUSHROOM, ModFeatures.REDLIKE_SUBSTILIUM_MUSHROOM.get(), new HugeMushroomFeatureConfiguration(
                 BlockStateProvider.simple(ModBlocks.ENTORIUM_SHROOM.get()), BlockStateProvider.simple(ModBlocks.SUBSTILIUM_STEM.get()), 2));
         register(context, BROWNLIKE_SUBSTILIUM_MUSHROOM, Feature.HUGE_BROWN_MUSHROOM, new HugeMushroomFeatureConfiguration(
                 BlockStateProvider.simple(ModBlocks.ENTORIUM_SHROOM.get()), BlockStateProvider.simple(ModBlocks.SUBSTILIUM_STEM.get()), 3));

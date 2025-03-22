@@ -18,7 +18,6 @@ import net.farkas.wildaside.util.ModWoodTypes;
 import net.farkas.wildaside.worldgen.biome.ModTerraBlenderAPI;
 import net.farkas.wildaside.worldgen.biome.surface.ModSurfaceRules;
 import net.farkas.wildaside.worldgen.feature.ModFeatures;
-import net.farkas.wildaside.worldgen.feature.mushroom.ModStemPlacerTypes;
 import net.farkas.wildaside.worldgen.feature.ModFoliagePlacers;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
@@ -64,8 +63,6 @@ public class WildAside
 
         ModMenuTypes.register(modEventBus);
         ModRecipes.register(modEventBus);
-
-        ModStemPlacerTypes.register(modEventBus);
 
         ModMobEffects.register(modEventBus);
         ModPotions.register(modEventBus);
